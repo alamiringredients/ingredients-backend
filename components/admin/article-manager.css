@@ -1,0 +1,20 @@
+/* Shared editorial CRUD layout, using the product catalog control styles. */
+.news-crud-fields{border:0;margin:0;padding:0;min-width:0}
+.news-editor-languages{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
+.news-published-locales{display:block;margin-top:6px;color:var(--admin-muted);font-size:11px;white-space:nowrap}
+.news-crud .catalog-panel-body>.catalog-button+.catalog-button{margin-top:10px}
+.news-crud .catalog-field .content-editor{width:100%;min-width:0}
+.news-crud .catalog-form-title h1{font-size:24px;max-width:34ch}
+@media(min-width:1051px){
+  .news-crud .catalog-form-sidebar{max-height:calc(100dvh - 184px);overflow-y:auto;overscroll-behavior-y:contain;scrollbar-width:none;padding:2px;scroll-padding-block:12px}
+  .news-crud .catalog-form-sidebar::-webkit-scrollbar{display:none}
+}
+
+.news-crud .catalog-field textarea{width:100%;min-height:90px;resize:vertical;border:1px solid #dce2e5;border-radius:7px;padding:9px 10px;font:inherit;font-size:13px;background:#fff}
+
+.news-revision-list{display:grid}
+.news-revision-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid #e5e9ec}
+.news-revision-row:last-child{border-bottom:0}
+.news-revision-row time{font-size:13px;color:#60717e;font-variant-numeric:tabular-nums}
+.news-revision-row>.catalog-button{flex-shrink:0;white-space:nowrap;width:auto;min-height:36px;padding:8px 12px;font-size:12px}
+@media(max-width:600px){.news-revision-row{align-items:flex-start;flex-direction:column;gap:10px}}

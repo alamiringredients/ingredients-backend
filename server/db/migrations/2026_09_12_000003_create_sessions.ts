@@ -1,0 +1,20 @@
+import { defineMigration } from '@holo-js/db'
+
+export default defineMigration({
+  async up({ schema }) {
+    await schema.createTable('sessions', (table) => {
+      table.string('id').primaryKey()
+      table.string('store').default('database')
+      table.json('data')
+      table.timestamp('created_at')
+      table.timestamp('last_activity_at')
+      table.timestamp('expires_at')
+      table.timestamp('invalidated_at').nullable()
+      table.string('remember_token_hash').nullable()
+      table.index(['expires_at'])
+    })
+  },
+  async down({ schema }) {
+    await schema.dropTable('sessions')
+  },
+})

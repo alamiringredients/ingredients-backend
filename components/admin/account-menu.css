@@ -1,0 +1,29 @@
+.admin-account{position:relative;display:flex;align-items:center;gap:6px;flex-shrink:0;margin-top:auto;padding-top:14px;border-top:1px solid #ffffff16}
+.account-trigger,.account-settings{display:flex;align-items:center;justify-content:center;min-height:44px;border:0;border-radius:10px;background:transparent;color:#dbe4ec;font:inherit;cursor:pointer;text-decoration:none;transition:transform 140ms cubic-bezier(.23,1,.32,1)}
+.account-trigger{flex:1;min-width:0;gap:9px;padding:6px;text-align:left}
+.account-avatar{display:grid;place-items:center;flex:0 0 32px;height:32px;border:1px solid #ffffff20;border-radius:50%;background:#ffffff0d;color:#fff;font-size:11px;font-weight:700;letter-spacing:.03em}
+.account-trigger-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:600}
+.admin-account svg{flex-shrink:0;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.account-chevron{width:14px!important;color:#8fa4b6}
+.account-trigger[aria-expanded=true]{background:#ffffff0d}
+.account-trigger[aria-expanded=true] .account-chevron{transform:rotate(180deg)}
+.account-settings{flex:0 0 40px;color:#91a5b6}
+.account-menu-panel{position:absolute;z-index:30;bottom:calc(100% + 8px);left:0;width:248px;max-width:calc(100vw - 32px);padding:6px;border:1px solid #dce3e8;border-radius:14px;background:#fff;color:#203344;box-shadow:0 12px 40px #06142329,0 2px 6px #06142314;transform-origin:24px bottom;transition:opacity 160ms cubic-bezier(.23,1,.32,1),transform 160ms cubic-bezier(.23,1,.32,1)}
+.account-menu-panel[hidden]{display:none}
+@starting-style{.account-menu-panel:not([data-keyboard=true]){opacity:0;transform:translateY(4px) scale(.97)}}
+.account-menu-panel[data-keyboard=true]{transition:none}
+.account-menu-heading{display:grid;gap:5px;padding:10px 10px 12px;margin-bottom:4px;border-bottom:1px solid #edf0f2}
+.account-menu-heading span{color:#76838e;font-size:11px}.account-menu-heading strong{overflow-wrap:anywhere;font-size:13px;font-weight:600}
+.account-menu-item{display:flex;align-items:center;gap:10px;width:100%;min-height:42px;padding:10px;border:0;border-radius:8px;background:transparent;color:inherit;font:500 12px Arial,sans-serif;text-align:left;text-decoration:none;cursor:pointer;transition:transform 140ms cubic-bezier(.23,1,.32,1)}
+.account-menu-item svg{color:#7a8995}.admin-account form{margin:4px 0 0;padding-top:4px;border-top:1px solid #edf0f2}.account-menu-logout,.account-menu-logout svg{color:#b84030}.account-menu-item:disabled{opacity:.6;cursor:wait}
+.account-trigger:focus-visible,.account-settings:focus-visible{outline:2px solid #fff;outline-offset:2px}.account-menu-item:focus-visible{outline:2px solid #18384f;outline-offset:-2px;background:#f1f4f6}
+@media(hover:hover) and (pointer:fine){.account-trigger:hover,.account-settings:hover{background:#ffffff0d;color:#fff}.account-menu-item:hover{background:#f1f4f6}.account-menu-logout:hover{background:#fff1ee}.account-trigger:active,.account-settings:active,.account-menu-item:active{transform:scale(.97)}}
+.account-trigger:focus-visible:active,.account-settings:focus-visible:active,.account-menu-item:focus-visible:active{transform:none;transition:none}
+.is-collapsed .admin-account{flex-direction:column}.is-collapsed .account-trigger{flex:none;width:48px}.is-collapsed .account-trigger-name,.is-collapsed .account-chevron{display:none}.is-collapsed .account-settings{flex:none;width:44px}
+@media(max-width:800px){.admin-account{flex-direction:column}.account-trigger{flex:none;width:48px}.account-trigger-name,.account-chevron{display:none}.account-settings{flex:none;width:44px}}
+@media(prefers-reduced-motion:reduce){.account-menu-panel,.account-trigger,.account-settings,.account-menu-item{transition:none}@starting-style{.account-menu-panel:not([data-keyboard=true]){opacity:1;transform:none}}}
+.password-form{display:grid;gap:20px;max-width:480px;padding:28px;border:1px solid var(--admin-line);border-radius:16px;background:#fff}
+.password-form label{display:grid;gap:8px;font-size:13px;font-weight:600}.password-form input{width:100%;min-height:44px;padding:10px 12px;border:1px solid #cbd3d9;border-radius:8px;font:inherit}.password-form input:focus-visible{outline:2px solid #18384f;outline-offset:2px}
+.password-form p{margin:0;font-size:13px;line-height:1.5}
+.password-form>button{min-height:44px;border:0;border-radius:8px;padding:12px 18px;background:var(--admin-navy);color:#fff;font:600 13px Arial,sans-serif;cursor:pointer;transition:transform 140ms cubic-bezier(.23,1,.32,1)}.password-form>button:active{transform:scale(.98)}.password-form>button:focus-visible{outline:2px solid #18384f;outline-offset:3px;transform:none;transition:none}.password-form>button:disabled{opacity:.6;cursor:wait}
+@media(prefers-reduced-motion:reduce){.password-form>button{transition:none}}

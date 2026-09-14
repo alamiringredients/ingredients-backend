@@ -1,0 +1,89 @@
+---
+name: holo-js
+description: Help users build applications with the Holo-JS framework by researching the current Holo-JS documentation at https://docs.holo-js.com/ before answering or coding. Use when a user asks how to scaffold, configure, integrate, or implement Holo-JS app features in Nuxt, Next.js, or SvelteKit, including database, ORM, auth, authorization, validation, forms, storage, media, queues, events, broadcast, realtime, mail, notifications, testing, or deployment. Prefer this for user-facing app work, not Holo-JS framework internals.
+---
+
+# Holo-JS
+
+Use the docs as the source of truth, then act. Do not answer from memory when exact commands, imports, API names, config shape, route shape, or framework integration details matter.
+
+Primary documentation URL: https://docs.holo-js.com/
+
+## Required Workflow
+
+1. Clarify the user's task category in your own reasoning: setup, config, database, ORM, auth, authorization, validation/forms, storage/media, queue/events, broadcast/realtime, mail/notifications, testing, deployment, or framework integration.
+2. Search the live docs before giving implementation details.
+3. Open the most relevant docs page and read only the sections that match the task.
+4. Open at most one adjacent or overview page when the task touches package setup, framework integration, auth/session/security, background workers, or deployment.
+5. Stop researching as soon as the docs provide enough information to implement the requested task.
+6. Implement the task immediately using the docs you just read.
+7. Mention when docs do not cover the requested detail and ask for a docs link or local project context.
+
+Do not read package implementation files after docs lookup unless one of these is true:
+
+- the docs are missing the API detail required to compile the code
+- the implementation already failed and you need source to debug the failure
+- the user explicitly asks you to inspect package internals
+
+## How To Search
+
+Prefer these approaches, in order:
+
+1. Use the docs site's own search if you have browser access.
+2. Use web search with `site:docs.holo-js.com` plus the concrete feature terms.
+3. Open likely docs URLs from search results, then follow sidebar or in-page links to related pages.
+4. If working inside the Holo-JS repository, search local docs source under `apps/docs/docs/**/*.md` with `rg` as a fallback or for faster exact matching.
+
+Good search queries:
+
+- `site:docs.holo-js.com Holo-JS install <package-or-feature>`
+- `site:docs.holo-js.com Holo-JS <framework> <feature>`
+- `site:docs.holo-js.com Holo-JS <api-or-command-name>`
+- `site:docs.holo-js.com Holo-JS <error message or concept>`
+
+Local repo fallback:
+
+```bash
+rg -n "<feature|api|command|error>" apps/docs/docs
+find apps/docs/docs -type f -name '*.md' | sort
+```
+
+## What To Open
+
+Use docs pages by task area, not by package guesses. Examples:
+
+- Starting a project: installation, configuration, directory structure.
+- Framework routing or handlers: routing, runtime services, framework-specific integration pages.
+- Database and models: database pages first, then ORM pages.
+- Auth flows: auth overview plus the specific flow page, then session/cookies or current auth client if state is involved.
+- Authorization: authorization overview plus policies or abilities.
+- Forms: forms overview plus server validation, client usage, and framework integration as needed.
+- Files: storage first; media only when files belong to models or need conversions/collections.
+- Background work: queue, events, queued listeners, workers, failed jobs, and deployment pages as needed.
+- Browser realtime: broadcast or realtime docs plus framework helper pages.
+- Production behavior: deployment plus any worker/driver page for the feature.
+
+These names are navigation hints, not an API reference. Confirm exact paths and examples from the docs before responding.
+
+## Answering Rules
+
+- Cite or link the docs pages you used when the environment supports links.
+- Keep examples aligned with the user's framework and package manager.
+- Preserve framework-native routing, redirect, server action, and handler conventions shown by the docs.
+- Do not invent helper APIs to make an answer look cleaner.
+- Do not assume optional packages are installed. Check install/setup docs for the feature.
+- Do not expose secrets in client code or examples.
+- Do not hand-edit generated Holo-JS output unless docs explicitly instruct it.
+- If docs and installed package behavior disagree, tell the user what you found and verify the smallest relevant package surface before continuing.
+
+## Coding Against An Existing App
+
+When editing a user's app:
+
+1. Inspect the app's framework, package manager, installed `@holo-js/*` packages, and existing Holo-JS config.
+2. Search docs for the exact feature and framework.
+3. Match the app's existing conventions.
+4. Add validation and authorization at boundaries when the docs indicate they are required.
+5. Run the app's relevant typecheck, lint, and tests when available.
+
+If the user asks for a broad implementation such as "add auth" or "add realtime", start from the docs' setup/overview pages and implement the smallest complete vertical slice rather than assembling APIs from memory.

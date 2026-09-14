@@ -1,0 +1,6 @@
+import {defineMigration} from '@holo-js/db'
+export default defineMigration({async up({schema}){
+ await schema.createTable('career_jobs',t=>{t.id();t.string('slug').unique();t.string('code');t.string('status').default('draft');t.json('content');t.timestamps()})
+ await schema.createTable('career_applications',t=>{t.id();t.bigInteger('job_id').nullable();t.string('job_title');t.string('name');t.string('email');t.string('phone');t.string('department');t.text('letter');t.string('locale');t.string('status').default('pending');t.string('cv_path');t.string('cv_name');t.string('submission_key').unique();t.timestamps();t.index(['status']);t.index(['email']);t.foreign('job_id').references('id').on('career_jobs').onDelete('set null')})
+ await schema.createTable('career_replies',t=>{t.id();t.bigInteger('application_id');t.string('subject');t.text('body');t.string('status').default('sending');t.string('message_id').nullable();t.string('request_key').unique();t.index(['application_id','id']);t.timestamps();t.foreign('application_id').references('id').on('career_applications').onDelete('cascade')})
+},async down({schema}){await schema.dropTable('career_replies');await schema.dropTable('career_applications');await schema.dropTable('career_jobs')}})

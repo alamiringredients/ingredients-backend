@@ -1,0 +1,16 @@
+/* Font files load separately so fallback text can render immediately. */
+:root{--font-cormorant:"Cormorant Garamond","Times New Roman"}
+.font-manrope{--font-manrope:"Manrope",Arial}
+.font-arabic-display{--font-playpen-sans-arabic:"Playpen Arabic","Playpen Fallback",Arial}
+.font-almarai{--font-almarai:"Almarai","Almarai Fallback",Arial}
+
+
+@font-face{font-family:"Playpen Fallback";src:local("Tahoma");size-adjust:98.982%;font-weight:100 800}
+@font-face{font-family:"Almarai Fallback";src:local("Tahoma");size-adjust:103.577%;font-weight:100 900}
+
+@font-face{font-family:"English Serif Fallback";src:local("Times New Roman");size-adjust:100%;ascent-override:95.27%;descent-override:29.59%;line-gap-override:0%}
+html[lang="en"],html[lang="fr"]{--font-cormorant:"Cormorant Garamond","English Serif Fallback","Times New Roman"}
+
+@font-face{font-family:"French Serif Fallback";src:local("Georgia");size-adjust:95%;ascent-override:95.27%;descent-override:29.59%;line-gap-override:0%}
+@font-face{font-family:"French Sans Fallback";src:local("Verdana");size-adjust:100%;font-weight:100 900}
+html[lang="fr"]{--font-cormorant:"Cormorant Garamond","French Serif Fallback","Times New Roman";--font-manrope:"Manrope","French Sans Fallback",Arial}
