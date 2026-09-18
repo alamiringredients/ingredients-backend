@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import {readFile} from 'node:fs/promises'
 import {test} from 'node:test'
 import {PDFDocument} from 'pdf-lib'
 import {zipSync, strToU8} from 'fflate'
@@ -88,6 +89,13 @@ test('CMS validates bytes, filename, MIME and per-type size', async () => {
   await assert.rejects(validateCmsUpload(file(png, 'image.jpg', 'image/jpeg')), /contents/)
   await assert.rejects(validateCmsUpload(file(strToU8('<svg onload="alert(1)"/>'), 'image.svg', 'image/svg+xml')))
   await assert.rejects(validateCmsUpload({name: 'image.png', type: 'image/png', size: 21 * 1024 * 1024, arrayBuffer: async () => {throw Error('must not read')}}), /size/)
+})
+
+test('CMS accepts WebM videos and rejects direct MP4 uploads', async () => {
+  const webm = await readFile(new URL('../public/assets/videos/hero.webm', import.meta.url))
+  await validateCmsUpload(file(webm, 'hero.webm', 'video/webm'))
+  await assert.rejects(validateCmsUpload(file(webm, 'hero.mp4', 'video/mp4')), /allowed/)
+  await assert.rejects(validateCmsUpload(file(webm, 'hero.mp4', 'video/webm')), /allowed/)
 })
 
 test('the Holo-resolved Sharp converts AVIF, gallery and artwork using patched binaries', async () => {

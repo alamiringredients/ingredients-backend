@@ -148,7 +148,7 @@ export function AssetField({field, owner, onChange, conversion='optimized', name
       <label htmlFor={props.id}>{field.label}{props.required&&<RequiredMark/>}</label>
       <input {...props} value={field.value} onChange={(event) => {form?.change(props?.['data-admin-field']);onChange(event.target.value)}} />
       <div className="cms-media-actions">
-        <input ref={input} className="cms-file-input" type="file" accept={field.kind === 'pdf' ? 'application/pdf' : field.kind === 'video' ? 'video/mp4,video/webm' : 'image/jpeg,image/png,image/webp,image/avif,image/x-icon,image/vnd.microsoft.icon'} onChange={(event) => void upload(event.target.files?.[0])} />
+        <input ref={input} className="cms-file-input" type="file" accept={field.kind === 'pdf' ? 'application/pdf' : field.kind === 'video' ? 'video/webm' : 'image/jpeg,image/png,image/webp,image/avif,image/x-icon,image/vnd.microsoft.icon'} onChange={(event) => void upload(event.target.files?.[0])} />
         <CatalogButton disabled={uploading} onClick={() => input.current?.click()}>{uploading ? 'Uploading...' : 'Upload'}</CatalogButton>
         {field.kind!=='pdf'&&<MediaPicker kind={field.kind} disabled={uploading} onSelect={url=>{form?.change(props?.['data-admin-field']);setResult(null);onChange(url)}}/>}
       </div>

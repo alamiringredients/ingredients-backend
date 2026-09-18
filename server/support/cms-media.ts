@@ -12,7 +12,7 @@ export function cmsMediaDefinition({artwork = false}: {artwork?: boolean} = {}) 
         .acceptsMimeTypes(['image/x-icon', 'image/vnd.microsoft.icon', 'application/pdf'])
         .maxSize(10 * megabyte),
       collection('videos')
-        .acceptsMimeTypes(['video/webm', 'video/mp4'])
+        .acceptsMimeTypes(['video/webm'])
         .maxSize(100 * megabyte),
     ],
     conversions: [

@@ -3050,7 +3050,7 @@
                           {
                             "type": "video",
                             "attrs": {
-                              "src": "/assets/videos/heritage-vine.mp4",
+                              "src": "/assets/videos/heritage-vine.webm",
                               "loop": true,
                               "mode": "silent",
                               "label": "الطماطم الناضجة على الكرمة يتم شطفها في الساعة الذهبية في حقل مصري",
@@ -3767,7 +3767,7 @@
                           {
                             "type": "video",
                             "attrs": {
-                              "src": "/assets/videos/heritage-vine.mp4",
+                              "src": "/assets/videos/heritage-vine.webm",
                               "loop": true,
                               "mode": "silent",
                               "label": "Ripe tomatoes on the vine being rinsed at golden hour in an Egyptian field",
@@ -4493,7 +4493,7 @@
                           {
                             "type": "video",
                             "attrs": {
-                              "src": "/assets/videos/heritage-vine.mp4",
+                              "src": "/assets/videos/heritage-vine.webm",
                               "loop": true,
                               "mode": "silent",
                               "label": "Ripe tomates sur la vigne étant rincé à l'heure d'or dans un champ égyptien",

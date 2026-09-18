@@ -47,7 +47,7 @@ async function storeCmsMedia(model:unknown,file:CmsUploadFile,conversion:CmsImag
   // unaugmented firstOrCreate return type from leaking through the action.
   await validateCmsUpload(file)
   const owner = model as CmsMediaOwner
-  const collection = ['video/webm','video/mp4'].includes(file.type)
+  const collection = file.type === 'video/webm'
     ? 'videos'
     : convertibleImageTypes.has(file.type)
       ? 'images'

@@ -40,7 +40,7 @@ test('action groups preserve link appearance and per-link visibility',()=>{
 
 test('video blocks preserve their named caption treatment',()=>{
   const document=validateDocument({type:'doc',content:[
-    {type:'video',attrs:{src:'/video.mp4',caption:'A ledger caption',captionStyle:'ledger'}},
+    {type:'video',attrs:{src:'/video.webm',caption:'A ledger caption',captionStyle:'ledger'}},
   ]})
   assert.equal(document.content[0].attrs?.captionStyle,'ledger')
 })

@@ -11,7 +11,7 @@ function MediaField({label,value,onChange,kind='image'}:{label:string;value:stri
   const {upload}=useEditorMedia()
   const [busy,setBusy]=useState(false),[error,setError]=useState('')
   return <div className="editor-media-field"><label>{label}<input value={value} placeholder="Select or upload media" onChange={e=>onChange(e.target.value)}/></label>
-    <div className="editor-media-actions"><label className="editor-upload">{busy?'Uploading…':'Upload'}<input type="file" disabled={busy} accept={kind==='video'?'video/mp4,video/webm':'image/jpeg,image/png,image/webp,image/avif'} onChange={async e=>{const file=e.target.files?.[0];if(!file)return;setBusy(true);setError('');try{onChange(await upload(file))}catch(err){setError(err instanceof Error?err.message:'Upload failed.')}finally{setBusy(false);e.target.value=''}}}/></label>
+    <div className="editor-media-actions"><label className="editor-upload">{busy?'Uploading…':'Upload'}<input type="file" disabled={busy} accept={kind==='video'?'video/webm':'image/jpeg,image/png,image/webp,image/avif'} onChange={async e=>{const file=e.target.files?.[0];if(!file)return;setBusy(true);setError('');try{onChange(await upload(file))}catch(err){setError(err instanceof Error?err.message:'Upload failed.')}finally{setBusy(false);e.target.value=''}}}/></label>
     <MediaPicker kind={kind} onSelect={onChange}/></div>
     {error&&<p role="alert">{error}</p>}</div>
 }

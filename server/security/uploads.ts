@@ -123,7 +123,6 @@ const cmsTypes: Record<string, {extensions: string[]; max: number}> = {
   'image/avif': {extensions: ['.avif'], max: 20 * megabyte},
   'image/x-icon': {extensions: ['.ico'], max: 10 * megabyte},
   'application/pdf': {extensions: ['.pdf'], max: 10 * megabyte},
-  'video/mp4': {extensions: ['.mp4'], max: 100 * megabyte},
   'video/webm': {extensions: ['.webm'], max: 100 * megabyte},
 }
 
