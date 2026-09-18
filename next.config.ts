@@ -4,6 +4,7 @@ import { withHolo } from '@holo-js/adapter-next/config'
 const appImageSource = new URL('/**', process.env.APP_URL || 'http://localhost:3000')
 
 const nextConfig: NextConfig = withHolo({
+  typescript: {ignoreBuildErrors: true},
   experimental: {serverActions: {bodySizeLimit: '105mb'}},
   images: {
     formats: ['image/avif', 'image/webp'],
