@@ -27,7 +27,7 @@ function LogoutForm() {
   </form>
 }
 
-export function AccountMenu({adminName, canViewSettings}: {adminName: string; canViewSettings: boolean}) {
+export function AccountMenu({adminName, canViewSettings, frontendUrl}: {adminName: string; canViewSettings: boolean; frontendUrl: string}) {
   const [open, setOpen] = useState(false)
   const [keyboard, setKeyboard] = useState(false)
   const container = useRef<HTMLDivElement>(null)
@@ -64,7 +64,7 @@ export function AccountMenu({adminName, canViewSettings}: {adminName: string; ca
     </button>
     <div id={panelId} className="account-menu-panel" hidden={!open} data-keyboard={keyboard}>
       <div className="account-menu-heading"><span>Signed in as</span><strong>{adminName}</strong></div>
-      <Link className="account-menu-item" href="/" onClick={() => setOpen(false)}><AccountIcon name="website"/>View website</Link>
+      <a className="account-menu-item" href={frontendUrl} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}><AccountIcon name="website"/>View website</a>
       <Link className="account-menu-item" href="/admin/change-password" onClick={() => setOpen(false)}><AccountIcon name="password"/>Change password</Link>
       <LogoutForm/>
     </div>

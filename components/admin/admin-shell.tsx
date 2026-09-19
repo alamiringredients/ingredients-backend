@@ -173,7 +173,7 @@ function NavigationIcon({name}: {name: IconName}) {
   return <svg className="admin-nav-icon" viewBox="0 0 24 24" aria-hidden="true">{paths[name]}</svg>
 }
 
-export function AdminShell({children, adminName, access, pendingApplicationsCount = 0}: {children: ReactNode; adminName: string; pendingApplicationsCount?: number; access: {owner: boolean; permissions: RolePermissions}}) {
+export function AdminShell({children, adminName, access, pendingApplicationsCount = 0, frontendUrl}: {children: ReactNode; adminName: string; pendingApplicationsCount?: number; frontendUrl: string; access: {owner: boolean; permissions: RolePermissions}}) {
   const [collapsed, setCollapsed] = useState(false)
   const [tooltip, setTooltip] = useState<NavigationTooltip | null>(null)
   const tooltipDelayRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -248,7 +248,7 @@ export function AdminShell({children, adminName, access, pendingApplicationsCoun
           </div>
         })}
       </nav>
-      <AccountMenu adminName={adminName} canViewSettings={access.owner || hasAdminPermission(access.permissions, 'website_settings', 'view')}/>
+      <AccountMenu adminName={adminName} canViewSettings={access.owner || hasAdminPermission(access.permissions, 'website_settings', 'view')} frontendUrl={frontendUrl}/>
     </aside>
     {typeof document !== 'undefined' && tooltip && createPortal(<span className="admin-nav-floating-tooltip" data-instant={tooltip.instant || undefined} style={{left: tooltip.left, top: tooltip.top}} aria-hidden="true">{tooltip.label}</span>, document.body)}
     <main className="admin-content">{children}</main>
