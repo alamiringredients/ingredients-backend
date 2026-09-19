@@ -3630,7 +3630,7 @@
                   {
                     "type": "video",
                     "attrs": {
-                      "src": "/assets/photos/magnific_slow-smooth-cinematic-dol_0pc4ByNTfW.mp4",
+                      "src": "/assets/videos/aseptic-process.webm",
                       "loop": false,
                       "mode": "player",
                       "label": "جولة في منشأة الأمير للمكونات بمدينة السادات",
@@ -4349,7 +4349,7 @@
                   {
                     "type": "video",
                     "attrs": {
-                      "src": "/assets/photos/magnific_slow-smooth-cinematic-dol_0pc4ByNTfW.mp4",
+                      "src": "/assets/videos/aseptic-process.webm",
                       "loop": false,
                       "mode": "player",
                       "label": "Walkthrough of the Alamir Ingredients facility in Sadat City",
@@ -5073,7 +5073,7 @@
                   {
                     "type": "video",
                     "attrs": {
-                      "src": "/assets/photos/magnific_slow-smooth-cinematic-dol_0pc4ByNTfW.mp4",
+                      "src": "/assets/videos/aseptic-process.webm",
                       "loop": false,
                       "mode": "player",
                       "label": "Promenade à travers l'installation d'ingrédients Alamir à Sadat City",
