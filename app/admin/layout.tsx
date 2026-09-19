@@ -16,10 +16,11 @@ import '@/components/admin/article-manager.css'
 export default async function AdminLayout({children}: {children: ReactNode}) {
   const admin = await getCurrentAdmin()
   if (!admin) redirect('/login')
+  const frontendUrl = config('cors.origins')[0]
   const access = await getAdminNavigationAccess(admin)
   const pendingApplicationsCount = access.owner || hasAdminPermission(access.permissions, 'career_applications', 'view')
     ? await CareerApplication.where('status', 'pending').count()
     : 0
 
-  return <html lang="en" className={`${sans.variable} ${arabicDisplay.variable} ${arabicSans.variable}`}><head><link rel="stylesheet" href={fontStylesheets.latin}/><link rel="stylesheet" href={fontStylesheets.arabic}/></head><body><AdminShell adminName={String(admin.name ?? admin.email ?? 'Administrator')} access={access} pendingApplicationsCount={pendingApplicationsCount} frontendUrl={String(config('app.frontendUrl'))}>{children}</AdminShell></body></html>
+  return <html lang="en" className={`${sans.variable} ${arabicDisplay.variable} ${arabicSans.variable}`}><head><link rel="stylesheet" href={fontStylesheets.latin}/><link rel="stylesheet" href={fontStylesheets.arabic}/></head><body><AdminShell adminName={String(admin.name ?? admin.email ?? 'Administrator')} access={access} pendingApplicationsCount={pendingApplicationsCount} frontendUrl={frontendUrl}>{children}</AdminShell></body></html>
 }

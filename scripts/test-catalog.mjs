@@ -10,7 +10,7 @@ try {
   await build({stdin:{contents:`import './.holo-js/generated/schema.generated.ts'; ${models}; import ${JSON.stringify(`./${testFile}`)}`,resolveDir:process.cwd(),sourcefile:'holo-test-entry.ts'},outfile,bundle:true,platform:'node',format:'esm',packages:'external',jsx:'automatic',plugins:[{name:'render-test-boundaries',setup(build){
     build.onResolve({filter:/^@alamir\/forms\//},args=>({path:join(process.cwd(),'node_modules',args.path+'.ts')}))
     build.onResolve({filter:/^next\/navigation$/},()=>({path:'next/navigation',namespace:'next-navigation'}))
-    build.onLoad({filter:/.*/,namespace:'next-navigation'},()=>({contents:"export const useRouter=()=>({replace(){},refresh(){}}); export const usePathname=()=>'/admin';"}))
+    build.onLoad({filter:/.*/,namespace:'next-navigation'},()=>({contents:"export const useRouter=()=>({replace(){},refresh(){}}); export const usePathname=()=>'/admin'; export const redirect=()=>{};"}))
     build.onResolve({filter:/^next\/link$/},()=>({path:'next/link',namespace:'next-link'}))
     build.onLoad({filter:/.*/,namespace:'next-link'},()=>({contents:"import link from 'next/link.js'; export default link.default;",resolveDir:process.cwd()}))
     build.onResolve({filter:/^next\/image$/},()=>({path:'next/image',namespace:'next-image'}))

@@ -10,7 +10,6 @@ export default defineAppConfig({
   name: env('APP_NAME', "alamir"),
   key: env('APP_KEY'),
   url: env('APP_URL', 'http://localhost:3000'),
-  frontendUrl: env('FRONTEND_URL', 'http://localhost:3000'),
   env: appEnv,
   debug: env('APP_DEBUG', true),
   paths: {
