@@ -4,7 +4,7 @@ import {renderToStaticMarkup} from 'react-dom/server'
 import {loadConfigDirectory} from '@holo-js/config'
 import {AccountMenu} from '@/components/admin/account-menu'
 
-test('frontend config reads FRONTEND_URL', async () => {
+test('CORS origins read FRONTEND_URL', async () => {
   const frontendUrl = 'https://alamir.example'
   const loaded = await loadConfigDirectory(process.cwd(), {
     envName: 'test',
@@ -12,7 +12,7 @@ test('frontend config reads FRONTEND_URL', async () => {
     preferCache: false,
   })
 
-  assert.equal(loaded.all.frontend.url, frontendUrl)
+  assert.equal(loaded.cors.origins[0], frontendUrl)
 })
 
 test('view website opens the configured frontend URL in a new tab', () => {
