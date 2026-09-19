@@ -1673,7 +1673,6 @@
       "setting_key": "news",
       "value": {
         "ar": {
-          "hero": "/assets/photos/magnific_ultrawide-cinematic-macro_poD3BhDehw.webp",
           "empty": "لا توجد أخبار في هذا التصنيف حتى الآن.",
           "title": {
             "type": "doc",
@@ -1795,7 +1794,6 @@
           "contactDescription": "المواصفات وشهادات التحليل والاقتباسات لكل خط في الحافظة."
         },
         "en": {
-          "hero": "/assets/photos/magnific_ultrawide-cinematic-macro_poD3BhDehw.webp",
           "empty": "No news is available in this category yet.",
           "title": {
             "type": "doc",
@@ -1917,7 +1915,6 @@
           "contactDescription": "Specifications, certificates of analysis and quotations for every line in the portfolio."
         },
         "fr": {
-          "hero": "/assets/photos/magnific_ultrawide-cinematic-macro_poD3BhDehw.webp",
           "empty": "Aucune actualité dans cette catégorie pour le moment.",
           "title": {
             "type": "doc",
@@ -2038,6 +2035,7 @@
           "eventsDescription": "Les nouvelles de la compagnie ne sont que la moitié. Le calendrier des salons, les récapitulations des événements passés et la galerie de stand en direct sur leur propre page.",
           "contactDescription": "Spécifications, certificats d'analyse et devis pour chaque ligne du portefeuille."
         },
+        "heroImage": "/assets/photos/magnific_ultrawide-cinematic-macro_poD3BhDehw.webp",
         "sectionVisibility": {
           "hero": true,
           "events": true,

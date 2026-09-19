@@ -14,7 +14,10 @@ import {validateAbout} from '../lib/careers/validation'
 import type {AboutContent} from '../lib/careers/contracts'
 import {getEnquiryInterfaceDefinitions} from '../server/db/seed-data/enquiry-interface-definitions'
 import {getContentTranslationDefinitions} from '../server/db/seed-data/content-translation-definitions'
+import type {NewsPageContent} from '../lib/news/contracts'
+import {validateNewsPage} from '../lib/news/validation'
 import siteContent from '../server/db/seed-data/site-content.json'
+import newsSeed from '../server/db/seed-data/news.json'
 
 test('every admin-managed page seeder provides localized database content',()=>{
   const home=getHomePageSeedContent()
@@ -53,6 +56,19 @@ test('page records require every section visibility toggle',()=>{
   assert.throws(()=>sectionVisibility(undefined,['hero','body'] as const))
   assert.throws(()=>sectionVisibility({hero:false},['hero','body'] as const))
   assert.throws(()=>sectionVisibility({hero:'false'},['hero'] as const))
+})
+
+test('News page uses one shared hero image while keeping alternative text localized',()=>{
+  const seed=siteContent.website_settings.find(setting=>setting.setting_key==='news')!.value as NewsPageContent
+  assert.ok(seed.heroImage)
+  assert.equal('hero' in seed.en,false)
+  assert.notEqual(seed.en.heroAlt,seed.ar.heroAlt)
+  assert.equal(newsSeed.page.heroImage,seed.heroImage)
+  assert.equal('hero' in newsSeed.page.en,false)
+
+  const saved=validateNewsPage(seed)
+  assert.equal(saved.heroImage,seed.heroImage)
+  assert.equal('hero' in saved.en,false)
 })
 
 test('Products page and event records use rich editor documents without translation-owned editorial copy',()=>{

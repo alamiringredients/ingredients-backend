@@ -53,7 +53,7 @@ export function NewsPageManager({initial,canEdit}:{initial:NewsPageContent;canEd
           {tab==='seo'&&<>{text('seoTitle','Page title')}{text('seoDescription','Meta description',true)}</>}
         </CatalogPanel>
         {tab==='hero'&&<CatalogPanel title="Images and media">
-          {newsLocales.map(locale=><AssetField name={`content.${locale}.hero`} key={locale} field={{id:`hero-${locale}`,label:`Hero image · ${locale.toUpperCase()}`,kind:'image',source:'',value:content[locale].hero}} owner={{type:'website-setting',key:'news'}} onChange={value=>update('hero',{...localized('hero'),[locale]:value})}/>)}
+          <AssetField name="heroImage" field={{id:'hero-image',label:'Hero image',kind:'image',source:'',value:content.heroImage}} owner={{type:'website-setting',key:'news'}} onChange={value=>{setContent(previous=>({...previous,heroImage:value}));form.change()}}/>
           {text('heroAlt','Alternative text')}
         </CatalogPanel>}
       </PageManagerShell>

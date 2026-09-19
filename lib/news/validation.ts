@@ -31,11 +31,11 @@ export function validateTaxonomy(input:unknown):Omit<NewsTaxonomy,'id'> {
 }
 export function validateNewsPage(input:unknown):NewsPageContent {
   const page=input as NewsPageContent
-  const out={sectionVisibility:sectionVisibility(page?.sectionVisibility,newsPageSectionKeys)} as NewsPageContent
+  const out={heroImage:contentUrl(page.heroImage,true),sectionVisibility:sectionVisibility(page?.sectionVisibility,newsPageSectionKeys)} as NewsPageContent
   for(const l of newsLocales) {
     const i=page?.[l]
     if(!i)throw new Error('All page languages are required.')
-    out[l]={...Object.fromEntries(['kicker','description','heroAlt','empty','relatedKicker','contactKicker','contactDescription','eventsKicker','eventsDescription','seoTitle','seoDescription'].map(k=>[k,str(i[k as keyof typeof i])])),hero:contentUrl(i.hero,true),title:validateDocument(i.title),relatedTitle:validateDocument(i.relatedTitle),contactTitle:validateDocument(i.contactTitle),eventsTitle:validateDocument(i.eventsTitle)} as NewsPageContent[typeof l]
+    out[l]={...Object.fromEntries(['kicker','description','heroAlt','empty','relatedKicker','contactKicker','contactDescription','eventsKicker','eventsDescription','seoTitle','seoDescription'].map(k=>[k,str(i[k as keyof typeof i])])),title:validateDocument(i.title),relatedTitle:validateDocument(i.relatedTitle),contactTitle:validateDocument(i.contactTitle),eventsTitle:validateDocument(i.eventsTitle)} as NewsPageContent[typeof l]
   }
   return out
 }
