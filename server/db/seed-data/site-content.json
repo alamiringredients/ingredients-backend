@@ -13728,6 +13728,33 @@
         "key": "figures",
         "label": "Key figures",
         "links": [],
+        "stats": [
+          {
+            "id": "founded",
+            "label": "Founded year",
+            "value": 1970
+          },
+          {
+            "id": "export-markets",
+            "label": "Export markets",
+            "value": 60
+          },
+          {
+            "id": "exported-yearly",
+            "label": "Exported per year (thousand MT)",
+            "value": 140
+          },
+          {
+            "id": "imported-yearly",
+            "label": "Imported per year (thousand MT)",
+            "value": 140
+          },
+          {
+            "id": "exhibitions-yearly",
+            "label": "Exhibitions per year",
+            "value": 14
+          }
+        ],
         "texts": [
           {
             "id": "text-23a64aee54",

@@ -76,7 +76,8 @@ export async function saveHomeSectionAction(formData:FormData) {
 
     const data = await validate(formData, saveCmsPayload)
     const section = JSON.parse(data.payload) as HomeSectionContent
-    if (section.key !== data.key || !Array.isArray(section.texts) || !Array.isArray(section.assets) || !Array.isArray(section.links)) {
+    const validStats=section.key!=='figures'||(Array.isArray(section.stats)&&section.stats.length>0&&new Set(section.stats.map(stat=>stat.id)).size===section.stats.length&&section.stats.every(stat=>typeof stat.id==='string'&&typeof stat.label==='string'&&Number.isSafeInteger(stat.value)&&stat.value>=0))
+    if (section.key !== data.key || !Array.isArray(section.texts) || !Array.isArray(section.assets) || !Array.isArray(section.links) || !validStats) {
       return {ok: false, message: 'The section content is not valid.'}
     }
     await persistHomeSection(section)

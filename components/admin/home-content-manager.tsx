@@ -10,7 +10,7 @@ import { AdminFormProvider,FieldError,FormNotice,useAdminForm } from './form-fee
 import { saveHomeSectionAction,saveHomeSeoAction } from '@/app/admin/actions'
 import type { HomeCmsData,HomeSectionContent } from '@/lib/cms/contracts'
 import { useState } from 'react'
-import { AssetField,SeoFields,TextContentFields } from './cms-fields'
+import { AssetField,SeoFields,StatFields,TextContentFields } from './cms-fields'
 import { ConfirmAction } from './confirm-action'
 import { PageManagerShell } from './page-manager-shell'
 
@@ -52,6 +52,7 @@ export function HomeContentManager({initialData}: {initialData: HomeCmsData}) {
             <label className="cms-toggle"><input type="checkbox" checked={section.enabled} onChange={(event) => replaceSection({...section, enabled: event.target.checked})} /><span />Show section</label>
           </div>
           {section.key === 'certifications' && <p className="catalog-help">Names, logos, statuses and documents are managed in Certifications. This section controls the homepage introduction.</p>}
+          {section.key === 'figures' && section.stats && <CatalogPanel title={<>Key figure numbers</>}><StatFields fields={section.stats} onChange={stats=>replaceSection({...section,stats})}/></CatalogPanel>}
           <CatalogPanel title={<>Text in all languages</>}><TextContentFields richTexts={section.richTexts} onRichChange={richTexts=>replaceSection({...section,richTexts})} fields={section.texts} onChange={(texts) => replaceSection({...section, texts})} /></CatalogPanel>
           {!!section.assets.length && <CatalogPanel title={<>Images and media</>}>{section.assets.map((asset, index) => <AssetField field={asset} owner={{type: 'home-section', key: section.key}} onChange={(value) => replaceSection({...section, assets: section.assets.map((item, current) => current === index ? {...item, value} : item)})} key={asset.id} />)}</CatalogPanel>}
           {section.videos && <CatalogPanel><div className="cms-block-title"><h3>Hero video sequence</h3><CatalogButton type="button" onClick={() => replaceSection({...section, videos: [...(section.videos ?? []), '']})} variant="secondary">Add video</CatalogButton></div><div className="cms-sort-list">{section.videos.map((video, index) => <div className="cms-sort-row" key={index}>

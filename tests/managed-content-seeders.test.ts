@@ -36,6 +36,20 @@ test('every admin-managed page seeder provides localized database content',()=>{
   }
 })
 
+test('homepage key figure numbers are owned by the homepage seeder',()=>{
+  const figures=getHomePageSeedContent().sections.find(section=>section.key==='figures')!
+  const expected=[
+    ['founded',1970],
+    ['export-markets',60],
+    ['exported-yearly',140],
+    ['imported-yearly',140],
+    ['exhibitions-yearly',14],
+  ]
+  const source=siteContent.home_sections.find(section=>section.section_key==='figures')!.content
+  assert.deepEqual(figures.stats?.map(stat=>[stat.id,stat.value]),expected)
+  assert.deepEqual(source.stats?.map(stat=>[stat.id,stat.value]),expected)
+})
+
 test('shared seeder merge repairs copied English while retaining administrator edits',()=>{
   const seed={title:{en:'Title',ar:'العنوان',fr:'Titre'},sections:[{key:'hero',label:{en:'Hero',ar:'واجهة',fr:'Bannière'}}]}
   const current={title:{en:'Title',ar:'Title',fr:'Titre personnalisé'},sections:[{key:'hero',label:{en:'Hero',ar:'Hero',fr:'Hero'}}]}

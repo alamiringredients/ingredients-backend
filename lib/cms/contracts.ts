@@ -28,6 +28,12 @@ export type CmsLinkField = {
   value: string
 }
 
+export type CmsStatField = {
+  id: string
+  label: string
+  value: number
+}
+
 export type CmsCardItem = {
   id: string
   title: LocalizedValue
@@ -42,6 +48,7 @@ export type HomeSectionContent = {
   richTexts?: CmsRichText[]
   assets: CmsAssetField[]
   links: CmsLinkField[]
+  stats?: CmsStatField[]
   cards?: CmsCardItem[]
   videos?: string[]
 }

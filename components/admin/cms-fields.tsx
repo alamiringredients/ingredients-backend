@@ -2,7 +2,7 @@
 
 import { uploadCmsFileAction } from '@/app/admin/actions'
 import { MediaPicker } from '@/components/editor/media-picker'
-import type { CmsCardItem,CmsRichText } from '@/lib/cms/contracts'
+import type { CmsCardItem,CmsRichText,CmsStatField } from '@/lib/cms/contracts'
 import { cmsLocales,type CmsAssetField,type CmsTextField,type HomeSeoContent,type LocalizedValue } from '@/lib/cms/contracts'
 import Image from 'next/image'
 import { useId,useRef,useState } from 'react'
@@ -80,6 +80,22 @@ export function TextContentFields({fields, onChange,richTexts=[],onRichChange,ed
     {richTexts.map((field,index)=><LocalizedEditor editable={editable} appearance={field.label.startsWith('Paragraph:')?'body':'heading'} key={field.id} label={field.label} value={field.values} onChange={values=>onRichChange?.(richTexts.map((f,i)=>i===index?{...f,values}:f))}/>)}
     {fields.map((field, index) => richTexts.some(r=>r.sources.includes(field.source))?null:<LocalizedFields label={field.label} value={field.values} multiline={field.source.length > 64} onChange={(values) => update(index, values)} key={field.id} />)}
     {!fields.length && <p className="cms-empty">This section has no editable text.</p>}
+  </div>
+}
+
+export function StatFields({fields,onChange}:{fields:CmsStatField[];onChange:(fields:CmsStatField[])=>void}) {
+  const form=useAdminFields()
+  const path=form?.path(fields)??'stats'
+  return <div className="cms-locale-grid">
+    {fields.map((field,index)=>{
+      const name=`${path}.${index}.value`
+      const props=form?.input(name)
+      return <div className="admin-field" key={field.id}>
+        <label htmlFor={props?.id}>{field.label}</label>
+        <input {...props} type="number" min="0" step="1" required value={field.value} onChange={event=>{form?.change(props?.['data-admin-field']);onChange(fields.map((item,current)=>current===index?{...item,value:Number(event.target.value)}:item))}}/>
+        <FieldError name={name}/>
+      </div>
+    })}
   </div>
 }
 
