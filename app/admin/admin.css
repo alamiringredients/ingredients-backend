@@ -167,7 +167,7 @@ form button[type="submit"]:disabled,form input[type="submit"]:disabled{cursor:wa
 
 .admin-confirm{width:min(440px,calc(100vw - 32px));max-width:none;border:0;background:transparent;padding:0;color:var(--admin-text);overflow:visible;opacity:1;transform:scale(1);transform-origin:center;transition:opacity 180ms cubic-bezier(.23,1,.32,1),transform 180ms cubic-bezier(.23,1,.32,1)}
 .admin-confirm::backdrop{background:rgba(8,20,33,.58);backdrop-filter:blur(3px);transition:background-color 180ms ease}
-.admin-confirm-card{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;border:1px solid #dce0e2;border-radius:16px;background:#fff;padding:22px;box-shadow:0 24px 70px rgba(7,17,28,.25)}
+.admin-confirm-card{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;border:1px solid #dce0e2;border-radius:16px;background:#fff;padding:22px;white-space:normal;box-shadow:0 24px 70px rgba(7,17,28,.25)}
 .admin-confirm-icon{display:grid;width:44px;height:44px;place-items:center;border-radius:12px;background:#fff0ed;color:#b83b29}
 .admin-confirm-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .admin-confirm-copy{align-self:center}.admin-confirm-copy h2{margin:0;font:600 24px/1.15 Georgia,serif;letter-spacing:-.015em}.admin-confirm-copy p{margin:8px 0 0;color:#65717b;font-size:13px;line-height:1.55}
