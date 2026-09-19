@@ -1,14 +1,14 @@
 'use client'
 
 import {useForm} from '@holo-js/adapter-next/client'
-import {loginForm} from '@/app/login/schema'
+import {loginForm} from '@/app/admin/login/schema'
 import {loginAdminAction} from './actions'
 
-export function LoginForm() {
+export function LoginForm({redirectTo}: {redirectTo: string}) {
   const form = useForm(loginForm, {
     initialValues: {email: '', password: '', remember: false},
     validateOn: 'submit',
-    submitter: ({formData}) => loginAdminAction(formData),
+    submitter: ({formData}) => loginAdminAction(formData, redirectTo),
   })
   const emailError = form.errors.first('email')
   const passwordError = form.errors.first('password')

@@ -3,7 +3,6 @@ import {sans,arabicDisplay,arabicSans} from '@/lib/site-fonts'
 import '@/styles/serif-font.css'
 import type {ReactNode} from 'react'
 import {getCurrentAdmin} from '@/server/admin/session'
-import {redirect} from 'next/navigation'
 import {AdminShell} from '@/components/admin/admin-shell'
 import {getAdminNavigationAccess} from '@/server/admin/authorization'
 import {hasAdminPermission} from '@/lib/admin/access'
@@ -15,7 +14,7 @@ import '@/components/admin/article-manager.css'
 
 export default async function AdminLayout({children}: {children: ReactNode}) {
   const admin = await getCurrentAdmin()
-  if (!admin) redirect('/login')
+  if (!admin) return <html lang="en"><body>{children}</body></html>
   const frontendUrl = config('cors.origins')[0]
   const access = await getAdminNavigationAccess(admin)
   const pendingApplicationsCount = access.owner || hasAdminPermission(access.permissions, 'career_applications', 'view')

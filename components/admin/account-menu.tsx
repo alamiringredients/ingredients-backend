@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import {useEffect, useId, useRef, useState} from 'react'
 import {useForm} from '@holo-js/adapter-next/client'
-import {logoutForm} from '@/app/login/schema'
+import {logoutForm} from '@/app/admin/login/schema'
 import {logoutAdminAction} from '@/app/admin/auth-actions'
 
 function AccountIcon({name}: {name: 'website' | 'password' | 'logout' | 'settings'}) {

@@ -6,7 +6,7 @@ import {configureSecurityRuntime, createMemoryRateLimitStore, rateLimit, resetSe
 test('one anonymous visitor cannot exhaust another email address allowance', async () => {
   configureSecurityRuntime({config: {rateLimit: {limiters: {login: {maxAttempts: 5, decaySeconds: 60, key: accountRateLimitKey}}}}, rateLimitStore: createMemoryRateLimitStore()})
   try {
-    const request = new Request('http://localhost/login')
+    const request = new Request('http://localhost/admin/login')
     for (let i = 0; i < 5; i++) await rateLimit('login', {request, values: {email: 'one@example.test'}})
     await assert.rejects(rateLimit('login', {request, values: {email: ' ONE@example.test '}}))
     await rateLimit('login', {request, values: {email: 'two@example.test'}})

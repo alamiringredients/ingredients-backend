@@ -5,8 +5,8 @@ import {csrfProtection} from '@holo-js/security/next/server'
 const protectAdmin = protectRoutes(
   authOnly({
     guard: 'admin',
-    routes: ['/admin/*'],
-    redirectTo: '/login',
+    routes: [pathname => pathname !== '/admin/login' && (pathname === '/admin' || pathname.startsWith('/admin/'))],
+    redirectTo: '/admin/login',
   }),
 )
 const protectCsrf = csrfProtection()
@@ -29,11 +29,15 @@ export async function proxy(request: NextRequest) {
   }
 
   const authResponse = await protectAdmin(request)
-  if (authResponse) return authResponse
+  if (authResponse) {
+    const loginUrl = new URL('/admin/login', request.url)
+    loginUrl.searchParams.set('redirect', `${request.nextUrl.pathname}${request.nextUrl.search}`)
+    return NextResponse.redirect(loginUrl, authResponse.status)
+  }
 
   return NextResponse.next()
 }
 
 export const config = {
-  matcher: ['/api/:path*', '/login', '/admin/:path*'],
+  matcher: ['/api/:path*', '/admin/:path*'],
 }

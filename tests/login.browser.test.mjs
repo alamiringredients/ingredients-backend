@@ -10,7 +10,8 @@ test('failed Holo login preserves email and remember selection', async () => {
     const page = await browser.newPage()
     const errors = []
     page.on('pageerror', error => errors.push(error.message))
-    await page.goto(`${origin}/login`)
+    await page.goto(`${origin}/admin/settings?section=general`)
+    await page.waitForURL(`${origin}/admin/login?redirect=%2Fadmin%2Fsettings%3Fsection%3Dgeneral`)
     const email = `login-regression-${Date.now()}@example.invalid`
     await page.getByLabel('Email address').fill(email)
     await page.getByLabel('Password', {exact: true}).fill('invalid-regression-password')
