@@ -16,7 +16,7 @@ import '@/components/admin/article-manager.css'
 export default async function AdminLayout({children}: {children: ReactNode}) {
   const admin = await getCurrentAdmin()
   if (!admin) redirect('/login')
-  const frontendUrl = config('cors.origins')[0]
+  const frontendUrl = config('frontend.url')
   const access = await getAdminNavigationAccess(admin)
   const pendingApplicationsCount = access.owner || hasAdminPermission(access.permissions, 'career_applications', 'view')
     ? await CareerApplication.where('status', 'pending').count()
