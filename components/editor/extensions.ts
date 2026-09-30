@@ -20,7 +20,7 @@ export const contentExtensions = [
   custom('image',undefined,{captionLabel:'',src:'',alt:'',caption:'',captionPosition:'below',ratio:'original',position:'center'}),
   custom('gallery',undefined,{images:[],caption:'',captionPosition:'below'}),
   custom('facts',undefined,{label:'',items:[]}),
-  custom('textStatistics','block*',{label:'',markSrc:'',markAlt:'',markHref:'',items:[]}),
+  custom('textStatistics','block*',{label:'',useGroupLogo:false,markSrc:'',markAlt:'',markHref:'',items:[]}),
   custom('columns','column{2,3}',{layout:'equal',verticalAlign:'start',mediaSide:'start'}),
   Node.create({name:'column',content:'block+',isolating:true,parseHTML:()=>[{tag:'div[data-column]'}],renderHTML:()=>['div',{'data-column':''},0]}),
   custom('video',undefined,{source:'upload',src:'',mode:'player',autoplay:false,loop:false,muted:false,controls:true,poster:'',caption:'',captionPosition:'below',captionStyle:'plain',label:'',ratio:'16/9'}),
@@ -38,6 +38,9 @@ export const contentExtensions = [
 
 // Inline fields share the editor UI while keeping page layout outside the document.
 export const inlineExtensions = [
-  StarterKit.configure({heading:false,blockquote:false,bulletList:false,orderedList:false,listItem:false,listKeymap:false,code:false,codeBlock:false,horizontalRule:false,strike:false,underline:false,link:false}),
+  StarterKit.configure({heading:{levels:[2,3]},trailingNode:false,blockquote:false,bulletList:false,orderedList:false,listItem:false,listKeymap:false,code:false,codeBlock:false,horizontalRule:false,strike:false,underline:false,link:false}),
+  Extension.create({name:'inlineHeadingAttributes',addGlobalAttributes:()=>[
+    {types:['heading'],attributes:{id:{default:null},hideFromContents:{default:false},visible:{default:true}}},
+  ]}),
   Extension.create({name:'inlineLineBreak',addKeyboardShortcuts(){return {Enter:()=>this.editor.commands.setHardBreak()}}}),
 ]

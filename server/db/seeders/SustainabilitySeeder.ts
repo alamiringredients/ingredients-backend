@@ -4,28 +4,14 @@ import type {SustainabilityPageContent, SustainabilityRecord} from '@/lib/sustai
 import source from '../seed-data/site-content.json'
 import SustainabilityArticle from '@/server/models/SustainabilityArticle'
 import SustainabilityArticleTranslation from '@/server/models/SustainabilityArticleTranslation'
-import SustainabilityGoal from '@/server/models/SustainabilityGoal'
-import SustainabilityGoalTranslation from '@/server/models/SustainabilityGoalTranslation'
 import SustainabilityPublication from '@/server/models/SustainabilityPublication'
 import WebsiteSetting from '@/server/models/WebsiteSetting'
 
 export default defineSeeder({
   name: 'sustainability',
   async run() {
-    const page = source.website_settings.find(row => row.setting_key === 'sustainability')!.value as SustainabilityPageContent
-    const {goals, ...pageContent} = page
-    await WebsiteSetting.firstOrCreate({setting_key: 'sustainability'}, {value: pageContent})
-    await SustainabilityGoal.unguarded(async () => {
-      for (const [sortOrder, goal] of goals.entries()) {
-        if (await SustainabilityGoal.find(goal.id)) continue
-        await DB.table('sustainability_goals').insert({id: goal.id, color: goal.color, image: goal.image, sort_order: sortOrder})
-        const record = await SustainabilityGoal.findOrFail(goal.id)
-        for (const locale of cmsLocales) {
-          await SustainabilityGoalTranslation.create({goal_id: Number(record.id), locale, name: goal.name[locale], alt: goal.alt[locale]})
-        }
-      }
-    })
-
+    const page = source.website_settings.find(row => row.setting_key === 'sustainability')!.value as Omit<SustainabilityPageContent,'goals'>
+    await WebsiteSetting.firstOrCreate({setting_key: 'sustainability'}, {value: page})
     await SustainabilityArticle.unguarded(async () => {
       for (const row of source.sustainability_articles as SustainabilityRecord[]) {
         if (await SustainabilityArticle.find(row.id)) continue

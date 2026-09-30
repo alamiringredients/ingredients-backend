@@ -21,6 +21,7 @@ import '@/server/models/CertificationTypeTranslation'
 import '@/server/models/EventSlot'
 import '@/server/models/ContentTranslationValue'
 import {field, schema, validate, isValidationException} from '@holo-js/forms'
+import countryNames from '@/lib/cms/country-names.json'
 
 type Row = Record<string, unknown>
 
@@ -30,7 +31,7 @@ export async function GET(request: Request) {
     const {locale} = await validate({locale: search.get('locale')?.trim()}, schema({locale: field.string().required().in(['en','ar','fr'])}))
     const stored = await cache.rememberForever(contentCacheKeyForPage('homepage', locale), async () => {
     const definitions = getCertificationTranslationDefinitions()
-    const [seo, sections, certificationRows, certificationTypeRows, translationEntities, events] = await Promise.all([
+    const [seo, sections, certificationRows, certificationTypeRows, translationEntities, events, countryTranslations] = await Promise.all([
       WebsiteSetting.where('setting_key', 'home_seo').firstJson(),
       HomeSection.where('enabled', true).whereNotIn('section_key', ['header', 'footer', 'overlays']).orderBy('sort_order').orderBy('id').getJson(),
       CertificationModel.with({translations: query => query.where('locale', locale)}).where('published', true).orderBy('sort_order').orderBy('id').getJson() as unknown as Promise<Row[]>,
@@ -39,6 +40,7 @@ export async function GET(request: Request) {
         .where(query => query.whereIn('translation_key', definitions.map(entry => entry.key)).orWhere(group => group.whereIn('source', definitions.map(entry => entry.source))))
         .getJson() as unknown as Promise<Row[]>,
       Event.with('slots').where('published', true).where('kind', 'event').orderBy('starts_at').orderBy('id').getJson() as unknown as Promise<Row[]>,
+      ContentTranslation.with({values: query => query.where('locale', locale)}).where('page', 'countries').getJson() as unknown as Promise<Row[]>,
     ])
     if (!seo) throw new Error('Homepage SEO content is missing. Run the home_page seeder.')
     const translations: TranslationEntry[] = translationEntities.map(row => ({
@@ -58,6 +60,7 @@ export async function GET(request: Request) {
       home: {sections: sections.map(row => ({...requireContent(row.content, 'Homepage section'), key: String(row.section_key), label: String(row.label), enabled: true})) as HomeCmsData['sections'], seo: requireContent<HomeCmsData['seo']>(seo.value, 'Homepage SEO')},
       certifications: {certifications, types},
       certificationLabels: buildCertificationInterfaceLabels(values),
+      countries: countryNames.map(value => ({value, label: String((countryTranslations.find(row => row.source === value)?.values as Row[] | undefined)?.[0]?.value ?? '')})),
       events,
     }
   })
@@ -68,7 +71,7 @@ export async function GET(request: Request) {
     starts_at: new Date(String(meeting.starts_at)).toISOString(), ends_at: new Date(String(meeting.ends_at)).toISOString(), timezone: String(meeting.timezone),
     content: requireContent<EventRecord['content']>(meeting.content, 'Event'),
   } : null
-    const data = {home: stored.home, certifications: stored.certifications, certificationLabels: stored.certificationLabels, meetingEvent}
+    const data = {home: stored.home, certifications: stored.certifications, certificationLabels: stored.certificationLabels, countries: stored.countries, meetingEvent}
     return Response.json({data}, {headers: {'Cache-Control': 'public, max-age=0, s-maxage=60, stale-while-revalidate=300'}})
   } catch (error) {
     if (isValidationException(error)) return Response.json({message: error.message}, {status: error.status})

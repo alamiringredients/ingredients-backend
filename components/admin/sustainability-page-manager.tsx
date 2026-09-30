@@ -3,7 +3,6 @@ import { AdminForm } from './admin-form';
 import { CatalogTabButton } from "./catalog-button";
 
 import {
-CatalogField,
 CmsSectionTabs,
 } from "./catalog-layout";
 import { CatalogPanel } from "./catalog-panel";
@@ -42,7 +41,7 @@ export function SustainabilityPageManager({
       });
   };
   return (
-    <AdminFormProvider form={form} reveal={name=>{const [key,index]=name.split(".");setTab(key==="sections"?content.sections[Number(index)]?.key:key==="goals"?"goals":key==="seo"?"seo":"related")}}>
+    <AdminFormProvider form={form} reveal={name=>{const [key,index]=name.split(".");setTab(key==="sections"?content.sections[Number(index)]?.key:key==="seo"?"seo":"related")}}>
     <section onChangeCapture={() => form.change()}>
       <AdminForm
         noValidate
@@ -64,7 +63,6 @@ export function SustainabilityPageManager({
                     key: s.key,
                     label: s.label,
                   })),
-                  { key: "goals", label: "Sustainable development goals" },
                   { key: "related", label: "Related articles" },
                   { key: "seo", label: "SEO and sharing" },
                 ].map((s) => (
@@ -206,49 +204,6 @@ export function SustainabilityPageManager({
                 />
               </CatalogPanel>
             )}
-            {tab === "goals" &&
-              content.goals.map((g, i) => {
-                const change = (patch: Partial<typeof g>) =>
-                  setContent({
-                    ...content,
-                    goals: content.goals.map((v, j) =>
-                      i === j ? { ...v, ...patch } : v,
-                    ),
-                  });
-                return (
-                  <CatalogPanel key={g.id} title={<>Goal {g.id}</>}>
-                    <LocalizedFields
-                      label="Name"
-                      value={g.name}
-                      onChange={(name) => change({ name })}
-                    />
-                    <AssetField name={`goals.${i}.image`}
-                      field={{
-                        id: `goal-${g.id}`,
-                        label: "Goal icon",
-                        kind: "image",
-                        source: "",
-                        value: g.image,
-                      }}
-                      owner={{ type: "website-setting", key: "sustainability" }}
-                      onChange={(image) => change({ image })}
-                    />
-                    <LocalizedFields
-                      label="Alternative text"
-                      value={g.alt}
-                      onChange={(alt) => change({ alt })}
-                    />
-                    <CatalogField name={`goals.${i}.color`}>
-                      <span>Accent color</span>
-                      <input
-                        type="color"
-                        value={g.color}
-                        onChange={(e) => change({ color: e.target.value })}
-                      />
-                    </CatalogField>
-                  </CatalogPanel>
-                );
-              })}
           </PageManagerShell>
         </fieldset>
       </AdminForm>

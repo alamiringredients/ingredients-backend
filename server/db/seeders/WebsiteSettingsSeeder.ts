@@ -1,13 +1,16 @@
 import {defineSeeder} from '@holo-js/db'
 import type {WebsiteSettings} from '@/lib/cms/contracts'
+import {companyInformationDefaults} from '../seed-data/company-information'
 import source from '../seed-data/site-content.json'
 import WebsiteSetting from '@/server/models/WebsiteSetting'
 
 export function getWebsiteSettingsSeedContent():WebsiteSettings {
   return {
+    company: structuredClone(companyInformationDefaults),
     companyProfile:{en:'',ar:'',fr:''},
     siteName:{en:'Alamir Ingredients',ar:'الأمير للمكونات',fr:'Alamir Ingredients'},
     logo:'/assets/logo-full.svg',
+    groupLogo:'/assets/logo.webp',
     icon:'/assets/icon.svg',
     defaultSeoTitle:{en:'Alamir Ingredients | From Field to Formula',ar:'الأمير للمكونات | من الحقل إلى التركيبة',fr:'Alamir Ingredients | Du champ à la formulation'},
     defaultSeoDescription:{

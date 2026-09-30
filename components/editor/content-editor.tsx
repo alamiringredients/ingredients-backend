@@ -21,9 +21,11 @@ export function ContentEditor({
   upload,
   label,
   sectionGoals = false,
+  goalOptions = [],
   blockSet = "default",
 }: {
   sectionGoals?: boolean;
+  goalOptions?: {id:number;name:string}[];
   blockSet?: "default" | "quality";
   value: ContentDocument;
   onChange: (doc: ContentDocument) => void;
@@ -191,7 +193,7 @@ export function ContentEditor({
     "horizontalRule",
   ].find((type) => editor.isActive(type));
   return (
-    <EditorContext.Provider value={{ upload, sectionGoals }}>
+    <EditorContext.Provider value={{ upload, sectionGoals, goalOptions }}>
       <div
         className={`content-editor${compact ? " content-editor--compact" : ""}`}
         lang={locale}

@@ -17,6 +17,7 @@ export default defineSeeder({
     await call('product_catalog')
     await call('certifications')
     await call('news')
+    await call('sustainability_goals')
     await call('sustainability')
     await call('events')
   },

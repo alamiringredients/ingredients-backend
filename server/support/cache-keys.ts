@@ -3,23 +3,23 @@ import type {CmsLocale} from '@/lib/cms/contracts'
 
 export const contentCacheKeys = {
   certifications: 'cms:certifications:v2',
-  homeSections: 'cms:home-sections:v1',
+  homeSections: 'cms:home-sections:v11',
   homeSeo: 'cms:home-seo:v1',
-  websiteSettings: 'cms:website-settings:v1',
+  websiteSettings: 'cms:website-settings:v3',
   downloadsPage: 'cms:downloads-page:v1',
   qualityPage: 'cms:quality-page:v2',
-  products: 'cms:products:v1',
-  productCategories: 'cms:product-categories:v1',
-  catalogSettings: 'cms:catalog-settings:v1',
+  products: 'cms:products:v3',
+  productCategories: 'cms:product-categories:v3',
+  catalogSettings: 'cms:catalog-settings:v3',
   catalogTranslations: 'cms:catalog-translations:v2',
-  contentTranslations: 'cms:content-translations:v2',
+  contentTranslations: 'cms:content-translations:v3',
   events: 'cms:events:v1',
   eventSlots: 'cms:event-slots:v1',
 } as const
 
-export const contentCacheKeyForSetting=(key:string)=>`cms:page:${key}:v1`
+export const contentCacheKeyForSetting=(key:string)=>`cms:page:${key}:v9`
 
-export const contentCacheKeyForPage = (page: 'layout' | 'homepage' | 'about' | 'catalog' | 'catalog-labels' | 'certifications' | 'quality' | 'downloads' | 'news' | 'sustainability' | 'careers' | 'careers-search' | 'events' | 'search' | 'search-page' | `managed:${ManagedPageKey}`, locale: CmsLocale) => `cms:${page}:${locale}:v4`
+export const contentCacheKeyForPage = (page: 'layout' | 'homepage' | 'about' | 'catalog' | 'catalog-labels' | 'certifications' | 'quality' | 'downloads' | 'news' | 'sustainability' | 'careers' | 'careers-search' | 'events' | 'search' | 'search-page' | `managed:${ManagedPageKey}`, locale: CmsLocale) => `cms:${page}:${locale}:v${page==='layout'?11:page==='homepage'?11:12}`
 
 export const layoutCacheKeys = (['en', 'fr', 'ar'] as const).map(locale => contentCacheKeyForPage('layout', locale))
 export const homepageCacheKeys = (['en', 'fr', 'ar'] as const).map(locale => contentCacheKeyForPage('homepage', locale))

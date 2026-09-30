@@ -16,6 +16,7 @@ export async function getSustainabilityGoals(locale?: CmsLocale): Promise<Sustai
     const translations = goal.translations as Record<string, unknown>[]
     return {
       id: Number(goal.id),
+      sortOrder: Number(goal.sort_order),
       color: String(goal.color),
       image: String(goal.image),
       name: Object.fromEntries(translations.map(row => [String(row.locale), String(row.name)])) as SustainabilityGoalData['name'],

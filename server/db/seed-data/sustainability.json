@@ -9255,20 +9255,7 @@
           }
         ],
         "assets": [],
-        "links": [
-          {
-            "id": "link-0",
-            "label": "Request a quote",
-            "source": "/contact",
-            "value": "/contact"
-          },
-          {
-            "id": "link-1",
-            "label": "Certification roadmap",
-            "source": "/quality",
-            "value": "/quality"
-          }
-        ]
+        "links": []
       }
     ],
     "goals": [

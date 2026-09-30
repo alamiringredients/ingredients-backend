@@ -53,6 +53,27 @@
           "ar": "مركزات ومهروسات الطماطم والفواكه عالية الجودة، مصنوعة في مصر لمصنعي الأغذية والمشروبات في جميع أنحاء العالم.",
           "en": "Premium tomato and fruit concentrates and purees, made in Egypt for food and beverage manufacturers worldwide.",
           "fr": "Concentrés et purées de tomates et de fruits haut de gamme, fabriqués en Égypte pour les fabricants de produits alimentaires et de boissons dans le monde entier."
+        },
+        "groupLogo": "/assets/logo.webp",
+        "company": {
+          "email": "sales@alamiringredients.com",
+          "phone": "(+20) 100 32 444 22",
+          "exportPhone": "+20 100 550 5020",
+          "secondaryPhone": "+20 122 157 7774",
+          "website": "https://www.alamiringredients.com",
+          "address": {
+            "en": "Industrial Zone, Sadat City,\nMenoufia, Egypt",
+            "ar": "المنطقة الصناعية، مدينة السادات،\nالمنوفية، مصر",
+            "fr": "Zone industrielle, ville de Sadat,\nMenoufia, Égypte"
+          },
+          "socialLinks": {
+            "facebook": "https://www.facebook.com/",
+            "instagram": "https://www.instagram.com/",
+            "linkedin": "https://www.linkedin.com/",
+            "youtube": "https://www.youtube.com/",
+            "whatsapp": "https://wa.me/201005505020"
+          },
+          "salesWhatsapp": "https://wa.me/201005505020?text=Hello%20Alamir%20Ingredients%2C%20I%20would%20like%20to%20speak%20with%20your%20sales%20team%20about%20tomato%20and%20fruit%20concentrates."
         }
       }
     },
@@ -2060,173 +2081,6 @@
             "fr": "Sustainability at Alamir Ingredients: articles sur l'approvisionnement local, l'emballage aseptique, l'efficacité du traitement, l'eau, les gens et la feuille de route de certification, cartographié vers les Objectifs de développement durable de l'ONU."
           }
         },
-        "goals": [
-          {
-            "id": 2,
-            "alt": {
-              "ar": "هدف الأمم المتحدة للتنمية المستدامة 2 - القضاء على الجوع",
-              "en": "UN Sustainable Development Goal 2 — Zero hunger",
-              "fr": "Objectif de développement durable 2 de l'ONU — Zéro faim"
-            },
-            "name": {
-              "ar": "صفر الجوع",
-              "en": "Zero hunger",
-              "fr": "Zéro faim"
-            },
-            "color": "#DDA63A",
-            "image": "/assets/SDG%20Icons/E_SDG_Icons-02.webp"
-          },
-          {
-            "id": 4,
-            "alt": {
-              "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 4 - التعليم الجيد",
-              "en": "UN Sustainable Development Goal 4 — Quality education",
-              "fr": "Objectif de développement durable 4 de l'ONU — Une éducation de qualité"
-            },
-            "name": {
-              "ar": "تعليم عالي الجودة",
-              "en": "Quality education",
-              "fr": "Éducation de qualité"
-            },
-            "color": "#C5192D",
-            "image": "/assets/SDG%20Icons/E_SDG_Icons-04.webp"
-          },
-          {
-            "id": 6,
-            "alt": {
-              "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 6 - المياه النظيفة والصرف الصحي",
-              "en": "UN Sustainable Development Goal 6 — Clean water and sanitation",
-              "fr": "Objectif de développement durable 6 de l'ONU — Eau potable et assainissement"
-            },
-            "name": {
-              "ar": "المياه النظيفة والصرف الصحي",
-              "en": "Clean water and sanitation",
-              "fr": "Eau potable et assainissement"
-            },
-            "color": "#26BDE2",
-            "image": "/assets/SDG%20Icons/E_SDG_Icons-06.webp"
-          },
-          {
-            "id": 7,
-            "alt": {
-              "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 7 - طاقة نظيفة وبأسعار معقولة",
-              "en": "UN Sustainable Development Goal 7 — Affordable and clean energy",
-              "fr": "Objectif de développement durable 7 de l'ONU — Énergie abordable et propre"
-            },
-            "name": {
-              "ar": "طاقة نظيفة وبأسعار معقولة",
-              "en": "Affordable and clean energy",
-              "fr": "Énergie abordable et propre"
-            },
-            "color": "#FCC30B",
-            "image": "/assets/SDG%20Icons/E_SDG_Icons-07.webp"
-          },
-          {
-            "id": 8,
-            "alt": {
-              "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 8 - العمل اللائق والنمو الاقتصادي",
-              "en": "UN Sustainable Development Goal 8 — Decent work and economic growth",
-              "fr": "Objectif de développement durable 8 de l'ONU — Travail décent et croissance économique"
-            },
-            "name": {
-              "ar": "العمل اللائق والنمو الاقتصادي",
-              "en": "Decent work and economic growth",
-              "fr": "Travail décent et croissance économique"
-            },
-            "color": "#A21942",
-            "image": "/assets/SDG%20Icons/E_SDG_Icons-08.webp"
-          },
-          {
-            "id": 9,
-            "alt": {
-              "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 9 - الصناعة والابتكار والبنية التحتية",
-              "en": "UN Sustainable Development Goal 9 — Industry, innovation and infrastructure",
-              "fr": "Objectif de développement durable 9 de l'ONU — Industrie, innovation et infrastructures"
-            },
-            "name": {
-              "ar": "الصناعة والابتكار والبنية التحتية",
-              "en": "Industry, innovation and infrastructure",
-              "fr": "Industrie, innovation et infrastructures"
-            },
-            "color": "#FD6925",
-            "image": "/assets/SDG%20Icons/E_SDG_Icons-09.webp"
-          },
-          {
-            "id": 11,
-            "alt": {
-              "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 11 - مدن ومجتمعات محلية مستدامة",
-              "en": "UN Sustainable Development Goal 11 — Sustainable cities and communities",
-              "fr": "Objectif de développement durable 11 de l'ONU — Villes et communautés durables"
-            },
-            "name": {
-              "ar": "المدن والمجتمعات المستدامة",
-              "en": "Sustainable cities and communities",
-              "fr": "Villes et communautés durables"
-            },
-            "color": "#FD9D24",
-            "image": "/assets/SDG%20Icons/E_SDG_Icons-11.webp"
-          },
-          {
-            "id": 12,
-            "alt": {
-              "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 12 - الاستهلاك والإنتاج المسؤولان",
-              "en": "UN Sustainable Development Goal 12 — Responsible consumption and production",
-              "fr": "Objectif de développement durable 12 de l'ONU — Une consommation et une production responsables"
-            },
-            "name": {
-              "ar": "الاستهلاك والإنتاج المسؤولان",
-              "en": "Responsible consumption and production",
-              "fr": "Consommation et production responsables"
-            },
-            "color": "#BF8B2E",
-            "image": "/assets/SDG%20Icons/E_SDG_Icons-12.webp"
-          },
-          {
-            "id": 13,
-            "alt": {
-              "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 13 - العمل المناخي",
-              "en": "UN Sustainable Development Goal 13 — Climate action",
-              "fr": "Objectif de développement durable 13 de l'ONU — Action pour le climat"
-            },
-            "name": {
-              "ar": "العمل المناخي",
-              "en": "Climate action",
-              "fr": "Action pour le climat"
-            },
-            "color": "#3F7E44",
-            "image": "/assets/SDG%20Icons/E_SDG_Icons-13.webp"
-          },
-          {
-            "id": 15,
-            "alt": {
-              "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 15 – الحياة على الأرض",
-              "en": "UN Sustainable Development Goal 15 — Life on land",
-              "fr": "Objectif de développement durable 15 de l'ONU — La vie sur terre"
-            },
-            "name": {
-              "ar": "الحياة على الأرض",
-              "en": "Life on land",
-              "fr": "La vie sur terre"
-            },
-            "color": "#56C02B",
-            "image": "/assets/SDG%20Icons/E_SDG_Icons-15.webp"
-          },
-          {
-            "id": 17,
-            "alt": {
-              "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 17 - الشراكات من أجل تحقيق الأهداف",
-              "en": "UN Sustainable Development Goal 17 — Partnerships for the goals",
-              "fr": "Objectif de développement durable 17 de l'ONU — Partenariats pour les objectifs"
-            },
-            "name": {
-              "ar": "شراكات من أجل الأهداف",
-              "en": "Partnerships for the goals",
-              "fr": "Partenariats pour les objectifs"
-            },
-            "color": "#19486A",
-            "image": "/assets/SDG%20Icons/E_SDG_Icons-17.webp"
-          }
-        ],
         "sections": [
           {
             "key": "section-0",
@@ -2580,20 +2434,7 @@
           {
             "key": "section-2",
             "label": "Contact",
-            "links": [
-              {
-                "id": "link-0",
-                "label": "Request a quote",
-                "value": "/contact",
-                "source": "/contact"
-              },
-              {
-                "id": "link-1",
-                "label": "Certification roadmap",
-                "value": "/quality",
-                "source": "/quality"
-              }
-            ],
+            "links": [],
             "texts": [
               {
                 "id": "2e0e11631d4c",
@@ -3148,10 +2989,11 @@
                         }
                       ],
                       "label": "مجموعة الأمير في لمحة",
-                      "markSrc": "/assets/logo-group-mark.webp",
+                      "markSrc": "",
                       "markAlt": "مجموعة الأمير",
                       "markHref": "https://www.alamireg.com/",
-                      "visible": true
+                      "visible": true,
+                      "useGroupLogo": true
                     },
                     "content": []
                   },
@@ -3865,10 +3707,11 @@
                         }
                       ],
                       "label": "Al Amir Group at a glance",
-                      "markSrc": "/assets/logo-group-mark.webp",
+                      "markSrc": "",
                       "markAlt": "Alamir Group",
                       "markHref": "https://www.alamireg.com/",
-                      "visible": true
+                      "visible": true,
+                      "useGroupLogo": true
                     }
                   },
                   {
@@ -4591,10 +4434,11 @@
                         }
                       ],
                       "label": "Al Amir Groupe en bref",
-                      "markSrc": "/assets/logo-group-mark.webp",
+                      "markSrc": "",
                       "markAlt": "Groupe Alamir",
                       "markHref": "https://www.alamireg.com/",
-                      "visible": true
+                      "visible": true,
+                      "useGroupLogo": true
                     },
                     "content": []
                   },
@@ -5899,7 +5743,7 @@
             "en": "That page does not exist. Find products, quality, downloads and contact details here.",
             "fr": "Cette page n'existe pas. Trouvez les produits, la qualité, les téléchargements et les coordonnées ici."
           },
-          "socialImage": "",
+          "socialImage": "/assets/hero-poster.webp",
           "socialTitle": {
             "ar": "لم يتم العثور على الصفحة — مكونات الامير",
             "en": "Page not found — Alamir Ingredients",
@@ -6185,7 +6029,7 @@
                 }
               }
             ],
-            "label": "Section 2",
+            "label": "Page recovery links",
             "links": [],
             "texts": [],
             "assets": [],
@@ -6210,7 +6054,7 @@
             "en": "Tomato concentrates, fruit concentrates, fruit purees and chilli concentrate in aseptic bulk formats.",
             "fr": "Tomato concentrates, fruit concentrates, fruit purees and chilli concentrate in aseptic bulk formats."
           },
-          "socialImage": "",
+          "socialImage": "/assets/products/fruit-concentrates/gallery-a.webp",
           "socialTitle": {
             "ar": "Products — Alamir Ingredients",
             "en": "Products — Alamir Ingredients",
@@ -6444,15 +6288,8 @@
           },
           {
             "key": "collection",
-            "label": "Collection",
-            "links": [
-              {
-                "id": "link-eda4eb3e35",
-                "label": "Link: tell the export team what you need",
-                "value": "/contact",
-                "source": "/contact"
-              }
-            ],
+            "label": "Product catalogue",
+            "links": [],
             "texts": [
               {
                 "id": "text-d18d10e3e4",
@@ -6803,21 +6640,8 @@
           },
           {
             "key": "deep",
-            "label": "Deep",
-            "links": [
-              {
-                "id": "link-54411e5483",
-                "label": "Link: Download specification sheets",
-                "value": "/downloads",
-                "source": "/downloads"
-              },
-              {
-                "id": "link-eda4eb3e35",
-                "label": "Link: Request a quote",
-                "value": "/contact",
-                "source": "/contact"
-              }
-            ],
+            "label": "Certifications and documentation",
+            "links": [],
             "texts": [
               {
                 "id": "text-0c50402110",
@@ -6858,163 +6682,9 @@
                   "en": "Technical data sheets, specifications and certificates of analysis are available for every line. See the full certification programme on the home page, or request documentation directly.",
                   "fr": "Des fiches techniques, des spécifications et des certificats d'analyse sont disponibles pour chaque ligne. Voir le programme de certification complet sur la page d'accueil, ou demander la documentation directement."
                 }
-              },
-              {
-                "id": "text-6e23038391",
-                "label": "ISO 45001",
-                "source": "ISO 45001",
-                "values": {
-                  "ar": "ISO 45001",
-                  "en": "ISO 45001",
-                  "fr": "ISO 45001"
-                }
-              },
-              {
-                "id": "text-f90da3cfe4",
-                "label": "ISO 14001",
-                "source": "ISO 14001",
-                "values": {
-                  "ar": "ISO 14001",
-                  "en": "ISO 14001",
-                  "fr": "ISO 14001"
-                }
-              },
-              {
-                "id": "text-f33f7a660f",
-                "label": "BRCGS",
-                "source": "BRCGS",
-                "values": {
-                  "ar": "BRCGS",
-                  "en": "BRCGS",
-                  "fr": "BRCGS"
-                }
-              },
-              {
-                "id": "text-4cd4dade3d",
-                "label": "FSSC 22000",
-                "source": "FSSC 22000",
-                "values": {
-                  "ar": "FSSC 22000",
-                  "en": "FSSC 22000",
-                  "fr": "FSSC 22000"
-                }
-              },
-              {
-                "id": "text-e1c9d15468",
-                "label": "NFSA",
-                "source": "NFSA",
-                "values": {
-                  "ar": "NFSA",
-                  "en": "NFSA",
-                  "fr": "NFSA"
-                }
-              },
-              {
-                "id": "text-ed82f4676c",
-                "label": "Halal",
-                "source": "Halal",
-                "values": {
-                  "ar": "Halal",
-                  "en": "Halal",
-                  "fr": "Halal"
-                }
-              },
-              {
-                "id": "text-ebe9bb66a7",
-                "label": "Kosher",
-                "source": "Kosher",
-                "values": {
-                  "ar": "Kosher",
-                  "en": "Kosher",
-                  "fr": "Kosher"
-                }
-              },
-              {
-                "id": "text-8ecf341da3",
-                "label": "FDA",
-                "source": "FDA",
-                "values": {
-                  "ar": "FDA",
-                  "en": "FDA",
-                  "fr": "FDA"
-                }
-              },
-              {
-                "id": "text-4d114f3003",
-                "label": "SEDEX",
-                "source": "SEDEX",
-                "values": {
-                  "ar": "SEDEX",
-                  "en": "SEDEX",
-                  "fr": "SEDEX"
-                }
               }
             ],
-            "assets": [
-              {
-                "id": "asset-7b3ebee938",
-                "kind": "image",
-                "label": "certs/iso 45001.webp",
-                "value": "/assets/certs/iso-45001.webp",
-                "source": "/assets/certs/iso-45001.webp"
-              },
-              {
-                "id": "asset-70a754bb2f",
-                "kind": "image",
-                "label": "certs/iso 14001.webp",
-                "value": "/assets/certs/iso-14001.webp",
-                "source": "/assets/certs/iso-14001.webp"
-              },
-              {
-                "id": "asset-c19955bb4b",
-                "kind": "image",
-                "label": "certs/brcgs.webp",
-                "value": "/assets/certs/brcgs.webp",
-                "source": "/assets/certs/brcgs.webp"
-              },
-              {
-                "id": "asset-6eaf657360",
-                "kind": "image",
-                "label": "certs/fssc 22000.webp",
-                "value": "/assets/certs/fssc-22000.webp",
-                "source": "/assets/certs/fssc-22000.webp"
-              },
-              {
-                "id": "asset-45bd5726d5",
-                "kind": "image",
-                "label": "certs/nfsa.webp",
-                "value": "/assets/certs/nfsa.webp",
-                "source": "/assets/certs/nfsa.webp"
-              },
-              {
-                "id": "asset-b526964134",
-                "kind": "image",
-                "label": "certs/halal.webp",
-                "value": "/assets/certs/halal.webp",
-                "source": "/assets/certs/halal.webp"
-              },
-              {
-                "id": "asset-46bbca263a",
-                "kind": "image",
-                "label": "certs/kosher.webp",
-                "value": "/assets/certs/kosher.webp",
-                "source": "/assets/certs/kosher.webp"
-              },
-              {
-                "id": "asset-2e90a58f0c",
-                "kind": "image",
-                "label": "certs/fda.webp",
-                "value": "/assets/certs/fda.webp",
-                "source": "/assets/certs/fda.webp"
-              },
-              {
-                "id": "asset-079f34e650",
-                "kind": "image",
-                "label": "certs/sedex smeta.webp",
-                "value": "/assets/certs/sedex-smeta.webp",
-                "source": "/assets/certs/sedex-smeta.webp"
-              }
-            ],
+            "assets": [],
             "enabled": true,
             "richTexts": [
               {
@@ -7187,7 +6857,7 @@
             "en": "Trade shows, facility visits and company announcements. Where to meet the Alamir Ingredients export team.",
             "fr": "Foires commerciales, visites d'établissements et annonces d'entreprises. Où rencontrer l'équipe d'exportation d'Alamir Ingredients."
           },
-          "socialImage": "",
+          "socialImage": "/assets/photos/team-corridor.webp",
           "socialTitle": {
             "ar": "الأحداث – مكونات الأمير",
             "en": "Events — Alamir Ingredients",
@@ -7411,15 +7081,8 @@
           },
           {
             "key": "section-2",
-            "label": "Section 2",
-            "links": [
-              {
-                "id": "link-ac75303363",
-                "label": "Link: Arrange a meeting",
-                "value": "/book-a-meeting",
-                "source": "/book-a-meeting"
-              }
-            ],
+            "label": "Upcoming events",
+            "links": [],
             "texts": [
               {
                 "id": "text-523baab918",
@@ -7548,7 +7211,7 @@
           },
           {
             "key": "section-3",
-            "label": "Section 3",
+            "label": "Past events",
             "links": [],
             "texts": [
               {
@@ -7678,7 +7341,7 @@
           },
           {
             "key": "section-4",
-            "label": "Section 4",
+            "label": "Event gallery",
             "links": [],
             "texts": [
               {
@@ -7867,7 +7530,7 @@
             "en": "Sealed 1 kg sample plus TDS within five business days. Talk to the export team.",
             "fr": "Échantillon scellé de 1 kg plus TDS dans les cinq jours ouvrables. Parlez à l'équipe d'exportation."
           },
-          "socialImage": "",
+          "socialImage": "/assets/products/packaging/ibc.webp",
           "socialTitle": {
             "ar": "الاتصال – مكونات الامير",
             "en": "Contact — Alamir Ingredients",
@@ -8101,57 +7764,8 @@
           },
           {
             "key": "section-2",
-            "label": "Section 2",
-            "links": [
-              {
-                "id": "link-943280bbe8",
-                "label": "Link: www.alamiringredients.com",
-                "value": "https://www.alamiringredients.com",
-                "source": "https://www.alamiringredients.com"
-              },
-              {
-                "id": "link-108ec1825c",
-                "label": "Link: https://www.facebook.com/",
-                "value": "https://www.facebook.com/",
-                "source": "https://www.facebook.com/"
-              },
-              {
-                "id": "link-e730d810bf",
-                "label": "Link: https://www.instagram.com/",
-                "value": "https://www.instagram.com/",
-                "source": "https://www.instagram.com/"
-              },
-              {
-                "id": "link-d0d41a7810",
-                "label": "Link: https://www.linkedin.com/",
-                "value": "https://www.linkedin.com/",
-                "source": "https://www.linkedin.com/"
-              },
-              {
-                "id": "link-fef0e980f7",
-                "label": "Link: https://www.youtube.com/",
-                "value": "https://www.youtube.com/",
-                "source": "https://www.youtube.com/"
-              },
-              {
-                "id": "link-e2cff42b9c",
-                "label": "Link: https://wa.me/201005505020",
-                "value": "https://wa.me/201005505020",
-                "source": "https://wa.me/201005505020"
-              },
-              {
-                "id": "link-746697eb77",
-                "label": "Link: privacy policy",
-                "value": "/privacy",
-                "source": "/privacy"
-              },
-              {
-                "id": "link-a592c70870",
-                "label": "Link: Contact sales on WhatsApp",
-                "value": "https://wa.me/201005505020?text=Hello%20Alamir%20Ingredients%2C%20I%20would%20like%20to%20speak%20with%20your%20sales%20team%20about%20tomato%20and%20fruit%20concentrates.",
-                "source": "https://wa.me/201005505020?text=Hello%20Alamir%20Ingredients%2C%20I%20would%20like%20to%20speak%20with%20your%20sales%20team%20about%20tomato%20and%20fruit%20concentrates."
-              }
-            ],
+            "label": "Contact details and enquiry form",
+            "links": [],
             "texts": [
               {
                 "id": "text-d4ec65ae3c",
@@ -8174,16 +7788,6 @@
                 }
               },
               {
-                "id": "text-136aa47c6e",
-                "label": "sales@alamiringredients.com",
-                "source": "sales@alamiringredients.com",
-                "values": {
-                  "ar": "sales@alamiringredients.com",
-                  "en": "sales@alamiringredients.com",
-                  "fr": "vente@alamiringredients.com"
-                }
-              },
-              {
                 "id": "text-77064d5265",
                 "label": "Phone",
                 "source": "Phone",
@@ -8191,16 +7795,6 @@
                   "ar": "هاتف",
                   "en": "Phone",
                   "fr": "Téléphone"
-                }
-              },
-              {
-                "id": "text-0684070f2c",
-                "label": "(+20) 100 32 444 22",
-                "source": "(+20) 100 32 444 22",
-                "values": {
-                  "ar": "(+20) 100 32 444 22",
-                  "en": "(+20) 100 32 444 22",
-                  "fr": "(+20) 100 32 444 22"
                 }
               },
               {
@@ -8214,16 +7808,6 @@
                 }
               },
               {
-                "id": "text-0f74f15a75",
-                "label": "www.alamiringredients.com",
-                "source": "www.alamiringredients.com",
-                "values": {
-                  "ar": "www.alamiringredients.com",
-                  "en": "www.alamiringredients.com",
-                  "fr": "Le site www.alamiringredients.com"
-                }
-              },
-              {
                 "id": "text-d70f93df5e",
                 "label": "Address",
                 "source": "Address",
@@ -8231,26 +7815,6 @@
                   "ar": "عنوان",
                   "en": "Address",
                   "fr": "Adresse"
-                }
-              },
-              {
-                "id": "text-191aed683a",
-                "label": "Industrial Zone, Sadat City,",
-                "source": "Industrial Zone, Sadat City,",
-                "values": {
-                  "ar": "المنطقة الصناعية، مدينة السادات،",
-                  "en": "Industrial Zone, Sadat City,",
-                  "fr": "Zone industrielle, ville de Sadat,"
-                }
-              },
-              {
-                "id": "text-930e0d2569",
-                "label": "Menoufia, Egypt",
-                "source": "Menoufia, Egypt",
-                "values": {
-                  "ar": "المنوفية، مصر",
-                  "en": "Menoufia, Egypt",
-                  "fr": "Menoufia, Égypte"
                 }
               },
               {
@@ -8276,91 +7840,7 @@
             ],
             "assets": [],
             "enabled": true,
-            "richTexts": [
-              {
-                "id": "rich-13203a8640e3",
-                "label": "Paragraph: Industrial Zone, Sadat City,Menoufia, Egypt",
-                "source": "Industrial Zone, Sadat City,Menoufia, Egypt",
-                "values": {
-                  "ar": {
-                    "type": "doc",
-                    "content": [
-                      {
-                        "type": "paragraph",
-                        "content": [
-                          {
-                            "text": "المنطقة الصناعية، مدينة السادات،",
-                            "type": "text"
-                          },
-                          {
-                            "type": "hardBreak"
-                          },
-                          {
-                            "text": "المنوفية، مصر",
-                            "type": "text"
-                          }
-                        ],
-                        "attrs": {
-                          "visible": true
-                        }
-                      }
-                    ]
-                  },
-                  "en": {
-                    "type": "doc",
-                    "content": [
-                      {
-                        "type": "paragraph",
-                        "content": [
-                          {
-                            "text": "Industrial Zone, Sadat City,",
-                            "type": "text"
-                          },
-                          {
-                            "type": "hardBreak"
-                          },
-                          {
-                            "text": "Menoufia, Egypt",
-                            "type": "text"
-                          }
-                        ],
-                        "attrs": {
-                          "visible": true
-                        }
-                      }
-                    ]
-                  },
-                  "fr": {
-                    "type": "doc",
-                    "content": [
-                      {
-                        "type": "paragraph",
-                        "content": [
-                          {
-                            "text": "Zone industrielle, ville de Sadat,",
-                            "type": "text"
-                          },
-                          {
-                            "type": "hardBreak"
-                          },
-                          {
-                            "text": "Menoufia, Égypte",
-                            "type": "text"
-                          }
-                        ],
-                        "attrs": {
-                          "visible": true
-                        }
-                      }
-                    ]
-                  }
-                },
-                "sources": [
-                  "Industrial Zone, Sadat City,",
-                  "Menoufia, Egypt"
-                ]
-              }
-            ]
+            "richTexts": []
           }
         ]
       }
@@ -8380,7 +7860,7 @@
             "en": "Pick a slot with the Alamir Ingredients export team — 30 minutes, on video or on our stand at the show.",
             "fr": "Choisissez une machine à sous avec l'équipe d'exportation d'Alamir Ingredients — 30 minutes, en vidéo ou sur notre stand au salon."
           },
-          "socialImage": "",
+          "socialImage": "/assets/photos/book-meeting.webp",
           "socialTitle": {
             "ar": "حجز اجتماع – مكونات الامير",
             "en": "Book a meeting — Alamir Ingredients",
@@ -8614,39 +8094,8 @@
           },
           {
             "key": "bk-band",
-            "label": "Bk band",
-            "links": [
-              {
-                "id": "link-8e47fde48d",
-                "label": "Link: Back to home",
-                "value": "/index",
-                "source": "/index"
-              },
-              {
-                "id": "link-eda4eb3e35",
-                "label": "Link: Send an enquiry →",
-                "value": "/contact",
-                "source": "/contact"
-              },
-              {
-                "id": "link-746697eb77",
-                "label": "Link: privacy policy",
-                "value": "/privacy",
-                "source": "/privacy"
-              },
-              {
-                "id": "link-b164a2192d",
-                "label": "Link: Company news & events",
-                "value": "/news",
-                "source": "/news"
-              },
-              {
-                "id": "link-54411e5483",
-                "label": "Link: Browse downloads",
-                "value": "/downloads",
-                "source": "/downloads"
-              }
-            ],
+            "label": "Meeting booking and confirmation",
+            "links": [],
             "texts": [
               {
                 "id": "text-3961c71126",
@@ -8999,15 +8448,7 @@
                 }
               }
             ],
-            "assets": [
-              {
-                "id": "asset-563e0a483f",
-                "kind": "image",
-                "label": "icon.svg",
-                "value": "/assets/icon.svg",
-                "source": "/assets/icon.svg"
-              }
-            ],
+            "assets": [],
             "enabled": true,
             "richTexts": [
               {
@@ -9709,7 +9150,7 @@
             "en": "What personal data Alamir Ingredients collects through this website, why, and how to have it removed.",
             "fr": "Quelles données personnelles Alamir Ingredients collecte à travers ce site, pourquoi, et comment le faire supprimer."
           },
-          "socialImage": "",
+          "socialImage": "/assets/hero-poster.webp",
           "socialTitle": {
             "ar": "سياسة الخصوصية – مكونات الامير",
             "en": "Privacy policy — Alamir Ingredients",
@@ -9925,21 +9366,8 @@
           },
           {
             "key": "section-2",
-            "label": "Section 2",
-            "links": [
-              {
-                "id": "link-f0459ea7d1",
-                "label": "Link: Read the cookie notice",
-                "value": "/cookies",
-                "source": "/cookies"
-              },
-              {
-                "id": "link-eda4eb3e35",
-                "label": "Link: contact form",
-                "value": "/contact",
-                "source": "/contact"
-              }
-            ],
+            "label": "Privacy policy",
+            "links": [],
             "texts": [
               {
                 "id": "text-7e439c353e",
@@ -10703,7 +10131,7 @@
             "en": "The terms on which the Alamir Ingredients website is provided.",
             "fr": "Les termes sur lesquels le site Alamir Ingredients est fourni."
           },
-          "socialImage": "",
+          "socialImage": "/assets/hero-poster.webp",
           "socialTitle": {
             "ar": "شروط الاستخدام – مكونات الامير",
             "en": "Terms of use — Alamir Ingredients",
@@ -10919,15 +10347,8 @@
           },
           {
             "key": "section-2",
-            "label": "Section 2",
-            "links": [
-              {
-                "id": "link-eda4eb3e35",
-                "label": "Link: contact form",
-                "value": "/contact",
-                "source": "/contact"
-              }
-            ],
+            "label": "Terms and conditions",
+            "links": [],
             "texts": [
               {
                 "id": "text-7e439c353e",
@@ -11651,7 +11072,7 @@
             "en": "The cookies this site sets, what they do and how to change your choice.",
             "fr": "Les cookies que ce site définit, ce qu'ils font et comment changer votre choix."
           },
-          "socialImage": "",
+          "socialImage": "/assets/hero-poster.webp",
           "socialTitle": {
             "ar": "إشعار ملفات تعريف الارتباط – مكونات الأمير",
             "en": "Cookie notice — Alamir Ingredients",
@@ -11867,15 +11288,8 @@
           },
           {
             "key": "section-2",
-            "label": "Section 2",
-            "links": [
-              {
-                "id": "link-eda4eb3e35",
-                "label": "Link: contact form",
-                "value": "/contact",
-                "source": "/contact"
-              }
-            ],
+            "label": "Cookie policy",
+            "links": [],
             "texts": [
               {
                 "id": "text-7e439c353e",
@@ -12366,7 +11780,7 @@
             "en": "Search products, specifications, certifications, downloads and news.",
             "fr": "Rechercher les produits, spécifications, certifications, téléchargements et nouvelles."
           },
-          "socialImage": "",
+          "socialImage": "/assets/hero-poster.webp",
           "socialTitle": {
             "ar": "بحث - مكونات الامير",
             "en": "Search — Alamir Ingredients",
@@ -12582,15 +11996,8 @@
           },
           {
             "key": "section-2",
-            "label": "Section 2",
-            "links": [
-              {
-                "id": "link-eda4eb3e35",
-                "label": "Link: ask the export team",
-                "value": "/contact",
-                "source": "/contact"
-              }
-            ],
+            "label": "Search results",
+            "links": [],
             "texts": [
               {
                 "id": "text-021c90e64f",
@@ -12645,7 +12052,7 @@
             "en": "Your enquiry has reached the Alamir Ingredients export team.",
             "fr": "Votre demande est adressée à l'équipe d'exportation d'Alamir Ingredients."
           },
-          "socialImage": "",
+          "socialImage": "/assets/hero-poster.webp",
           "socialTitle": {
             "ar": "شكرا لك - مكونات الامير",
             "en": "Thank you — Alamir Ingredients",
@@ -12661,20 +12068,7 @@
           {
             "key": "hero",
             "label": "Hero",
-            "links": [
-              {
-                "id": "link-8e47fde48d",
-                "label": "Link: Back to home",
-                "value": "/index",
-                "source": "/index"
-              },
-              {
-                "id": "link-54411e5483",
-                "label": "Link: Browse downloads",
-                "value": "/downloads",
-                "source": "/downloads"
-              }
-            ],
+            "links": [],
             "texts": [
               {
                 "id": "text-43d8013d6f",
@@ -12864,27 +12258,8 @@
           },
           {
             "key": "section-2",
-            "label": "Section 2",
-            "links": [
-              {
-                "id": "link-45b13aa030",
-                "label": "Link: 01Quality & capability The certification roadmap, the CFT process lin...",
-                "value": "/quality",
-                "source": "/quality"
-              },
-              {
-                "id": "link-721825360c",
-                "label": "Link: 02Product portfolio Tomato concentrates, fruit concentrates, fruit pu...",
-                "value": "/products",
-                "source": "/products"
-              },
-              {
-                "id": "link-0efb4cf9ed",
-                "label": "Link: 03Where to meet us Trade shows across the next twelve months, and how...",
-                "value": "/events",
-                "source": "/events"
-              }
-            ],
+            "label": "Recommended next steps",
+            "links": [],
             "texts": [
               {
                 "id": "text-4573744c51",
@@ -13728,33 +13103,6 @@
         "key": "figures",
         "label": "Key figures",
         "links": [],
-        "stats": [
-          {
-            "id": "founded",
-            "label": "Founded year",
-            "value": 1970
-          },
-          {
-            "id": "export-markets",
-            "label": "Export markets",
-            "value": 60
-          },
-          {
-            "id": "exported-yearly",
-            "label": "Exported per year (thousand MT)",
-            "value": 140
-          },
-          {
-            "id": "imported-yearly",
-            "label": "Imported per year (thousand MT)",
-            "value": 140
-          },
-          {
-            "id": "exhibitions-yearly",
-            "label": "Exhibitions per year",
-            "value": 14
-          }
-        ],
         "texts": [
           {
             "id": "text-23a64aee54",
@@ -13777,106 +13125,6 @@
             }
           },
           {
-            "id": "text-d6c4d8ffa0",
-            "label": "Founded",
-            "source": "Founded",
-            "values": {
-              "ar": "تأسست",
-              "en": "Founded",
-              "fr": "Fondée"
-            }
-          },
-          {
-            "id": "text-148e7c7e1d",
-            "label": "Behera, Egypt",
-            "source": "Behera, Egypt",
-            "values": {
-              "ar": "البحيرة، مصر",
-              "en": "Behera, Egypt",
-              "fr": "Behera, Égypte"
-            }
-          },
-          {
-            "id": "text-0ea42b74da",
-            "label": "Export markets",
-            "source": "Export markets",
-            "values": {
-              "ar": "أسواق التصدير",
-              "en": "Export markets",
-              "fr": "Marchés d'exportation"
-            }
-          },
-          {
-            "id": "text-1f0c8c4f22",
-            "label": "Across four regions",
-            "source": "Across four regions",
-            "values": {
-              "ar": "عبر أربع مناطق",
-              "en": "Across four regions",
-              "fr": "Quatre régions"
-            }
-          },
-          {
-            "id": "text-3c928e49bb",
-            "label": "MT",
-            "source": "MT",
-            "values": {
-              "ar": "طن متري",
-              "en": "MT",
-              "fr": "Pays"
-            }
-          },
-          {
-            "id": "text-3856d6afed",
-            "label": "Exported / year",
-            "source": "Exported / year",
-            "values": {
-              "ar": "تصدير / سنة",
-              "en": "Exported / year",
-              "fr": "Exportation / année"
-            }
-          },
-          {
-            "id": "text-5047917f56",
-            "label": "Group wide",
-            "source": "Group-wide",
-            "values": {
-              "ar": "على مستوى المجموعة",
-              "en": "Group-wide",
-              "fr": "À l ' échelle du groupe"
-            }
-          },
-          {
-            "id": "text-9d1a275bad",
-            "label": "Imported / year",
-            "source": "Imported / year",
-            "values": {
-              "ar": "مستورد / سنة",
-              "en": "Imported / year",
-              "fr": "Importé / année"
-            }
-          },
-          {
-            "id": "text-1a65fe17d3",
-            "label": "Exhibitions / yr",
-            "source": "Exhibitions / yr",
-            "values": {
-              "ar": "المعارض / سنة",
-              "en": "Exhibitions / yr",
-              "fr": "Expositions / année"
-            }
-          },
-          {
-            "id": "text-fec48e3ac3",
-            "label": "Global trade events",
-            "source": "Global trade events",
-            "values": {
-              "ar": "أحداث التجارة العالمية",
-              "en": "Global trade events",
-              "fr": "Manifestations commerciales mondiales"
-            }
-          },
-          {
             "id": "text-3bd46079dc",
             "label": "Key figures",
             "source": "Key figures",
@@ -13887,17 +13135,111 @@
             }
           }
         ],
-        "assets": [
-          {
-            "id": "asset-e0ac829986",
-            "kind": "image",
-            "label": "logo group mark.webp",
-            "value": "/assets/logo-group-mark.webp",
-            "source": "/assets/logo-group-mark.webp"
-          }
-        ],
+        "assets": [],
         "enabled": true,
-        "richTexts": []
+        "richTexts": [],
+        "figures": [
+          {
+            "id": "founded",
+            "value": 1970,
+            "unit": "",
+            "unitLabel": {
+              "en": "",
+              "ar": "",
+              "fr": ""
+            },
+            "label": {
+              "ar": "تأسست",
+              "en": "Founded",
+              "fr": "Fondée"
+            },
+            "description": {
+              "ar": "البحيرة، مصر",
+              "en": "Behera, Egypt",
+              "fr": "Behera, Égypte"
+            }
+          },
+          {
+            "id": "export-markets",
+            "value": 60,
+            "unit": "+",
+            "unitLabel": {
+              "en": "",
+              "ar": "",
+              "fr": ""
+            },
+            "label": {
+              "ar": "أسواق التصدير",
+              "en": "Export markets",
+              "fr": "Marchés d'exportation"
+            },
+            "description": {
+              "ar": "عبر أربع مناطق",
+              "en": "Across four regions",
+              "fr": "Quatre régions"
+            }
+          },
+          {
+            "id": "exported-yearly",
+            "value": 140,
+            "unit": "K",
+            "unitLabel": {
+              "ar": "طن متري",
+              "en": "MT",
+              "fr": "Pays"
+            },
+            "label": {
+              "ar": "تصدير / سنة",
+              "en": "Exported / year",
+              "fr": "Exportation / année"
+            },
+            "description": {
+              "ar": "على مستوى المجموعة",
+              "en": "Group-wide",
+              "fr": "À l ' échelle du groupe"
+            }
+          },
+          {
+            "id": "imported-yearly",
+            "value": 140,
+            "unit": "K",
+            "unitLabel": {
+              "ar": "طن متري",
+              "en": "MT",
+              "fr": "Pays"
+            },
+            "label": {
+              "ar": "مستورد / سنة",
+              "en": "Imported / year",
+              "fr": "Importé / année"
+            },
+            "description": {
+              "ar": "على مستوى المجموعة",
+              "en": "Group-wide",
+              "fr": "À l ' échelle du groupe"
+            }
+          },
+          {
+            "id": "exhibitions-yearly",
+            "value": 14,
+            "unit": "+",
+            "unitLabel": {
+              "en": "",
+              "ar": "",
+              "fr": ""
+            },
+            "label": {
+              "ar": "المعارض / سنة",
+              "en": "Exhibitions / yr",
+              "fr": "Expositions / année"
+            },
+            "description": {
+              "ar": "أحداث التجارة العالمية",
+              "en": "Global trade events",
+              "fr": "Manifestations commerciales mondiales"
+            }
+          }
+        ]
       }
     },
     {
@@ -13969,16 +13311,6 @@
               "ar": "المزيد عنا",
               "en": "More about us",
               "fr": "Plus sur nous"
-            }
-          },
-          {
-            "id": "text-4a626863f5",
-            "label": " &gt;",
-            "source": "-&gt;",
-            "values": {
-              "ar": "->",
-              "en": "-&gt;",
-              "fr": "-&gt;"
             }
           },
           {
@@ -16010,14 +15342,7 @@
       "content": {
         "key": "contact",
         "label": "Contact and enquiry form",
-        "links": [
-          {
-            "id": "link-80eeef9e0a",
-            "label": "+20 100 550 5020",
-            "value": "tel:+201005505020",
-            "source": "tel:+201005505020"
-          }
-        ],
+        "links": [],
         "texts": [
           {
             "id": "text-a2a14e0ff7",
@@ -16397,1996 +15722,6 @@
               "ar": "يرجى إدخال الوجهة.",
               "en": "Please enter a destination.",
               "fr": "Veuillez saisir une destination."
-            }
-          },
-          {
-            "id": "text-88eec993ab",
-            "label": "Afghanistan",
-            "source": "Afghanistan",
-            "values": {
-              "ar": "أفغانستان",
-              "en": "Afghanistan",
-              "fr": "Afghanistan"
-            }
-          },
-          {
-            "id": "text-63a00bf59f",
-            "label": "Albania",
-            "source": "Albania",
-            "values": {
-              "ar": "ألبانيا",
-              "en": "Albania",
-              "fr": "Albanie"
-            }
-          },
-          {
-            "id": "text-161fd0392d",
-            "label": "Algeria",
-            "source": "Algeria",
-            "values": {
-              "ar": "الجزائر",
-              "en": "Algeria",
-              "fr": "Algérie"
-            }
-          },
-          {
-            "id": "text-e85611fc6e",
-            "label": "Andorra",
-            "source": "Andorra",
-            "values": {
-              "ar": "أندورا",
-              "en": "Andorra",
-              "fr": "Andorre"
-            }
-          },
-          {
-            "id": "text-daf5ee4128",
-            "label": "Angola",
-            "source": "Angola",
-            "values": {
-              "ar": "أنغولا",
-              "en": "Angola",
-              "fr": "Angola"
-            }
-          },
-          {
-            "id": "text-4dd794b2f5",
-            "label": "Antigua and Barbuda",
-            "source": "Antigua and Barbuda",
-            "values": {
-              "ar": "أنتيغوا وبربودا",
-              "en": "Antigua and Barbuda",
-              "fr": "Antigua-et-Barbuda"
-            }
-          },
-          {
-            "id": "text-150ea0bcb8",
-            "label": "Argentina",
-            "source": "Argentina",
-            "values": {
-              "ar": "الأرجنتين",
-              "en": "Argentina",
-              "fr": "Argentine"
-            }
-          },
-          {
-            "id": "text-98b81c2500",
-            "label": "Armenia",
-            "source": "Armenia",
-            "values": {
-              "ar": "أرمينيا",
-              "en": "Armenia",
-              "fr": "Arménie"
-            }
-          },
-          {
-            "id": "text-a053fc489c",
-            "label": "Australia",
-            "source": "Australia",
-            "values": {
-              "ar": "أستراليا",
-              "en": "Australia",
-              "fr": "Australie"
-            }
-          },
-          {
-            "id": "text-32095442c0",
-            "label": "Austria",
-            "source": "Austria",
-            "values": {
-              "ar": "النمسا",
-              "en": "Austria",
-              "fr": "Autriche"
-            }
-          },
-          {
-            "id": "text-9dff5325b0",
-            "label": "Azerbaijan",
-            "source": "Azerbaijan",
-            "values": {
-              "ar": "أذربيجان",
-              "en": "Azerbaijan",
-              "fr": "Azerbaïdjan"
-            }
-          },
-          {
-            "id": "text-6e2d47f46f",
-            "label": "Bahamas",
-            "source": "Bahamas",
-            "values": {
-              "ar": "جزر البهاما",
-              "en": "Bahamas",
-              "fr": "Bahamas"
-            }
-          },
-          {
-            "id": "text-55b9369b93",
-            "label": "Bahrain",
-            "source": "Bahrain",
-            "values": {
-              "ar": "البحرين",
-              "en": "Bahrain",
-              "fr": "Bahreïn"
-            }
-          },
-          {
-            "id": "text-5c526b1480",
-            "label": "Bangladesh",
-            "source": "Bangladesh",
-            "values": {
-              "ar": "بنغلاديش",
-              "en": "Bangladesh",
-              "fr": "Bangladesh"
-            }
-          },
-          {
-            "id": "text-35ab6dbd50",
-            "label": "Barbados",
-            "source": "Barbados",
-            "values": {
-              "ar": "بربادوس",
-              "en": "Barbados",
-              "fr": "Barbade"
-            }
-          },
-          {
-            "id": "text-a6973ed7b5",
-            "label": "Belarus",
-            "source": "Belarus",
-            "values": {
-              "ar": "بيلاروسيا",
-              "en": "Belarus",
-              "fr": "Bélarus"
-            }
-          },
-          {
-            "id": "text-c176dbf625",
-            "label": "Belgium",
-            "source": "Belgium",
-            "values": {
-              "ar": "بلجيكا",
-              "en": "Belgium",
-              "fr": "Belgique"
-            }
-          },
-          {
-            "id": "text-55c1310e58",
-            "label": "Belize",
-            "source": "Belize",
-            "values": {
-              "ar": "بليز",
-              "en": "Belize",
-              "fr": "Belize"
-            }
-          },
-          {
-            "id": "text-a4830a06b2",
-            "label": "Benin",
-            "source": "Benin",
-            "values": {
-              "ar": "بنين",
-              "en": "Benin",
-              "fr": "Bénin"
-            }
-          },
-          {
-            "id": "text-e946f2b37b",
-            "label": "Bhutan",
-            "source": "Bhutan",
-            "values": {
-              "ar": "بوتان",
-              "en": "Bhutan",
-              "fr": "Bhoutan"
-            }
-          },
-          {
-            "id": "text-b2b1c2c527",
-            "label": "Bolivia",
-            "source": "Bolivia",
-            "values": {
-              "ar": "بوليفيا",
-              "en": "Bolivia",
-              "fr": "Bolivie"
-            }
-          },
-          {
-            "id": "text-dba2fa8981",
-            "label": "Bosnia and Herzegovina",
-            "source": "Bosnia and Herzegovina",
-            "values": {
-              "ar": "البوسنة والهرسك",
-              "en": "Bosnia and Herzegovina",
-              "fr": "Bosnie-Herzégovine"
-            }
-          },
-          {
-            "id": "text-4328afbb22",
-            "label": "Botswana",
-            "source": "Botswana",
-            "values": {
-              "ar": "بوتسوانا",
-              "en": "Botswana",
-              "fr": "Botswana"
-            }
-          },
-          {
-            "id": "text-b8affd5869",
-            "label": "Brazil",
-            "source": "Brazil",
-            "values": {
-              "ar": "البرازيل",
-              "en": "Brazil",
-              "fr": "Brésil"
-            }
-          },
-          {
-            "id": "text-f9a1adfd0c",
-            "label": "Brunei",
-            "source": "Brunei",
-            "values": {
-              "ar": "بروناي",
-              "en": "Brunei",
-              "fr": "Brunei"
-            }
-          },
-          {
-            "id": "text-c0e03c697e",
-            "label": "Bulgaria",
-            "source": "Bulgaria",
-            "values": {
-              "ar": "بلغاريا",
-              "en": "Bulgaria",
-              "fr": "Bulgarie"
-            }
-          },
-          {
-            "id": "text-92b29110ed",
-            "label": "Burkina Faso",
-            "source": "Burkina Faso",
-            "values": {
-              "ar": "بوركينا فاسو",
-              "en": "Burkina Faso",
-              "fr": "Burkina Faso"
-            }
-          },
-          {
-            "id": "text-211e543c11",
-            "label": "Burundi",
-            "source": "Burundi",
-            "values": {
-              "ar": "بوروندي",
-              "en": "Burundi",
-              "fr": "Burundi"
-            }
-          },
-          {
-            "id": "text-7eac40c88b",
-            "label": "Cambodia",
-            "source": "Cambodia",
-            "values": {
-              "ar": "كمبوديا",
-              "en": "Cambodia",
-              "fr": "Cambodge"
-            }
-          },
-          {
-            "id": "text-1ae9a61370",
-            "label": "Cameroon",
-            "source": "Cameroon",
-            "values": {
-              "ar": "الكاميرون",
-              "en": "Cameroon",
-              "fr": "Cameroun"
-            }
-          },
-          {
-            "id": "text-d3f4f9204f",
-            "label": "Canada",
-            "source": "Canada",
-            "values": {
-              "ar": "كندا",
-              "en": "Canada",
-              "fr": "Canada"
-            }
-          },
-          {
-            "id": "text-3bc22e78fa",
-            "label": "Cape Verde",
-            "source": "Cape Verde",
-            "values": {
-              "ar": "الرأس الأخضر",
-              "en": "Cape Verde",
-              "fr": "Cap-Vert"
-            }
-          },
-          {
-            "id": "text-54ede60b5f",
-            "label": "Central African Republic",
-            "source": "Central African Republic",
-            "values": {
-              "ar": "جمهورية أفريقيا الوسطى",
-              "en": "Central African Republic",
-              "fr": "République centrafricaine"
-            }
-          },
-          {
-            "id": "text-395deb0ac9",
-            "label": "Chad",
-            "source": "Chad",
-            "values": {
-              "ar": "تشاد",
-              "en": "Chad",
-              "fr": "Tchad"
-            }
-          },
-          {
-            "id": "text-aeb38a23f8",
-            "label": "Chile",
-            "source": "Chile",
-            "values": {
-              "ar": "شيلي",
-              "en": "Chile",
-              "fr": "Chili"
-            }
-          },
-          {
-            "id": "text-6ee5d7b62b",
-            "label": "China",
-            "source": "China",
-            "values": {
-              "ar": "الصين",
-              "en": "China",
-              "fr": "Chine"
-            }
-          },
-          {
-            "id": "text-2cd6422816",
-            "label": "Colombia",
-            "source": "Colombia",
-            "values": {
-              "ar": "كولومبيا",
-              "en": "Colombia",
-              "fr": "Colombie"
-            }
-          },
-          {
-            "id": "text-4698ee03d7",
-            "label": "Comoros",
-            "source": "Comoros",
-            "values": {
-              "ar": "جزر القمر",
-              "en": "Comoros",
-              "fr": "Comores"
-            }
-          },
-          {
-            "id": "text-1ac0c5429b",
-            "label": "Congo (Brazzaville)",
-            "source": "Congo (Brazzaville)",
-            "values": {
-              "ar": "الكونغو (برازافيل)",
-              "en": "Congo (Brazzaville)",
-              "fr": "Congo (Brazzaville)"
-            }
-          },
-          {
-            "id": "text-694f0fa06b",
-            "label": "Congo (Kinshasa)",
-            "source": "Congo (Kinshasa)",
-            "values": {
-              "ar": "الكونغو (كينشاسا)",
-              "en": "Congo (Kinshasa)",
-              "fr": "Congo (Kinshasa)"
-            }
-          },
-          {
-            "id": "text-cc5058631e",
-            "label": "Costa Rica",
-            "source": "Costa Rica",
-            "values": {
-              "ar": "كوستاريكا",
-              "en": "Costa Rica",
-              "fr": "Costa Rica"
-            }
-          },
-          {
-            "id": "text-f9e77a95e8",
-            "label": "Cote d'Ivoire",
-            "source": "Cote d'Ivoire",
-            "values": {
-              "ar": "Cote d'Ivoire",
-              "en": "Cote d'Ivoire",
-              "fr": "Côte d'Ivoire"
-            }
-          },
-          {
-            "id": "text-646515c536",
-            "label": "Croatia",
-            "source": "Croatia",
-            "values": {
-              "ar": "كرواتيا",
-              "en": "Croatia",
-              "fr": "Croatie"
-            }
-          },
-          {
-            "id": "text-2785c11a9d",
-            "label": "Cuba",
-            "source": "Cuba",
-            "values": {
-              "ar": "كوبا",
-              "en": "Cuba",
-              "fr": "Cuba"
-            }
-          },
-          {
-            "id": "text-81fbc8df3d",
-            "label": "Cyprus",
-            "source": "Cyprus",
-            "values": {
-              "ar": "قبرص",
-              "en": "Cyprus",
-              "fr": "Chypre"
-            }
-          },
-          {
-            "id": "text-324e5399bc",
-            "label": "Czechia",
-            "source": "Czechia",
-            "values": {
-              "ar": "التشيك",
-              "en": "Czechia",
-              "fr": "République tchèque"
-            }
-          },
-          {
-            "id": "text-b5651a7e17",
-            "label": "Denmark",
-            "source": "Denmark",
-            "values": {
-              "ar": "الدنمارك",
-              "en": "Denmark",
-              "fr": "Danemark"
-            }
-          },
-          {
-            "id": "text-bcae47527a",
-            "label": "Djibouti",
-            "source": "Djibouti",
-            "values": {
-              "ar": "جيبوتي",
-              "en": "Djibouti",
-              "fr": "Djibouti"
-            }
-          },
-          {
-            "id": "text-f566e94050",
-            "label": "Dominica",
-            "source": "Dominica",
-            "values": {
-              "ar": "دومينيكا",
-              "en": "Dominica",
-              "fr": "Dominique"
-            }
-          },
-          {
-            "id": "text-41cc317e1b",
-            "label": "Dominican Republic",
-            "source": "Dominican Republic",
-            "values": {
-              "ar": "جمهورية الدومينيكان",
-              "en": "Dominican Republic",
-              "fr": "République dominicaine"
-            }
-          },
-          {
-            "id": "text-39c8bde3cc",
-            "label": "Ecuador",
-            "source": "Ecuador",
-            "values": {
-              "ar": "الاكوادور",
-              "en": "Ecuador",
-              "fr": "Équateur"
-            }
-          },
-          {
-            "id": "text-e59f296151",
-            "label": "Egypt",
-            "source": "Egypt",
-            "values": {
-              "ar": "مصر",
-              "en": "Egypt",
-              "fr": "Égypte"
-            }
-          },
-          {
-            "id": "text-62306d5e4c",
-            "label": "El Salvador",
-            "source": "El Salvador",
-            "values": {
-              "ar": "السلفادور",
-              "en": "El Salvador",
-              "fr": "El Salvador"
-            }
-          },
-          {
-            "id": "text-2c0dbe7e57",
-            "label": "Equatorial Guinea",
-            "source": "Equatorial Guinea",
-            "values": {
-              "ar": "غينيا الاستوائية",
-              "en": "Equatorial Guinea",
-              "fr": "Guinée équatoriale"
-            }
-          },
-          {
-            "id": "text-8efb9e13a5",
-            "label": "Eritrea",
-            "source": "Eritrea",
-            "values": {
-              "ar": "إريتريا",
-              "en": "Eritrea",
-              "fr": "Érythrée"
-            }
-          },
-          {
-            "id": "text-d361f5e7a2",
-            "label": "Estonia",
-            "source": "Estonia",
-            "values": {
-              "ar": "إستونيا",
-              "en": "Estonia",
-              "fr": "Espagne"
-            }
-          },
-          {
-            "id": "text-7fd7735251",
-            "label": "Eswatini",
-            "source": "Eswatini",
-            "values": {
-              "ar": "إيسواتيني",
-              "en": "Eswatini",
-              "fr": "Eswatini"
-            }
-          },
-          {
-            "id": "text-3cbd16cb8b",
-            "label": "Ethiopia",
-            "source": "Ethiopia",
-            "values": {
-              "ar": "أثيوبيا",
-              "en": "Ethiopia",
-              "fr": "Éthiopie"
-            }
-          },
-          {
-            "id": "text-e222f7d6c5",
-            "label": "Fiji",
-            "source": "Fiji",
-            "values": {
-              "ar": "فيجي",
-              "en": "Fiji",
-              "fr": "Fidji"
-            }
-          },
-          {
-            "id": "text-5c7225a99e",
-            "label": "Finland",
-            "source": "Finland",
-            "values": {
-              "ar": "فنلندا",
-              "en": "Finland",
-              "fr": "Finlande"
-            }
-          },
-          {
-            "id": "text-77b998714e",
-            "label": "France",
-            "source": "France",
-            "values": {
-              "ar": "فرنسا",
-              "en": "France",
-              "fr": "France"
-            }
-          },
-          {
-            "id": "text-c376f43a82",
-            "label": "Gabon",
-            "source": "Gabon",
-            "values": {
-              "ar": "الجابون",
-              "en": "Gabon",
-              "fr": "Gabon"
-            }
-          },
-          {
-            "id": "text-46681d6a9f",
-            "label": "Gambia",
-            "source": "Gambia",
-            "values": {
-              "ar": "غامبيا",
-              "en": "Gambia",
-              "fr": "Gambie"
-            }
-          },
-          {
-            "id": "text-c071ac06e2",
-            "label": "Georgia",
-            "source": "Georgia",
-            "values": {
-              "ar": "جورجيا",
-              "en": "Georgia",
-              "fr": "Géorgie"
-            }
-          },
-          {
-            "id": "text-2525b457d3",
-            "label": "Germany",
-            "source": "Germany",
-            "values": {
-              "ar": "ألمانيا",
-              "en": "Germany",
-              "fr": "Allemagne"
-            }
-          },
-          {
-            "id": "text-10e277ade8",
-            "label": "Ghana",
-            "source": "Ghana",
-            "values": {
-              "ar": "غانا",
-              "en": "Ghana",
-              "fr": "Ghana"
-            }
-          },
-          {
-            "id": "text-29187e9cca",
-            "label": "Greece",
-            "source": "Greece",
-            "values": {
-              "ar": "اليونان",
-              "en": "Greece",
-              "fr": "Grèce"
-            }
-          },
-          {
-            "id": "text-5a6ac4ec8a",
-            "label": "Grenada",
-            "source": "Grenada",
-            "values": {
-              "ar": "غرينادا",
-              "en": "Grenada",
-              "fr": "Grenade"
-            }
-          },
-          {
-            "id": "text-853f95af7c",
-            "label": "Guatemala",
-            "source": "Guatemala",
-            "values": {
-              "ar": "غواتيمالا",
-              "en": "Guatemala",
-              "fr": "Guatemala"
-            }
-          },
-          {
-            "id": "text-136b4f938c",
-            "label": "Guinea",
-            "source": "Guinea",
-            "values": {
-              "ar": "غينيا",
-              "en": "Guinea",
-              "fr": "Guinée"
-            }
-          },
-          {
-            "id": "text-4fe9906c21",
-            "label": "Guinea Bissau",
-            "source": "Guinea-Bissau",
-            "values": {
-              "ar": "غينيا بيساو",
-              "en": "Guinea-Bissau",
-              "fr": "Guinée-Bissau"
-            }
-          },
-          {
-            "id": "text-250fb42c47",
-            "label": "Guyana",
-            "source": "Guyana",
-            "values": {
-              "ar": "غيانا",
-              "en": "Guyana",
-              "fr": "Guyana"
-            }
-          },
-          {
-            "id": "text-9338c642d0",
-            "label": "Haiti",
-            "source": "Haiti",
-            "values": {
-              "ar": "هايتي",
-              "en": "Haiti",
-              "fr": "Haïti"
-            }
-          },
-          {
-            "id": "text-631a8b7bde",
-            "label": "Honduras",
-            "source": "Honduras",
-            "values": {
-              "ar": "هندوراس",
-              "en": "Honduras",
-              "fr": "Honduras"
-            }
-          },
-          {
-            "id": "text-29ffdc17cd",
-            "label": "Hong Kong",
-            "source": "Hong Kong",
-            "values": {
-              "ar": "هونج كونج",
-              "en": "Hong Kong",
-              "fr": "Hong Kong"
-            }
-          },
-          {
-            "id": "text-e46325047c",
-            "label": "Hungary",
-            "source": "Hungary",
-            "values": {
-              "ar": "هنغاريا",
-              "en": "Hungary",
-              "fr": "Hongrie"
-            }
-          },
-          {
-            "id": "text-27c28b7f25",
-            "label": "Iceland",
-            "source": "Iceland",
-            "values": {
-              "ar": "أيسلندا",
-              "en": "Iceland",
-              "fr": "Espagne"
-            }
-          },
-          {
-            "id": "text-fb5df90991",
-            "label": "India",
-            "source": "India",
-            "values": {
-              "ar": "الهند",
-              "en": "India",
-              "fr": "Inde"
-            }
-          },
-          {
-            "id": "text-487a4ac339",
-            "label": "Indonesia",
-            "source": "Indonesia",
-            "values": {
-              "ar": "أندونيسيا",
-              "en": "Indonesia",
-              "fr": "Indonésie"
-            }
-          },
-          {
-            "id": "text-fa92851e13",
-            "label": "Iran",
-            "source": "Iran",
-            "values": {
-              "ar": "إيران",
-              "en": "Iran",
-              "fr": "Iran"
-            }
-          },
-          {
-            "id": "text-f696687ab6",
-            "label": "Iraq",
-            "source": "Iraq",
-            "values": {
-              "ar": "العراق",
-              "en": "Iraq",
-              "fr": "Iraq"
-            }
-          },
-          {
-            "id": "text-6ca82295ef",
-            "label": "Ireland",
-            "source": "Ireland",
-            "values": {
-              "ar": "أيرلندا",
-              "en": "Ireland",
-              "fr": "Belgique"
-            }
-          },
-          {
-            "id": "text-70d959058d",
-            "label": "Israel",
-            "source": "Israel",
-            "values": {
-              "ar": "إسرائيل",
-              "en": "Israel",
-              "fr": "Israël"
-            }
-          },
-          {
-            "id": "text-1ac3dcd93c",
-            "label": "Italy",
-            "source": "Italy",
-            "values": {
-              "ar": "إيطاليا",
-              "en": "Italy",
-              "fr": "Italie"
-            }
-          },
-          {
-            "id": "text-4ee6ce2f0b",
-            "label": "Jamaica",
-            "source": "Jamaica",
-            "values": {
-              "ar": "جامايكا",
-              "en": "Jamaica",
-              "fr": "Jamaïque"
-            }
-          },
-          {
-            "id": "text-5ae1187a3d",
-            "label": "Japan",
-            "source": "Japan",
-            "values": {
-              "ar": "اليابان",
-              "en": "Japan",
-              "fr": "Japon"
-            }
-          },
-          {
-            "id": "text-1065feca13",
-            "label": "Jordan",
-            "source": "Jordan",
-            "values": {
-              "ar": "الأردن",
-              "en": "Jordan",
-              "fr": "Jordanie"
-            }
-          },
-          {
-            "id": "text-a72969d75c",
-            "label": "Kazakhstan",
-            "source": "Kazakhstan",
-            "values": {
-              "ar": "كازاخستان",
-              "en": "Kazakhstan",
-              "fr": "Kazakhstan"
-            }
-          },
-          {
-            "id": "text-b448ab3a55",
-            "label": "Kenya",
-            "source": "Kenya",
-            "values": {
-              "ar": "كينيا",
-              "en": "Kenya",
-              "fr": "Kenya"
-            }
-          },
-          {
-            "id": "text-3ec463fcee",
-            "label": "Kiribati",
-            "source": "Kiribati",
-            "values": {
-              "ar": "كيريباتي",
-              "en": "Kiribati",
-              "fr": "Kiribati"
-            }
-          },
-          {
-            "id": "text-3a8e16c5a1",
-            "label": "Kuwait",
-            "source": "Kuwait",
-            "values": {
-              "ar": "الكويت",
-              "en": "Kuwait",
-              "fr": "Koweït"
-            }
-          },
-          {
-            "id": "text-d1c5a5a676",
-            "label": "Kyrgyzstan",
-            "source": "Kyrgyzstan",
-            "values": {
-              "ar": "قيرغيزستان",
-              "en": "Kyrgyzstan",
-              "fr": "Kirghizistan"
-            }
-          },
-          {
-            "id": "text-363e51cf91",
-            "label": "Laos",
-            "source": "Laos",
-            "values": {
-              "ar": "لاوس",
-              "en": "Laos",
-              "fr": "Laos"
-            }
-          },
-          {
-            "id": "text-31a74094fb",
-            "label": "Latvia",
-            "source": "Latvia",
-            "values": {
-              "ar": "لاتفيا",
-              "en": "Latvia",
-              "fr": "Lettonie"
-            }
-          },
-          {
-            "id": "text-0d7442a37c",
-            "label": "Lebanon",
-            "source": "Lebanon",
-            "values": {
-              "ar": "لبنان",
-              "en": "Lebanon",
-              "fr": "Liban"
-            }
-          },
-          {
-            "id": "text-9ce121c082",
-            "label": "Lesotho",
-            "source": "Lesotho",
-            "values": {
-              "ar": "ليسوتو",
-              "en": "Lesotho",
-              "fr": "Lesotho"
-            }
-          },
-          {
-            "id": "text-60658c905a",
-            "label": "Liberia",
-            "source": "Liberia",
-            "values": {
-              "ar": "ليبيريا",
-              "en": "Liberia",
-              "fr": "Libéria"
-            }
-          },
-          {
-            "id": "text-70c8b9257a",
-            "label": "Libya",
-            "source": "Libya",
-            "values": {
-              "ar": "ليبيا",
-              "en": "Libya",
-              "fr": "Libye"
-            }
-          },
-          {
-            "id": "text-6f28c2acc1",
-            "label": "Liechtenstein",
-            "source": "Liechtenstein",
-            "values": {
-              "ar": "ليختنشتاين",
-              "en": "Liechtenstein",
-              "fr": "Liechtenstein"
-            }
-          },
-          {
-            "id": "text-577036a738",
-            "label": "Lithuania",
-            "source": "Lithuania",
-            "values": {
-              "ar": "ليتوانيا",
-              "en": "Lithuania",
-              "fr": "Lituanie"
-            }
-          },
-          {
-            "id": "text-d350807d56",
-            "label": "Luxembourg",
-            "source": "Luxembourg",
-            "values": {
-              "ar": "لوكسمبورغ",
-              "en": "Luxembourg",
-              "fr": "Luxembourg"
-            }
-          },
-          {
-            "id": "text-99c8417a4e",
-            "label": "Macao",
-            "source": "Macao",
-            "values": {
-              "ar": "ماكاو",
-              "en": "Macao",
-              "fr": "Macao"
-            }
-          },
-          {
-            "id": "text-b41fefe5c8",
-            "label": "Madagascar",
-            "source": "Madagascar",
-            "values": {
-              "ar": "مدغشقر",
-              "en": "Madagascar",
-              "fr": "Madagascar"
-            }
-          },
-          {
-            "id": "text-ca0e55c936",
-            "label": "Malawi",
-            "source": "Malawi",
-            "values": {
-              "ar": "ملاوي",
-              "en": "Malawi",
-              "fr": "Malawi"
-            }
-          },
-          {
-            "id": "text-195da9fa0d",
-            "label": "Malaysia",
-            "source": "Malaysia",
-            "values": {
-              "ar": "ماليزيا",
-              "en": "Malaysia",
-              "fr": "Malaisie"
-            }
-          },
-          {
-            "id": "text-983269838c",
-            "label": "Maldives",
-            "source": "Maldives",
-            "values": {
-              "ar": "جزر المالديف",
-              "en": "Maldives",
-              "fr": "Maldives"
-            }
-          },
-          {
-            "id": "text-11e5a520d8",
-            "label": "Mali",
-            "source": "Mali",
-            "values": {
-              "ar": "مالي",
-              "en": "Mali",
-              "fr": "Mali"
-            }
-          },
-          {
-            "id": "text-f063c8cd4d",
-            "label": "Malta",
-            "source": "Malta",
-            "values": {
-              "ar": "مالطا",
-              "en": "Malta",
-              "fr": "Malte"
-            }
-          },
-          {
-            "id": "text-99d889fb3a",
-            "label": "Marshall Islands",
-            "source": "Marshall Islands",
-            "values": {
-              "ar": "جزر مارشال",
-              "en": "Marshall Islands",
-              "fr": "Îles Marshall"
-            }
-          },
-          {
-            "id": "text-d2f6eb944d",
-            "label": "Mauritania",
-            "source": "Mauritania",
-            "values": {
-              "ar": "موريتانيا",
-              "en": "Mauritania",
-              "fr": "Mauritanie"
-            }
-          },
-          {
-            "id": "text-0d8150f78b",
-            "label": "Mauritius",
-            "source": "Mauritius",
-            "values": {
-              "ar": "موريشيوس",
-              "en": "Mauritius",
-              "fr": "Maurice"
-            }
-          },
-          {
-            "id": "text-97fbbb89fb",
-            "label": "Mexico",
-            "source": "Mexico",
-            "values": {
-              "ar": "المكسيك",
-              "en": "Mexico",
-              "fr": "Mexique"
-            }
-          },
-          {
-            "id": "text-a2645431a6",
-            "label": "Micronesia",
-            "source": "Micronesia",
-            "values": {
-              "ar": "ميكرونيزيا",
-              "en": "Micronesia",
-              "fr": "Micronésie"
-            }
-          },
-          {
-            "id": "text-ff7f9d37ea",
-            "label": "Moldova",
-            "source": "Moldova",
-            "values": {
-              "ar": "مولدوفا",
-              "en": "Moldova",
-              "fr": "Moldova"
-            }
-          },
-          {
-            "id": "text-7260da911c",
-            "label": "Monaco",
-            "source": "Monaco",
-            "values": {
-              "ar": "موناكو",
-              "en": "Monaco",
-              "fr": "Monaco"
-            }
-          },
-          {
-            "id": "text-d207679774",
-            "label": "Mongolia",
-            "source": "Mongolia",
-            "values": {
-              "ar": "منغوليا",
-              "en": "Mongolia",
-              "fr": "Mongolie"
-            }
-          },
-          {
-            "id": "text-34bba1bfa6",
-            "label": "Montenegro",
-            "source": "Montenegro",
-            "values": {
-              "ar": "الجبل الأسود",
-              "en": "Montenegro",
-              "fr": "Monténégro"
-            }
-          },
-          {
-            "id": "text-e48828a421",
-            "label": "Morocco",
-            "source": "Morocco",
-            "values": {
-              "ar": "المغرب",
-              "en": "Morocco",
-              "fr": "Maroc"
-            }
-          },
-          {
-            "id": "text-8ea6b96f62",
-            "label": "Mozambique",
-            "source": "Mozambique",
-            "values": {
-              "ar": "موزمبيق",
-              "en": "Mozambique",
-              "fr": "Mozambique"
-            }
-          },
-          {
-            "id": "text-330cfbce0f",
-            "label": "Myanmar",
-            "source": "Myanmar",
-            "values": {
-              "ar": "ميانمار",
-              "en": "Myanmar",
-              "fr": "Myanmar"
-            }
-          },
-          {
-            "id": "text-03fcd8409f",
-            "label": "Namibia",
-            "source": "Namibia",
-            "values": {
-              "ar": "ناميبيا",
-              "en": "Namibia",
-              "fr": "Namibie"
-            }
-          },
-          {
-            "id": "text-66b8ce459c",
-            "label": "Nauru",
-            "source": "Nauru",
-            "values": {
-              "ar": "ناورو",
-              "en": "Nauru",
-              "fr": "Nauru"
-            }
-          },
-          {
-            "id": "text-a4736ec3d1",
-            "label": "Nepal",
-            "source": "Nepal",
-            "values": {
-              "ar": "نيبال",
-              "en": "Nepal",
-              "fr": "Népal"
-            }
-          },
-          {
-            "id": "text-9f35d5c519",
-            "label": "Netherlands",
-            "source": "Netherlands",
-            "values": {
-              "ar": "هولندا",
-              "en": "Netherlands",
-              "fr": "Belgique"
-            }
-          },
-          {
-            "id": "text-3af4764654",
-            "label": "New Zealand",
-            "source": "New Zealand",
-            "values": {
-              "ar": "نيوزيلندا",
-              "en": "New Zealand",
-              "fr": "Nouvelle-Zélande"
-            }
-          },
-          {
-            "id": "text-63228f3051",
-            "label": "Nicaragua",
-            "source": "Nicaragua",
-            "values": {
-              "ar": "نيكاراغوا",
-              "en": "Nicaragua",
-              "fr": "Nicaragua"
-            }
-          },
-          {
-            "id": "text-6e03e853d3",
-            "label": "Niger",
-            "source": "Niger",
-            "values": {
-              "ar": "النيجر",
-              "en": "Niger",
-              "fr": "Niger"
-            }
-          },
-          {
-            "id": "text-bb21b3adac",
-            "label": "Nigeria",
-            "source": "Nigeria",
-            "values": {
-              "ar": "نيجيريا",
-              "en": "Nigeria",
-              "fr": "Nigéria"
-            }
-          },
-          {
-            "id": "text-7088c5ef2a",
-            "label": "North Korea",
-            "source": "North Korea",
-            "values": {
-              "ar": "كوريا الشمالية",
-              "en": "North Korea",
-              "fr": "Corée du Nord"
-            }
-          },
-          {
-            "id": "text-5a6aba3605",
-            "label": "North Macedonia",
-            "source": "North Macedonia",
-            "values": {
-              "ar": "مقدونيا الشمالية",
-              "en": "North Macedonia",
-              "fr": "Macédoine du Nord"
-            }
-          },
-          {
-            "id": "text-ad4092d701",
-            "label": "Norway",
-            "source": "Norway",
-            "values": {
-              "ar": "النرويج",
-              "en": "Norway",
-              "fr": "Norvège"
-            }
-          },
-          {
-            "id": "text-e6361b6168",
-            "label": "Oman",
-            "source": "Oman",
-            "values": {
-              "ar": "عمان",
-              "en": "Oman",
-              "fr": "Oman"
-            }
-          },
-          {
-            "id": "text-7f4aceb2ee",
-            "label": "Pakistan",
-            "source": "Pakistan",
-            "values": {
-              "ar": "باكستان",
-              "en": "Pakistan",
-              "fr": "Pakistan"
-            }
-          },
-          {
-            "id": "text-da2e1eb82b",
-            "label": "Palau",
-            "source": "Palau",
-            "values": {
-              "ar": "بالاو",
-              "en": "Palau",
-              "fr": "Palaos"
-            }
-          },
-          {
-            "id": "text-bcc8a02d6d",
-            "label": "Palestine",
-            "source": "Palestine",
-            "values": {
-              "ar": "فلسطين",
-              "en": "Palestine",
-              "fr": "Palestine"
-            }
-          },
-          {
-            "id": "text-278c89eed3",
-            "label": "Panama",
-            "source": "Panama",
-            "values": {
-              "ar": "بنما",
-              "en": "Panama",
-              "fr": "Panama"
-            }
-          },
-          {
-            "id": "text-f1d14b532a",
-            "label": "Papua New Guinea",
-            "source": "Papua New Guinea",
-            "values": {
-              "ar": "بابوا غينيا الجديدة",
-              "en": "Papua New Guinea",
-              "fr": "Papouasie-Nouvelle-Guinée"
-            }
-          },
-          {
-            "id": "text-3ae94e5772",
-            "label": "Paraguay",
-            "source": "Paraguay",
-            "values": {
-              "ar": "باراجواي",
-              "en": "Paraguay",
-              "fr": "Paraguay"
-            }
-          },
-          {
-            "id": "text-79cae48eb5",
-            "label": "Peru",
-            "source": "Peru",
-            "values": {
-              "ar": "بيرو",
-              "en": "Peru",
-              "fr": "Pérou"
-            }
-          },
-          {
-            "id": "text-c06a84890f",
-            "label": "Philippines",
-            "source": "Philippines",
-            "values": {
-              "ar": "فيلبيني",
-              "en": "Philippines",
-              "fr": "Espagne"
-            }
-          },
-          {
-            "id": "text-42a297f9eb",
-            "label": "Poland",
-            "source": "Poland",
-            "values": {
-              "ar": "بولندا",
-              "en": "Poland",
-              "fr": "Pologne"
-            }
-          },
-          {
-            "id": "text-545505daa7",
-            "label": "Portugal",
-            "source": "Portugal",
-            "values": {
-              "ar": "البرتغال",
-              "en": "Portugal",
-              "fr": "Portugal"
-            }
-          },
-          {
-            "id": "text-132433073d",
-            "label": "Qatar",
-            "source": "Qatar",
-            "values": {
-              "ar": "قطر",
-              "en": "Qatar",
-              "fr": "Qatar"
-            }
-          },
-          {
-            "id": "text-a6212db004",
-            "label": "Romania",
-            "source": "Romania",
-            "values": {
-              "ar": "رومانيا",
-              "en": "Romania",
-              "fr": "Roumanie"
-            }
-          },
-          {
-            "id": "text-26c3378db0",
-            "label": "Russia",
-            "source": "Russia",
-            "values": {
-              "ar": "روسيا",
-              "en": "Russia",
-              "fr": "Russie"
-            }
-          },
-          {
-            "id": "text-e7ebb603f6",
-            "label": "Rwanda",
-            "source": "Rwanda",
-            "values": {
-              "ar": "رواندا",
-              "en": "Rwanda",
-              "fr": "Rwanda"
-            }
-          },
-          {
-            "id": "text-5dda6694a6",
-            "label": "Saint Kitts and Nevis",
-            "source": "Saint Kitts and Nevis",
-            "values": {
-              "ar": "سانت كيتس ونيفيس",
-              "en": "Saint Kitts and Nevis",
-              "fr": "Saint-Kitts-et-Nevis"
-            }
-          },
-          {
-            "id": "text-0b5a837060",
-            "label": "Saint Lucia",
-            "source": "Saint Lucia",
-            "values": {
-              "ar": "سانت لوسيا",
-              "en": "Saint Lucia",
-              "fr": "Sainte-Lucie"
-            }
-          },
-          {
-            "id": "text-e911eb4586",
-            "label": "Saint Vincent and the Grenadines",
-            "source": "Saint Vincent and the Grenadines",
-            "values": {
-              "ar": "سانت فنسنت وجزر غرينادين",
-              "en": "Saint Vincent and the Grenadines",
-              "fr": "Saint-Vincent-et-les Grenadines"
-            }
-          },
-          {
-            "id": "text-135703bcd3",
-            "label": "Samoa",
-            "source": "Samoa",
-            "values": {
-              "ar": "ساموا",
-              "en": "Samoa",
-              "fr": "Samoa"
-            }
-          },
-          {
-            "id": "text-22ee429bcc",
-            "label": "San Marino",
-            "source": "San Marino",
-            "values": {
-              "ar": "سان مارينو",
-              "en": "San Marino",
-              "fr": "Saint-Marin"
-            }
-          },
-          {
-            "id": "text-79f3c74c25",
-            "label": "Sao Tome and Principe",
-            "source": "Sao Tome and Principe",
-            "values": {
-              "ar": "سان تومي وبرينسيبي",
-              "en": "Sao Tome and Principe",
-              "fr": "Sao Tomé-et-Principe"
-            }
-          },
-          {
-            "id": "text-79165c2ae7",
-            "label": "Saudi Arabia",
-            "source": "Saudi Arabia",
-            "values": {
-              "ar": "المملكة العربية السعودية",
-              "en": "Saudi Arabia",
-              "fr": "Arabie saoudite"
-            }
-          },
-          {
-            "id": "text-7787191e26",
-            "label": "Senegal",
-            "source": "Senegal",
-            "values": {
-              "ar": "السنغال",
-              "en": "Senegal",
-              "fr": "Sénégal"
-            }
-          },
-          {
-            "id": "text-a7e6323200",
-            "label": "Serbia",
-            "source": "Serbia",
-            "values": {
-              "ar": "صربيا",
-              "en": "Serbia",
-              "fr": "Serbie"
-            }
-          },
-          {
-            "id": "text-08893dec0c",
-            "label": "Seychelles",
-            "source": "Seychelles",
-            "values": {
-              "ar": "سيشيل",
-              "en": "Seychelles",
-              "fr": "Seychelles"
-            }
-          },
-          {
-            "id": "text-5337ce1df3",
-            "label": "Sierra Leone",
-            "source": "Sierra Leone",
-            "values": {
-              "ar": "سيراليون",
-              "en": "Sierra Leone",
-              "fr": "Sierra Leone"
-            }
-          },
-          {
-            "id": "text-23f464e403",
-            "label": "Singapore",
-            "source": "Singapore",
-            "values": {
-              "ar": "سنغافورة",
-              "en": "Singapore",
-              "fr": "Singapour"
-            }
-          },
-          {
-            "id": "text-dc326c4a17",
-            "label": "Slovakia",
-            "source": "Slovakia",
-            "values": {
-              "ar": "سلوفاكيا",
-              "en": "Slovakia",
-              "fr": "Slovaquie"
-            }
-          },
-          {
-            "id": "text-2965e3452f",
-            "label": "Slovenia",
-            "source": "Slovenia",
-            "values": {
-              "ar": "سلوفينيا",
-              "en": "Slovenia",
-              "fr": "Slovénie"
-            }
-          },
-          {
-            "id": "text-64c441ff2d",
-            "label": "Solomon Islands",
-            "source": "Solomon Islands",
-            "values": {
-              "ar": "جزر سليمان",
-              "en": "Solomon Islands",
-              "fr": "Îles Salomon"
-            }
-          },
-          {
-            "id": "text-39fa2e5d09",
-            "label": "Somalia",
-            "source": "Somalia",
-            "values": {
-              "ar": "الصومال",
-              "en": "Somalia",
-              "fr": "Somalie"
-            }
-          },
-          {
-            "id": "text-73b262c89c",
-            "label": "South Africa",
-            "source": "South Africa",
-            "values": {
-              "ar": "جنوب أفريقيا",
-              "en": "South Africa",
-              "fr": "Afrique du Sud"
-            }
-          },
-          {
-            "id": "text-f31f5eca7e",
-            "label": "South Korea",
-            "source": "South Korea",
-            "values": {
-              "ar": "كوريا الجنوبية",
-              "en": "South Korea",
-              "fr": "Corée du Sud"
-            }
-          },
-          {
-            "id": "text-3a2b297b12",
-            "label": "South Sudan",
-            "source": "South Sudan",
-            "values": {
-              "ar": "جنوب السودان",
-              "en": "South Sudan",
-              "fr": "Soudan du Sud"
-            }
-          },
-          {
-            "id": "text-2c053a4bfa",
-            "label": "Spain",
-            "source": "Spain",
-            "values": {
-              "ar": "إسبانيا",
-              "en": "Spain",
-              "fr": "Espagne"
-            }
-          },
-          {
-            "id": "text-4aa663dda9",
-            "label": "Sri Lanka",
-            "source": "Sri Lanka",
-            "values": {
-              "ar": "سريلانكا",
-              "en": "Sri Lanka",
-              "fr": "Sri Lanka"
-            }
-          },
-          {
-            "id": "text-25c2a01883",
-            "label": "Sudan",
-            "source": "Sudan",
-            "values": {
-              "ar": "السودان",
-              "en": "Sudan",
-              "fr": "Soudan"
-            }
-          },
-          {
-            "id": "text-f1f1e43ebf",
-            "label": "Suriname",
-            "source": "Suriname",
-            "values": {
-              "ar": "سورينام",
-              "en": "Suriname",
-              "fr": "Suriname"
-            }
-          },
-          {
-            "id": "text-4495e05241",
-            "label": "Sweden",
-            "source": "Sweden",
-            "values": {
-              "ar": "السويد",
-              "en": "Sweden",
-              "fr": "Suède"
-            }
-          },
-          {
-            "id": "text-4e187b5e3e",
-            "label": "Switzerland",
-            "source": "Switzerland",
-            "values": {
-              "ar": "سويسرا",
-              "en": "Switzerland",
-              "fr": "Suisse"
-            }
-          },
-          {
-            "id": "text-e32ed94e81",
-            "label": "Syria",
-            "source": "Syria",
-            "values": {
-              "ar": "سوريا",
-              "en": "Syria",
-              "fr": "Syrie"
-            }
-          },
-          {
-            "id": "text-8a72760902",
-            "label": "Taiwan",
-            "source": "Taiwan",
-            "values": {
-              "ar": "تايوان",
-              "en": "Taiwan",
-              "fr": "Taïwan"
-            }
-          },
-          {
-            "id": "text-50e269c8b6",
-            "label": "Tajikistan",
-            "source": "Tajikistan",
-            "values": {
-              "ar": "طاجيكستان",
-              "en": "Tajikistan",
-              "fr": "Tadjikistan"
-            }
-          },
-          {
-            "id": "text-ce120c2016",
-            "label": "Tanzania",
-            "source": "Tanzania",
-            "values": {
-              "ar": "تنزانيا",
-              "en": "Tanzania",
-              "fr": "Tanzanie"
-            }
-          },
-          {
-            "id": "text-cdd18c9ed4",
-            "label": "Thailand",
-            "source": "Thailand",
-            "values": {
-              "ar": "تايلاند",
-              "en": "Thailand",
-              "fr": "Thaïlande"
-            }
-          },
-          {
-            "id": "text-d3475739c4",
-            "label": "Timor Leste",
-            "source": "Timor-Leste",
-            "values": {
-              "ar": "تيمور الشرقية",
-              "en": "Timor-Leste",
-              "fr": "Timor-Leste"
-            }
-          },
-          {
-            "id": "text-1717b67a8f",
-            "label": "Togo",
-            "source": "Togo",
-            "values": {
-              "ar": "توغو",
-              "en": "Togo",
-              "fr": "Togo"
-            }
-          },
-          {
-            "id": "text-058d80dbfb",
-            "label": "Tonga",
-            "source": "Tonga",
-            "values": {
-              "ar": "تونغا",
-              "en": "Tonga",
-              "fr": "États-Unis"
-            }
-          },
-          {
-            "id": "text-c493623f44",
-            "label": "Trinidad and Tobago",
-            "source": "Trinidad and Tobago",
-            "values": {
-              "ar": "ترينيداد وتوباغو",
-              "en": "Trinidad and Tobago",
-              "fr": "Trinité-et-Tobago"
-            }
-          },
-          {
-            "id": "text-0daaa9f587",
-            "label": "Tunisia",
-            "source": "Tunisia",
-            "values": {
-              "ar": "تونس",
-              "en": "Tunisia",
-              "fr": "Tunisie"
-            }
-          },
-          {
-            "id": "text-fd02a15af4",
-            "label": "Turkey",
-            "source": "Turkey",
-            "values": {
-              "ar": "ديك رومى",
-              "en": "Turkey",
-              "fr": "Turquie"
-            }
-          },
-          {
-            "id": "text-11f4c35ef7",
-            "label": "Turkmenistan",
-            "source": "Turkmenistan",
-            "values": {
-              "ar": "تركمانستان",
-              "en": "Turkmenistan",
-              "fr": "Turkménistan"
-            }
-          },
-          {
-            "id": "text-0de04c1667",
-            "label": "Tuvalu",
-            "source": "Tuvalu",
-            "values": {
-              "ar": "توفالو",
-              "en": "Tuvalu",
-              "fr": "Tuvalu"
-            }
-          },
-          {
-            "id": "text-32ea9951f3",
-            "label": "Uganda",
-            "source": "Uganda",
-            "values": {
-              "ar": "أوغندا",
-              "en": "Uganda",
-              "fr": "Ouganda"
-            }
-          },
-          {
-            "id": "text-fabc327529",
-            "label": "Ukraine",
-            "source": "Ukraine",
-            "values": {
-              "ar": "أوكرانيا",
-              "en": "Ukraine",
-              "fr": "Ukraine"
-            }
-          },
-          {
-            "id": "text-241cae7e75",
-            "label": "United Arab Emirates",
-            "source": "United Arab Emirates",
-            "values": {
-              "ar": "الإمارات العربية المتحدة",
-              "en": "United Arab Emirates",
-              "fr": "Émirats arabes unis"
-            }
-          },
-          {
-            "id": "text-2265a80440",
-            "label": "United Kingdom",
-            "source": "United Kingdom",
-            "values": {
-              "ar": "المملكة المتحدة",
-              "en": "United Kingdom",
-              "fr": "Royaume-Uni"
-            }
-          },
-          {
-            "id": "text-0bff208d3c",
-            "label": "United States",
-            "source": "United States",
-            "values": {
-              "ar": "الولايات المتحدة",
-              "en": "United States",
-              "fr": "États-Unis"
-            }
-          },
-          {
-            "id": "text-c1d7c69487",
-            "label": "Uruguay",
-            "source": "Uruguay",
-            "values": {
-              "ar": "أوروغواي",
-              "en": "Uruguay",
-              "fr": "Uruguay"
-            }
-          },
-          {
-            "id": "text-6f85f46092",
-            "label": "Uzbekistan",
-            "source": "Uzbekistan",
-            "values": {
-              "ar": "أوزبكستان",
-              "en": "Uzbekistan",
-              "fr": "Ouzbékistan"
-            }
-          },
-          {
-            "id": "text-b7cb935e0f",
-            "label": "Vanuatu",
-            "source": "Vanuatu",
-            "values": {
-              "ar": "فانواتو",
-              "en": "Vanuatu",
-              "fr": "Vanuatu"
-            }
-          },
-          {
-            "id": "text-6457723dc9",
-            "label": "Vatican City",
-            "source": "Vatican City",
-            "values": {
-              "ar": "مدينة الفاتيكان",
-              "en": "Vatican City",
-              "fr": "Cité du Vatican"
-            }
-          },
-          {
-            "id": "text-02cd346f30",
-            "label": "Venezuela",
-            "source": "Venezuela",
-            "values": {
-              "ar": "فنزويلا",
-              "en": "Venezuela",
-              "fr": "Venezuela"
-            }
-          },
-          {
-            "id": "text-e2c6f60331",
-            "label": "Vietnam",
-            "source": "Vietnam",
-            "values": {
-              "ar": "فيتنام",
-              "en": "Vietnam",
-              "fr": "Vietnam"
-            }
-          },
-          {
-            "id": "text-90584bd265",
-            "label": "Yemen",
-            "source": "Yemen",
-            "values": {
-              "ar": "اليمن",
-              "en": "Yemen",
-              "fr": "Yémen"
-            }
-          },
-          {
-            "id": "text-0e63c46835",
-            "label": "Zambia",
-            "source": "Zambia",
-            "values": {
-              "ar": "زامبيا",
-              "en": "Zambia",
-              "fr": "Zambie"
-            }
-          },
-          {
-            "id": "text-a9fabecdeb",
-            "label": "Zimbabwe",
-            "source": "Zimbabwe",
-            "values": {
-              "ar": "زيمبابوي",
-              "en": "Zimbabwe",
-              "fr": "Zimbabwe"
-            }
-          },
-          {
-            "id": "text-7d2bb51ec1",
-            "label": "+20 100 550 5020",
-            "source": "+20 100 550 5020",
-            "values": {
-              "ar": "+20 100 550 5020",
-              "en": "+20 100 550 5020",
-              "fr": "+20 100 550 5020"
             }
           }
         ],
@@ -18888,15 +16223,7 @@
             }
           }
         ],
-        "assets": [
-          {
-            "id": "asset-a825ceb575",
-            "kind": "image",
-            "label": "logo full.svg",
-            "value": "/assets/logo-full.svg",
-            "source": "/assets/logo-full.svg"
-          }
-        ],
+        "assets": [],
         "enabled": true,
         "richTexts": []
       }
@@ -18912,16 +16239,6 @@
         "label": "Popups and notices",
         "links": [],
         "texts": [
-          {
-            "id": "text-bf7deac4ca",
-            "label": "Nov 2026",
-            "source": "Nov 2026",
-            "values": {
-              "ar": "نوفمبر 2026",
-              "en": "Nov 2026",
-              "fr": "Novembre 2026"
-            }
-          },
           {
             "id": "text-ff38abb554",
             "label": "Upcoming event",
@@ -18940,36 +16257,6 @@
               "ar": "قابلنا في",
               "en": "Meet us at",
               "fr": "Retrouvez-nous à"
-            }
-          },
-          {
-            "id": "text-a8f0e2302c",
-            "label": "Gulfood Manufacturing.",
-            "source": "Gulfood Manufacturing.",
-            "values": {
-              "ar": "جلفود للتصنيع.",
-              "en": "Gulfood Manufacturing.",
-              "fr": "Fabrication Gulfood."
-            }
-          },
-          {
-            "id": "text-3d8ba73920",
-            "label": "18–22 November 2026",
-            "source": "18–22 November 2026",
-            "values": {
-              "ar": "18-22 نوفمبر 2026",
-              "en": "18–22 November 2026",
-              "fr": "18-22 novembre 2026"
-            }
-          },
-          {
-            "id": "text-b4d13c8c22",
-            "label": "Dubai World Trade Centre — Hall 4, Stand C 42",
-            "source": "Dubai World Trade Centre — Hall 4, Stand C-42",
-            "values": {
-              "ar": "مركز دبي التجاري العالمي – القاعة 4، الجناح C-42",
-              "en": "Dubai World Trade Centre — Hall 4, Stand C-42",
-              "fr": "Dubai World Trade Centre — Hall 4, Stand C-42"
             }
           },
           {
@@ -19043,316 +16330,6 @@
             }
           },
           {
-            "id": "text-2ed10bbe62",
-            "label": "Full name",
-            "source": "Full name",
-            "values": {
-              "ar": "الاسم الكامل",
-              "en": "Full name",
-              "fr": "Nom complet"
-            }
-          },
-          {
-            "id": "text-3380049cb4",
-            "label": "Company",
-            "source": "Company",
-            "values": {
-              "ar": "شركة",
-              "en": "Company",
-              "fr": "Société"
-            }
-          },
-          {
-            "id": "text-99659e118d",
-            "label": "Work email",
-            "source": "Work email",
-            "values": {
-              "ar": "البريد الإلكتروني للعمل",
-              "en": "Work email",
-              "fr": "Courriel de travail"
-            }
-          },
-          {
-            "id": "text-9fffda539c",
-            "label": "Country",
-            "source": "Country",
-            "values": {
-              "ar": "دولة",
-              "en": "Country",
-              "fr": "Pays"
-            }
-          },
-          {
-            "id": "text-68c72b6504",
-            "label": "Product",
-            "source": "Product",
-            "values": {
-              "ar": "منتج",
-              "en": "Product",
-              "fr": "Produit"
-            }
-          },
-          {
-            "id": "text-bc91b9c351",
-            "label": "Select a product line",
-            "source": "Select a product line",
-            "values": {
-              "ar": "حدد خط المنتج",
-              "en": "Select a product line",
-              "fr": "Sélectionnez une ligne de produits"
-            }
-          },
-          {
-            "id": "text-988c127ec1",
-            "label": "Tomato concentrates",
-            "source": "Tomato concentrates",
-            "values": {
-              "ar": "مركزات الطماطم",
-              "en": "Tomato concentrates",
-              "fr": "Concentrés de tomates"
-            }
-          },
-          {
-            "id": "text-b4a108efef",
-            "label": "Fruit concentrates",
-            "source": "Fruit concentrates",
-            "values": {
-              "ar": "مركزات الفاكهة",
-              "en": "Fruit concentrates",
-              "fr": "Concentrés de fruits"
-            }
-          },
-          {
-            "id": "text-9817c4336f",
-            "label": "Chilli concentrate",
-            "source": "Chilli concentrate",
-            "values": {
-              "ar": "تركيز الفلفل الحار",
-              "en": "Chilli concentrate",
-              "fr": "Chilli concentré"
-            }
-          },
-          {
-            "id": "text-3eab0e5055",
-            "label": "Fruit purees",
-            "source": "Fruit purees",
-            "values": {
-              "ar": "مهروس الفاكهة",
-              "en": "Fruit purees",
-              "fr": "Purées de fruits"
-            }
-          },
-          {
-            "id": "text-afd4d32806",
-            "label": "Cold Break Tomato Concentrate",
-            "source": "Cold Break Tomato Concentrate",
-            "values": {
-              "ar": "مركز الطماطم الباردة",
-              "en": "Cold Break Tomato Concentrate",
-              "fr": "Concentrez-vous sur la tomate froide Break"
-            }
-          },
-          {
-            "id": "text-abeeb486bd",
-            "label": "Hot Break Tomato Concentrate",
-            "source": "Hot Break Tomato Concentrate",
-            "values": {
-              "ar": "مركز الطماطم الساخنة",
-              "en": "Hot Break Tomato Concentrate",
-              "fr": "Concentrez-vous sur la tomate chaude"
-            }
-          },
-          {
-            "id": "text-f9d270fa51",
-            "label": "Apple Concentrate",
-            "source": "Apple Concentrate",
-            "values": {
-              "ar": "مركزات التفاح",
-              "en": "Apple Concentrate",
-              "fr": "Concentration de pommes"
-            }
-          },
-          {
-            "id": "text-4d7c53cd67",
-            "label": "Mango Concentrate",
-            "source": "Mango Concentrate",
-            "values": {
-              "ar": "مركز المانجو",
-              "en": "Mango Concentrate",
-              "fr": "Mango Concentré"
-            }
-          },
-          {
-            "id": "text-ed052aff64",
-            "label": "Strawberry Concentrate",
-            "source": "Strawberry Concentrate",
-            "values": {
-              "ar": "مركز الفراولة",
-              "en": "Strawberry Concentrate",
-              "fr": "Concentré de fraises"
-            }
-          },
-          {
-            "id": "text-ef27b66763",
-            "label": "Guava Concentrate",
-            "source": "Guava Concentrate",
-            "values": {
-              "ar": "مركز الجوافة",
-              "en": "Guava Concentrate",
-              "fr": "Guava Concentré"
-            }
-          },
-          {
-            "id": "text-756f08dfb6",
-            "label": "Peach Concentrate",
-            "source": "Peach Concentrate",
-            "values": {
-              "ar": "مركز الخوخ",
-              "en": "Peach Concentrate",
-              "fr": "Concentré pêche"
-            }
-          },
-          {
-            "id": "text-ecc53afd80",
-            "label": "Apple Puree",
-            "source": "Apple Puree",
-            "values": {
-              "ar": "هريس التفاح",
-              "en": "Apple Puree",
-              "fr": "Puree des pommes"
-            }
-          },
-          {
-            "id": "text-7b26639fb6",
-            "label": "Mango Puree",
-            "source": "Mango Puree",
-            "values": {
-              "ar": "هريسة المانجو",
-              "en": "Mango Puree",
-              "fr": "Mango Purée"
-            }
-          },
-          {
-            "id": "text-4f51e26911",
-            "label": "Strawberry Puree",
-            "source": "Strawberry Puree",
-            "values": {
-              "ar": "هريس الفراولة",
-              "en": "Strawberry Puree",
-              "fr": "Pure de fraise"
-            }
-          },
-          {
-            "id": "text-c8f0ccc438",
-            "label": "Guava Puree",
-            "source": "Guava Puree",
-            "values": {
-              "ar": "هريس الجوافة",
-              "en": "Guava Puree",
-              "fr": "Guava Purée"
-            }
-          },
-          {
-            "id": "text-1062d4d2c1",
-            "label": "Peach Puree",
-            "source": "Peach Puree",
-            "values": {
-              "ar": "هريس الخوخ",
-              "en": "Peach Puree",
-              "fr": "Pure de pêche"
-            }
-          },
-          {
-            "id": "text-56e79057f8",
-            "label": "Apricot Puree",
-            "source": "Apricot Puree",
-            "values": {
-              "ar": "هريس المشمش",
-              "en": "Apricot Puree",
-              "fr": "Abricot Puree"
-            }
-          },
-          {
-            "id": "text-2beaa29dd1",
-            "label": "Chilli Concentrate",
-            "source": "Chilli Concentrate",
-            "values": {
-              "ar": "مركز الفلفل الحار",
-              "en": "Chilli Concentrate",
-              "fr": "Chilli Concentré"
-            }
-          },
-          {
-            "id": "text-2faaecfa2c",
-            "label": "Not sure yet",
-            "source": "Not sure yet",
-            "values": {
-              "ar": "لست متأكدا بعد",
-              "en": "Not sure yet",
-              "fr": "Pas encore sûr"
-            }
-          },
-          {
-            "id": "text-d1fd813290",
-            "label": "Indicative annual volume",
-            "source": "Indicative annual volume",
-            "values": {
-              "ar": "الحجم السنوي الإرشادي",
-              "en": "Indicative annual volume",
-              "fr": "Volume annuel indicatif"
-            }
-          },
-          {
-            "id": "text-8d9987be3f",
-            "label": "Specification notes",
-            "source": "Specification notes",
-            "values": {
-              "ar": "ملاحظات المواصفات",
-              "en": "Specification notes",
-              "fr": "Notes techniques"
-            }
-          },
-          {
-            "id": "text-10a90cdb4a",
-            "label": "I agree that Alamir Ingredients may use these details to answ...",
-            "source": "I agree that Alamir Ingredients may use these details to answer my enquiry, as described in the",
-            "values": {
-              "ar": "أوافق على أنه يجوز لـ Alamir Ingredients استخدام هذه التفاصيل للإجابة على استفساري، كما هو موضح في",
-              "en": "I agree that Alamir Ingredients may use these details to answer my enquiry, as described in the",
-              "fr": "Je conviens qu'Alamir Ingredients peut utiliser ces détails pour répondre à ma demande, comme décrit dans la"
-            }
-          },
-          {
-            "id": "text-c472e57342",
-            "label": "privacy policy",
-            "source": "privacy policy",
-            "values": {
-              "ar": "سياسة الخصوصية",
-              "en": "privacy policy",
-              "fr": "Politique de confidentialité"
-            }
-          },
-          {
-            "id": "text-5864a36e61",
-            "label": "Send request",
-            "source": "Send request",
-            "values": {
-              "ar": "إرسال الطلب",
-              "en": "Send request",
-              "fr": "Envoyer la demande"
-            }
-          },
-          {
-            "id": "text-a6a18f0a8e",
-            "label": "Cancel",
-            "source": "Cancel",
-            "values": {
-              "ar": "يلغي",
-              "en": "Cancel",
-              "fr": "Annuler"
-            }
-          },
-          {
             "id": "text-ae7910f617",
             "label": "cookie notice",
             "source": "cookie notice",
@@ -19403,96 +16380,6 @@
             }
           },
           {
-            "id": "text-db2330aa68",
-            "label": "Please enter your full name.",
-            "source": "Please enter your full name.",
-            "values": {
-              "ar": "يرجى إدخال اسمك الكامل.",
-              "en": "Please enter your full name.",
-              "fr": "Veuillez saisir votre nom complet."
-            }
-          },
-          {
-            "id": "text-d6982dd80a",
-            "label": "Please enter your company name.",
-            "source": "Please enter your company name.",
-            "values": {
-              "ar": "يرجى إدخال اسم الشركة.",
-              "en": "Please enter your company name.",
-              "fr": "Veuillez saisir le nom de votre entreprise."
-            }
-          },
-          {
-            "id": "text-5d22a704d4",
-            "label": "Please enter your work email.",
-            "source": "Please enter your work email.",
-            "values": {
-              "ar": "يرجى إدخال بريدك الإلكتروني للعمل.",
-              "en": "Please enter your work email.",
-              "fr": "Veuillez saisir votre adresse e-mail professionnelle."
-            }
-          },
-          {
-            "id": "text-1d0d11346f",
-            "label": "Please enter a valid email address.",
-            "source": "Please enter a valid email address.",
-            "values": {
-              "ar": "يرجى إدخال عنوان بريد إلكتروني صالح.",
-              "en": "Please enter a valid email address.",
-              "fr": "Veuillez saisir une adresse e-mail valide."
-            }
-          },
-          {
-            "id": "text-a8d9ed45fa",
-            "label": "Please enter your country.",
-            "source": "Please enter your country.",
-            "values": {
-              "ar": "يرجى إدخال بلدك.",
-              "en": "Please enter your country.",
-              "fr": "Veuillez saisir votre pays."
-            }
-          },
-          {
-            "id": "text-7a135db549",
-            "label": "Single products",
-            "source": "Single products",
-            "values": {
-              "ar": "منتجات مفردة",
-              "en": "Single products",
-              "fr": "Produits uniques"
-            }
-          },
-          {
-            "id": "text-6770892a48",
-            "label": "e.g. 120 MT",
-            "source": "e.g. 120 MT",
-            "values": {
-              "ar": "على سبيل المثال 120 طن متري",
-              "en": "e.g. 120 MT",
-              "fr": "Par exemple 120 MT"
-            }
-          },
-          {
-            "id": "text-c73db70e70",
-            "label": "Brix, packaging format, delivery terms, timing",
-            "source": "Brix, packaging format, delivery terms, timing",
-            "values": {
-              "ar": "بركس، تنسيق التعبئة والتغليف، شروط التسليم، التوقيت",
-              "en": "Brix, packaging format, delivery terms, timing",
-              "fr": "Brix, format d'emballage, conditions de livraison, calendrier"
-            }
-          },
-          {
-            "id": "text-aedad3ffc8",
-            "label": "Please accept the privacy policy to continue.",
-            "source": "Please accept the privacy policy to continue.",
-            "values": {
-              "ar": "يرجى الموافقة على سياسة الخصوصية للمتابعة.",
-              "en": "Please accept the privacy policy to continue.",
-              "fr": "Veuillez accepter la politique de confidentialité pour continuer."
-            }
-          },
-          {
             "id": "text-f3584e9d58",
             "label": "Cookie notice",
             "source": "Cookie notice",
@@ -19503,15 +16390,7 @@
             }
           }
         ],
-        "assets": [
-          {
-            "id": "asset-e3ae03ed2c",
-            "kind": "image",
-            "label": "photos/team corridor.webp",
-            "value": "/assets/photos/team-corridor.webp",
-            "source": "/assets/photos/team-corridor.webp"
-          }
-        ],
+        "assets": [],
         "enabled": true,
         "richTexts": [
           {
@@ -19839,16 +16718,6 @@
             }
           },
           {
-            "id": "text-7fc5ec540c",
-            "label": "Sadat City, Menoufia, Egypt",
-            "source": "Sadat City, Menoufia, Egypt",
-            "values": {
-              "ar": "مدينة السادات، المنوفية، مصر",
-              "en": "Sadat City, Menoufia, Egypt",
-              "fr": "Ville de Sadate, Menoufia, Égypte"
-            }
-          },
-          {
             "id": "text-4ad6ee560b",
             "label": "(c) 2026 Alamir Ingredients",
             "source": "(c) 2026 Alamir Ingredients",
@@ -19979,22 +16848,7 @@
             }
           }
         ],
-        "assets": [
-          {
-            "id": "asset-a825ceb575",
-            "kind": "image",
-            "label": "logo full.svg",
-            "value": "/assets/logo-full.svg",
-            "source": "/assets/logo-full.svg"
-          },
-          {
-            "id": "asset-c6f8103ad8",
-            "kind": "image",
-            "label": "logo.webp",
-            "value": "/assets/logo.webp",
-            "source": "/assets/logo.webp"
-          }
-        ],
+        "assets": [],
         "enabled": true,
         "richTexts": [
           {
@@ -20090,37 +16944,37 @@
     {
       "id": 126,
       "translation_key": "book-a-meeting.c69153687791",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Afghanistan"
     },
     {
       "id": 129,
       "translation_key": "book-a-meeting.79b9d273ac6d",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Albania"
     },
     {
       "id": 130,
       "translation_key": "book-a-meeting.bd6acc8626d1",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Algeria"
     },
     {
       "id": 132,
       "translation_key": "book-a-meeting.9d3bd1fb5278",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Andorra"
     },
     {
       "id": 133,
       "translation_key": "book-a-meeting.a42522a0cdd6",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Angola"
     },
     {
       "id": 134,
       "translation_key": "book-a-meeting.530670dca740",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Antigua and Barbuda"
     },
     {
@@ -20132,25 +16986,25 @@
     {
       "id": 136,
       "translation_key": "book-a-meeting.354bf9892583",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Argentina"
     },
     {
       "id": 137,
       "translation_key": "book-a-meeting.5f4599daa341",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Armenia"
     },
     {
       "id": 138,
       "translation_key": "book-a-meeting.ceafb51e2b07",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Australia"
     },
     {
       "id": 139,
       "translation_key": "book-a-meeting.593905b31972",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Austria"
     },
     {
@@ -20162,7 +17016,7 @@
     {
       "id": 141,
       "translation_key": "book-a-meeting.213598a7e922",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Azerbaijan"
     },
     {
@@ -20174,163 +17028,163 @@
     {
       "id": 145,
       "translation_key": "book-a-meeting.1f797564f784",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Bahamas"
     },
     {
       "id": 146,
       "translation_key": "book-a-meeting.3ae11c725c30",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Bahrain"
     },
     {
       "id": 147,
       "translation_key": "book-a-meeting.fa6c3752cd00",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Bangladesh"
     },
     {
       "id": 148,
       "translation_key": "book-a-meeting.93409af2f208",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Barbados"
     },
     {
       "id": 149,
       "translation_key": "book-a-meeting.027a12c2fc85",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Belarus"
     },
     {
       "id": 150,
       "translation_key": "book-a-meeting.5cb4c9d82817",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Belgium"
     },
     {
       "id": 151,
       "translation_key": "book-a-meeting.42ab0c94a1e3",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Belize"
     },
     {
       "id": 152,
       "translation_key": "book-a-meeting.373616e39fb4",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Benin"
     },
     {
       "id": 153,
       "translation_key": "book-a-meeting.bb2254a806f4",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Bhutan"
     },
     {
       "id": 154,
       "translation_key": "book-a-meeting.a001af75ee89",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Bolivia"
     },
     {
       "id": 158,
       "translation_key": "book-a-meeting.62ac59b7255c",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Bosnia and Herzegovina"
     },
     {
       "id": 159,
       "translation_key": "book-a-meeting.180c89bf50c8",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Botswana"
     },
     {
       "id": 160,
       "translation_key": "book-a-meeting.37497aa5a227",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Brazil"
     },
     {
       "id": 163,
       "translation_key": "book-a-meeting.130e4a34f1b8",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Brunei"
     },
     {
       "id": 164,
       "translation_key": "book-a-meeting.5c77726358c5",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Bulgaria"
     },
     {
       "id": 165,
       "translation_key": "book-a-meeting.e71b56d92347",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Burkina Faso"
     },
     {
       "id": 166,
       "translation_key": "book-a-meeting.4617585b8749",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Burundi"
     },
     {
       "id": 167,
       "translation_key": "book-a-meeting.314ccd964ef6",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Cambodia"
     },
     {
       "id": 168,
       "translation_key": "book-a-meeting.73a7ddd505f2",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Cameroon"
     },
     {
       "id": 169,
       "translation_key": "book-a-meeting.cd6a7b876852",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Canada"
     },
     {
       "id": 170,
       "translation_key": "book-a-meeting.8e40809e474f",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Cape Verde"
     },
     {
       "id": 171,
       "translation_key": "book-a-meeting.dba86789b53e",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Central African Republic"
     },
     {
       "id": 172,
       "translation_key": "book-a-meeting.6c6b1b2b3ecc",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Chad"
     },
     {
       "id": 173,
       "translation_key": "book-a-meeting.349507e41dd8",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Chile"
     },
     {
       "id": 175,
       "translation_key": "book-a-meeting.d2eaf2aa1512",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "China"
     },
     {
       "id": 178,
       "translation_key": "book-a-meeting.2f7373996064",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Colombia"
     },
     {
       "id": 179,
       "translation_key": "book-a-meeting.e5bb59a27319",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Comoros"
     },
     {
@@ -20348,73 +17202,73 @@
     {
       "id": 184,
       "translation_key": "book-a-meeting.3b8a1bc656ad",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Congo (Brazzaville)"
     },
     {
       "id": 185,
       "translation_key": "book-a-meeting.7fef84abda29",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Congo (Kinshasa)"
     },
     {
       "id": 186,
       "translation_key": "book-a-meeting.1bf429f94068",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Costa Rica"
     },
     {
       "id": 187,
       "translation_key": "book-a-meeting.58f76ad9b377",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Cote d'Ivoire"
     },
     {
       "id": 190,
       "translation_key": "book-a-meeting.d7e0453bb4af",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Croatia"
     },
     {
       "id": 191,
       "translation_key": "book-a-meeting.c484b137e2d1",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Cuba"
     },
     {
       "id": 192,
       "translation_key": "book-a-meeting.852addab901c",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Cyprus"
     },
     {
       "id": 193,
       "translation_key": "book-a-meeting.045e2f1d6c4d",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Czechia"
     },
     {
       "id": 195,
       "translation_key": "book-a-meeting.89da124e04df",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Denmark"
     },
     {
       "id": 196,
       "translation_key": "book-a-meeting.60a8b0c6de6f",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Djibouti"
     },
     {
       "id": 197,
       "translation_key": "book-a-meeting.bc1cd4f07d82",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Dominica"
     },
     {
       "id": 198,
       "translation_key": "book-a-meeting.8a4bf12e17b2",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Dominican Republic"
     },
     {
@@ -20450,49 +17304,49 @@
     {
       "id": 204,
       "translation_key": "book-a-meeting.09f199d25132",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Ecuador"
     },
     {
       "id": 205,
       "translation_key": "book-a-meeting.1c39abf68e93",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Egypt"
     },
     {
       "id": 206,
       "translation_key": "book-a-meeting.259a6e935b84",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "El Salvador"
     },
     {
       "id": 207,
       "translation_key": "book-a-meeting.80eaf3087b0b",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Equatorial Guinea"
     },
     {
       "id": 208,
       "translation_key": "book-a-meeting.18740af5bcec",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Eritrea"
     },
     {
       "id": 209,
       "translation_key": "book-a-meeting.f0a96da3f86a",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Estonia"
     },
     {
       "id": 210,
       "translation_key": "book-a-meeting.16cc7f843a3e",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Eswatini"
     },
     {
       "id": 211,
       "translation_key": "book-a-meeting.3d91f7631ba8",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Ethiopia"
     },
     {
@@ -20504,19 +17358,19 @@
     {
       "id": 214,
       "translation_key": "book-a-meeting.bbb7ef7f2ec9",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Fiji"
     },
     {
       "id": 215,
       "translation_key": "book-a-meeting.c909b138eba8",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Finland"
     },
     {
       "id": 216,
       "translation_key": "book-a-meeting.e3772ac4b4db",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "France"
     },
     {
@@ -20528,91 +17382,91 @@
     {
       "id": 221,
       "translation_key": "book-a-meeting.a06dcd71328f",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Gabon"
     },
     {
       "id": 222,
       "translation_key": "book-a-meeting.7c39974f44b2",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Gambia"
     },
     {
       "id": 223,
       "translation_key": "book-a-meeting.9113c6c0c1f9",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Georgia"
     },
     {
       "id": 224,
       "translation_key": "book-a-meeting.17d53e0e6a68",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Germany"
     },
     {
       "id": 225,
       "translation_key": "book-a-meeting.317dbac90743",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Ghana"
     },
     {
       "id": 226,
       "translation_key": "book-a-meeting.4902a456caa9",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Greece"
     },
     {
       "id": 227,
       "translation_key": "book-a-meeting.dbf2a2da6458",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Grenada"
     },
     {
       "id": 228,
       "translation_key": "book-a-meeting.11760e1aac43",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Guatemala"
     },
     {
       "id": 229,
       "translation_key": "book-a-meeting.b47b54fd3a46",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Guinea"
     },
     {
       "id": 230,
       "translation_key": "book-a-meeting.b07cb9a2b248",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Guinea-Bissau"
     },
     {
       "id": 231,
       "translation_key": "book-a-meeting.bc88a24030a1",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Guyana"
     },
     {
       "id": 232,
       "translation_key": "book-a-meeting.a4842f0234d7",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Haiti"
     },
     {
       "id": 233,
       "translation_key": "book-a-meeting.5aa588714ab4",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Honduras"
     },
     {
       "id": 234,
       "translation_key": "book-a-meeting.2f488ffc82cc",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Hong Kong"
     },
     {
       "id": 235,
       "translation_key": "book-a-meeting.f14e46ce7d09",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Hungary"
     },
     {
@@ -20630,211 +17484,211 @@
     {
       "id": 238,
       "translation_key": "book-a-meeting.b3c92eecf0aa",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Iceland"
     },
     {
       "id": 239,
       "translation_key": "book-a-meeting.967ce367d89d",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "India"
     },
     {
       "id": 240,
       "translation_key": "book-a-meeting.35536a41b209",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Indonesia"
     },
     {
       "id": 241,
       "translation_key": "book-a-meeting.889224e3fca2",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Iran"
     },
     {
       "id": 242,
       "translation_key": "book-a-meeting.1aed9ecc6e1b",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Iraq"
     },
     {
       "id": 243,
       "translation_key": "book-a-meeting.eb2131ece0ef",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Ireland"
     },
     {
       "id": 244,
       "translation_key": "book-a-meeting.4c197dfd67f1",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Israel"
     },
     {
       "id": 245,
       "translation_key": "book-a-meeting.ad79ef0f076d",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Italy"
     },
     {
       "id": 246,
       "translation_key": "book-a-meeting.5eedd6a16ab8",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Jamaica"
     },
     {
       "id": 247,
       "translation_key": "book-a-meeting.fcf29f6cad32",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Japan"
     },
     {
       "id": 248,
       "translation_key": "book-a-meeting.674027e17b0e",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Jordan"
     },
     {
       "id": 249,
       "translation_key": "book-a-meeting.2f36b6bb1852",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Kazakhstan"
     },
     {
       "id": 250,
       "translation_key": "book-a-meeting.a84f56f2e6a7",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Kenya"
     },
     {
       "id": 251,
       "translation_key": "book-a-meeting.3f57adf2c06c",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Kiribati"
     },
     {
       "id": 252,
       "translation_key": "book-a-meeting.93295b0c76b9",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Kuwait"
     },
     {
       "id": 253,
       "translation_key": "book-a-meeting.c78791a3f0e1",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Kyrgyzstan"
     },
     {
       "id": 254,
       "translation_key": "book-a-meeting.7998be8d446d",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Laos"
     },
     {
       "id": 255,
       "translation_key": "book-a-meeting.c5f5bb3b3507",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Latvia"
     },
     {
       "id": 256,
       "translation_key": "book-a-meeting.5caa7f811b5a",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Lebanon"
     },
     {
       "id": 257,
       "translation_key": "book-a-meeting.93b12bf57f18",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Lesotho"
     },
     {
       "id": 258,
       "translation_key": "book-a-meeting.1ed5dd9d833f",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Liberia"
     },
     {
       "id": 259,
       "translation_key": "book-a-meeting.55949d4c1663",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Libya"
     },
     {
       "id": 260,
       "translation_key": "book-a-meeting.b0ddce0f54c9",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Liechtenstein"
     },
     {
       "id": 261,
       "translation_key": "book-a-meeting.74a788cee27d",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Lithuania"
     },
     {
       "id": 262,
       "translation_key": "book-a-meeting.5076721c4060",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Luxembourg"
     },
     {
       "id": 263,
       "translation_key": "book-a-meeting.918c53a2d612",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Macao"
     },
     {
       "id": 264,
       "translation_key": "book-a-meeting.f92bcb6a06d2",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Madagascar"
     },
     {
       "id": 265,
       "translation_key": "book-a-meeting.0ce65b26dcd3",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Malawi"
     },
     {
       "id": 266,
       "translation_key": "book-a-meeting.ff3ea3bec182",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Malaysia"
     },
     {
       "id": 267,
       "translation_key": "book-a-meeting.213cb2045092",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Maldives"
     },
     {
       "id": 268,
       "translation_key": "book-a-meeting.daa6a489dbca",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Mali"
     },
     {
       "id": 269,
       "translation_key": "book-a-meeting.1a591a3e91fc",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Malta"
     },
     {
       "id": 270,
       "translation_key": "book-a-meeting.bb130626b42c",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Marshall Islands"
     },
     {
       "id": 271,
       "translation_key": "book-a-meeting.85fa355bdb4f",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Mauritania"
     },
     {
       "id": 272,
       "translation_key": "book-a-meeting.26160d23fb07",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Mauritius"
     },
     {
@@ -20846,85 +17700,85 @@
     {
       "id": 277,
       "translation_key": "book-a-meeting.41937b20fbe8",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Mexico"
     },
     {
       "id": 278,
       "translation_key": "book-a-meeting.5a7d7bc91620",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Micronesia"
     },
     {
       "id": 279,
       "translation_key": "book-a-meeting.9791bc4d7273",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Moldova"
     },
     {
       "id": 281,
       "translation_key": "book-a-meeting.35ab1c3de6da",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Monaco"
     },
     {
       "id": 282,
       "translation_key": "book-a-meeting.f54da380bade",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Mongolia"
     },
     {
       "id": 283,
       "translation_key": "book-a-meeting.479fb34bdbf4",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Montenegro"
     },
     {
       "id": 284,
       "translation_key": "book-a-meeting.32e087f099be",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Morocco"
     },
     {
       "id": 285,
       "translation_key": "book-a-meeting.a40a9be00a9a",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Mozambique"
     },
     {
       "id": 286,
       "translation_key": "book-a-meeting.928b7c48a60a",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Myanmar"
     },
     {
       "id": 287,
       "translation_key": "book-a-meeting.bfe79debcedd",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Namibia"
     },
     {
       "id": 288,
       "translation_key": "book-a-meeting.f648c72a69c3",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Nauru"
     },
     {
       "id": 289,
       "translation_key": "book-a-meeting.0e1d589f58b7",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Nepal"
     },
     {
       "id": 290,
       "translation_key": "book-a-meeting.fb61c8a8eba2",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Netherlands"
     },
     {
       "id": 291,
       "translation_key": "book-a-meeting.a2238e91907f",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "New Zealand"
     },
     {
@@ -20936,91 +17790,91 @@
     {
       "id": 293,
       "translation_key": "book-a-meeting.4812648c8a89",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Nicaragua"
     },
     {
       "id": 294,
       "translation_key": "book-a-meeting.6687e1896dd8",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Niger"
     },
     {
       "id": 295,
       "translation_key": "book-a-meeting.9742d008c420",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Nigeria"
     },
     {
       "id": 296,
       "translation_key": "book-a-meeting.765b46e79bef",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "North Korea"
     },
     {
       "id": 297,
       "translation_key": "book-a-meeting.e2ac50f5a2be",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "North Macedonia"
     },
     {
       "id": 298,
       "translation_key": "book-a-meeting.988455e67df7",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Norway"
     },
     {
       "id": 300,
       "translation_key": "book-a-meeting.c14c36dffca6",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Oman"
     },
     {
       "id": 301,
       "translation_key": "book-a-meeting.82d220df17ce",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Pakistan"
     },
     {
       "id": 302,
       "translation_key": "book-a-meeting.e5e0b68adfac",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Palau"
     },
     {
       "id": 303,
       "translation_key": "book-a-meeting.05a15c18a203",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Palestine"
     },
     {
       "id": 304,
       "translation_key": "book-a-meeting.1e36b31e7882",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Panama"
     },
     {
       "id": 305,
       "translation_key": "book-a-meeting.fbaa3c3e9e1b",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Papua New Guinea"
     },
     {
       "id": 306,
       "translation_key": "book-a-meeting.71a45296474d",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Paraguay"
     },
     {
       "id": 307,
       "translation_key": "book-a-meeting.36c57243155b",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Peru"
     },
     {
       "id": 308,
       "translation_key": "book-a-meeting.8067364d44f5",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Philippines"
     },
     {
@@ -21032,13 +17886,13 @@
     {
       "id": 314,
       "translation_key": "book-a-meeting.5ff03b7273b1",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Poland"
     },
     {
       "id": 315,
       "translation_key": "book-a-meeting.a495190bcc2e",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Portugal"
     },
     {
@@ -21056,121 +17910,121 @@
     {
       "id": 323,
       "translation_key": "book-a-meeting.83ef3e6cee83",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Qatar"
     },
     {
       "id": 324,
       "translation_key": "book-a-meeting.d6b897fd145a",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Romania"
     },
     {
       "id": 325,
       "translation_key": "book-a-meeting.6754fe3cd831",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Russia"
     },
     {
       "id": 326,
       "translation_key": "book-a-meeting.7266a1da7e3a",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Rwanda"
     },
     {
       "id": 327,
       "translation_key": "book-a-meeting.3ad2dd829664",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Saint Kitts and Nevis"
     },
     {
       "id": 328,
       "translation_key": "book-a-meeting.673b1cf863c8",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Saint Lucia"
     },
     {
       "id": 329,
       "translation_key": "book-a-meeting.3fa9b2dd85d2",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Saint Vincent and the Grenadines"
     },
     {
       "id": 330,
       "translation_key": "book-a-meeting.f5680604ea9e",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Samoa"
     },
     {
       "id": 331,
       "translation_key": "book-a-meeting.87fd3befcce6",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "San Marino"
     },
     {
       "id": 332,
       "translation_key": "book-a-meeting.6ddcb9e4747f",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Sao Tome and Principe"
     },
     {
       "id": 334,
       "translation_key": "book-a-meeting.6f49c31192f5",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Saudi Arabia"
     },
     {
       "id": 339,
       "translation_key": "book-a-meeting.d8973b8edfe5",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Senegal"
     },
     {
       "id": 340,
       "translation_key": "book-a-meeting.6d31bf00d7ed",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Serbia"
     },
     {
       "id": 341,
       "translation_key": "book-a-meeting.3d2d7b1c3400",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Seychelles"
     },
     {
       "id": 342,
       "translation_key": "book-a-meeting.50df2d658581",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Sierra Leone"
     },
     {
       "id": 343,
       "translation_key": "book-a-meeting.20c0b7bdab70",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Singapore"
     },
     {
       "id": 344,
       "translation_key": "book-a-meeting.b6c149c3e004",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Slovakia"
     },
     {
       "id": 345,
       "translation_key": "book-a-meeting.d1aa0503612a",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Slovenia"
     },
     {
       "id": 346,
       "translation_key": "book-a-meeting.ecae78abec52",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Solomon Islands"
     },
     {
       "id": 347,
       "translation_key": "book-a-meeting.4dfdf195ecb7",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Somalia"
     },
     {
@@ -21182,199 +18036,199 @@
     {
       "id": 349,
       "translation_key": "book-a-meeting.35fda17ff05f",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "South Africa"
     },
     {
       "id": 350,
       "translation_key": "book-a-meeting.04653e650280",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "South Korea"
     },
     {
       "id": 351,
       "translation_key": "book-a-meeting.6981f4026cf8",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "South Sudan"
     },
     {
       "id": 352,
       "translation_key": "book-a-meeting.20a8df9b7603",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Spain"
     },
     {
       "id": 353,
       "translation_key": "book-a-meeting.197042c4de91",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Sri Lanka"
     },
     {
       "id": 354,
       "translation_key": "book-a-meeting.1193ba31f109",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Sudan"
     },
     {
       "id": 356,
       "translation_key": "book-a-meeting.b17fc6f05c07",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Suriname"
     },
     {
       "id": 357,
       "translation_key": "book-a-meeting.72ddd2b619af",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Sweden"
     },
     {
       "id": 358,
       "translation_key": "book-a-meeting.77dcd849e550",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Switzerland"
     },
     {
       "id": 359,
       "translation_key": "book-a-meeting.3ed104337eb1",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Syria"
     },
     {
       "id": 360,
       "translation_key": "book-a-meeting.094d515b3608",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Taiwan"
     },
     {
       "id": 361,
       "translation_key": "book-a-meeting.279c771ae60c",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Tajikistan"
     },
     {
       "id": 362,
       "translation_key": "book-a-meeting.7e380be8dc28",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Tanzania"
     },
     {
       "id": 363,
       "translation_key": "book-a-meeting.a2b7c120c93a",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Thailand"
     },
     {
       "id": 368,
       "translation_key": "book-a-meeting.2d79f6dbae28",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Timor-Leste"
     },
     {
       "id": 369,
       "translation_key": "book-a-meeting.30949d5f4a69",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Togo"
     },
     {
       "id": 371,
       "translation_key": "book-a-meeting.e8a1234b8442",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Tonga"
     },
     {
       "id": 372,
       "translation_key": "book-a-meeting.4d206a8103d3",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Trinidad and Tobago"
     },
     {
       "id": 374,
       "translation_key": "book-a-meeting.edf404d0db32",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Tunisia"
     },
     {
       "id": 375,
       "translation_key": "book-a-meeting.d7153e6702b4",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Turkey"
     },
     {
       "id": 376,
       "translation_key": "book-a-meeting.1f8dc1a6076e",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Turkmenistan"
     },
     {
       "id": 377,
       "translation_key": "book-a-meeting.9a2248f7c4de",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Tuvalu"
     },
     {
       "id": 378,
       "translation_key": "book-a-meeting.e92904bce802",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Uganda"
     },
     {
       "id": 379,
       "translation_key": "book-a-meeting.c951ec00f123",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Ukraine"
     },
     {
       "id": 380,
       "translation_key": "book-a-meeting.d115b8d5acb8",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "United Arab Emirates"
     },
     {
       "id": 381,
       "translation_key": "book-a-meeting.9769121f10f7",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "United Kingdom"
     },
     {
       "id": 382,
       "translation_key": "book-a-meeting.768685ca582a",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "United States"
     },
     {
       "id": 383,
       "translation_key": "book-a-meeting.66b98924b384",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Uruguay"
     },
     {
       "id": 384,
       "translation_key": "book-a-meeting.db800e86e9f3",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Uzbekistan"
     },
     {
       "id": 385,
       "translation_key": "book-a-meeting.d16ad2dcc6af",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Vanuatu"
     },
     {
       "id": 386,
       "translation_key": "book-a-meeting.136f5db5de74",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Vatican City"
     },
     {
       "id": 387,
       "translation_key": "book-a-meeting.9d4ac43d5e24",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Venezuela"
     },
     {
       "id": 390,
       "translation_key": "book-a-meeting.681101d8f9fa",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Vietnam"
     },
     {
@@ -21392,19 +18246,19 @@
     {
       "id": 396,
       "translation_key": "book-a-meeting.ac33d641f4c9",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Yemen"
     },
     {
       "id": 400,
       "translation_key": "book-a-meeting.dcf25ed56c95",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Zambia"
     },
     {
       "id": 401,
       "translation_key": "book-a-meeting.5922f5ceeff3",
-      "page": "book-a-meeting",
+      "page": "countries",
       "source": "Zimbabwe"
     },
     {

@@ -17,6 +17,7 @@ export const adminResources = [
   {key:'about_page',label:'About page'},
   {key:'careers_page',label:'Careers page'},
   {key:'sustainability',label:'Sustainability articles'},
+  {key:'sustainability_goals',label:'Sustainability goals'},
   {key:'sustainability_page',label:'Sustainability page'},
   {key: 'news', label: 'News articles'},
   {key: 'news_taxonomies', label: 'News categories and tags'},

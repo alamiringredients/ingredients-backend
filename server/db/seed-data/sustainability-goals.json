@@ -1,0 +1,167 @@
+[
+  {
+    "id": 2,
+    "alt": {
+      "ar": "هدف الأمم المتحدة للتنمية المستدامة 2 - القضاء على الجوع",
+      "en": "UN Sustainable Development Goal 2 — Zero hunger",
+      "fr": "Objectif de développement durable 2 de l'ONU — Zéro faim"
+    },
+    "name": {
+      "ar": "صفر الجوع",
+      "en": "Zero hunger",
+      "fr": "Zéro faim"
+    },
+    "color": "#DDA63A",
+    "image": "/assets/SDG%20Icons/E_SDG_Icons-02.webp"
+  },
+  {
+    "id": 4,
+    "alt": {
+      "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 4 - التعليم الجيد",
+      "en": "UN Sustainable Development Goal 4 — Quality education",
+      "fr": "Objectif de développement durable 4 de l'ONU — Une éducation de qualité"
+    },
+    "name": {
+      "ar": "تعليم عالي الجودة",
+      "en": "Quality education",
+      "fr": "Éducation de qualité"
+    },
+    "color": "#C5192D",
+    "image": "/assets/SDG%20Icons/E_SDG_Icons-04.webp"
+  },
+  {
+    "id": 6,
+    "alt": {
+      "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 6 - المياه النظيفة والصرف الصحي",
+      "en": "UN Sustainable Development Goal 6 — Clean water and sanitation",
+      "fr": "Objectif de développement durable 6 de l'ONU — Eau potable et assainissement"
+    },
+    "name": {
+      "ar": "المياه النظيفة والصرف الصحي",
+      "en": "Clean water and sanitation",
+      "fr": "Eau potable et assainissement"
+    },
+    "color": "#26BDE2",
+    "image": "/assets/SDG%20Icons/E_SDG_Icons-06.webp"
+  },
+  {
+    "id": 7,
+    "alt": {
+      "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 7 - طاقة نظيفة وبأسعار معقولة",
+      "en": "UN Sustainable Development Goal 7 — Affordable and clean energy",
+      "fr": "Objectif de développement durable 7 de l'ONU — Énergie abordable et propre"
+    },
+    "name": {
+      "ar": "طاقة نظيفة وبأسعار معقولة",
+      "en": "Affordable and clean energy",
+      "fr": "Énergie abordable et propre"
+    },
+    "color": "#FCC30B",
+    "image": "/assets/SDG%20Icons/E_SDG_Icons-07.webp"
+  },
+  {
+    "id": 8,
+    "alt": {
+      "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 8 - العمل اللائق والنمو الاقتصادي",
+      "en": "UN Sustainable Development Goal 8 — Decent work and economic growth",
+      "fr": "Objectif de développement durable 8 de l'ONU — Travail décent et croissance économique"
+    },
+    "name": {
+      "ar": "العمل اللائق والنمو الاقتصادي",
+      "en": "Decent work and economic growth",
+      "fr": "Travail décent et croissance économique"
+    },
+    "color": "#A21942",
+    "image": "/assets/SDG%20Icons/E_SDG_Icons-08.webp"
+  },
+  {
+    "id": 9,
+    "alt": {
+      "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 9 - الصناعة والابتكار والبنية التحتية",
+      "en": "UN Sustainable Development Goal 9 — Industry, innovation and infrastructure",
+      "fr": "Objectif de développement durable 9 de l'ONU — Industrie, innovation et infrastructures"
+    },
+    "name": {
+      "ar": "الصناعة والابتكار والبنية التحتية",
+      "en": "Industry, innovation and infrastructure",
+      "fr": "Industrie, innovation et infrastructures"
+    },
+    "color": "#FD6925",
+    "image": "/assets/SDG%20Icons/E_SDG_Icons-09.webp"
+  },
+  {
+    "id": 11,
+    "alt": {
+      "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 11 - مدن ومجتمعات محلية مستدامة",
+      "en": "UN Sustainable Development Goal 11 — Sustainable cities and communities",
+      "fr": "Objectif de développement durable 11 de l'ONU — Villes et communautés durables"
+    },
+    "name": {
+      "ar": "المدن والمجتمعات المستدامة",
+      "en": "Sustainable cities and communities",
+      "fr": "Villes et communautés durables"
+    },
+    "color": "#FD9D24",
+    "image": "/assets/SDG%20Icons/E_SDG_Icons-11.webp"
+  },
+  {
+    "id": 12,
+    "alt": {
+      "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 12 - الاستهلاك والإنتاج المسؤولان",
+      "en": "UN Sustainable Development Goal 12 — Responsible consumption and production",
+      "fr": "Objectif de développement durable 12 de l'ONU — Une consommation et une production responsables"
+    },
+    "name": {
+      "ar": "الاستهلاك والإنتاج المسؤولان",
+      "en": "Responsible consumption and production",
+      "fr": "Consommation et production responsables"
+    },
+    "color": "#BF8B2E",
+    "image": "/assets/SDG%20Icons/E_SDG_Icons-12.webp"
+  },
+  {
+    "id": 13,
+    "alt": {
+      "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 13 - العمل المناخي",
+      "en": "UN Sustainable Development Goal 13 — Climate action",
+      "fr": "Objectif de développement durable 13 de l'ONU — Action pour le climat"
+    },
+    "name": {
+      "ar": "العمل المناخي",
+      "en": "Climate action",
+      "fr": "Action pour le climat"
+    },
+    "color": "#3F7E44",
+    "image": "/assets/SDG%20Icons/E_SDG_Icons-13.webp"
+  },
+  {
+    "id": 15,
+    "alt": {
+      "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 15 – الحياة على الأرض",
+      "en": "UN Sustainable Development Goal 15 — Life on land",
+      "fr": "Objectif de développement durable 15 de l'ONU — La vie sur terre"
+    },
+    "name": {
+      "ar": "الحياة على الأرض",
+      "en": "Life on land",
+      "fr": "La vie sur terre"
+    },
+    "color": "#56C02B",
+    "image": "/assets/SDG%20Icons/E_SDG_Icons-15.webp"
+  },
+  {
+    "id": 17,
+    "alt": {
+      "ar": "هدف الأمم المتحدة للتنمية المستدامة رقم 17 - الشراكات من أجل تحقيق الأهداف",
+      "en": "UN Sustainable Development Goal 17 — Partnerships for the goals",
+      "fr": "Objectif de développement durable 17 de l'ONU — Partenariats pour les objectifs"
+    },
+    "name": {
+      "ar": "شراكات من أجل الأهداف",
+      "en": "Partnerships for the goals",
+      "fr": "Partenariats pour les objectifs"
+    },
+    "color": "#19486A",
+    "image": "/assets/SDG%20Icons/E_SDG_Icons-17.webp"
+  }
+]

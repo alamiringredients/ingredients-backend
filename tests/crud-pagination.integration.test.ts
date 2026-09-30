@@ -8,7 +8,7 @@ import {getTranslationList} from '../server/admin/translation-list'
 import {getEventSlotList} from '../server/services/events/content'
 import {getCrudIndex, type CrudKind} from '../server/admin/crud-index'
 
-const kinds: CrudKind[] = ['products', 'product-categories', 'applications', 'concentrations', 'certifications', 'certification-types', 'news', 'sustainability', 'news-categories', 'news-tags', 'events', 'careers', 'admins', 'roles']
+const kinds: CrudKind[] = ['products', 'product-categories', 'applications', 'concentrations', 'certifications', 'certification-types', 'news', 'sustainability', 'sustainability-goals', 'news-categories', 'news-tags', 'events', 'careers', 'admins', 'roles']
 test('every CRUD index paginates and filters in Holo queries', async t => {
   loadEnvFile('.env')
   const client = await createConnection({host: process.env.DB_HOST, port: Number(process.env.DB_PORT || 3306), user: process.env.DB_USERNAME, password: process.env.DB_PASSWORD, database: process.env.DB_DATABASE})

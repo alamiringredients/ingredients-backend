@@ -73,7 +73,7 @@ export function validateDocument(input: unknown): ContentDocument {
       out.content = n.content.map(child=>visit(child,depth+1,n.type))
     }
     if(n.type==='contentSection'){
-      if(typeof a.id!=='string'||!/^[\w-]{1,100}$/.test(a.id)||!Array.isArray(a.goals)||a.goals.some(g=>!Number.isInteger(g)||Number(g)<1||Number(g)>17))throw new Error('Invalid section anchor or goals.')
+      if(typeof a.id!=='string'||!/^[\w-]{1,100}$/.test(a.id)||!Array.isArray(a.goals)||a.goals.some(g=>!Number.isSafeInteger(g)||Number(g)<1))throw new Error('Invalid section anchor or goals.')
       out.attrs={id:a.id,goals:[...new Set(a.goals)],theme:choice(a.theme,['plain','tint','navy'],'plain')}
     }
     if(n.type==='dataTable'){
@@ -95,7 +95,7 @@ export function validateDocument(input: unknown): ContentDocument {
     }
     if (n.type === 'facts' || n.type === 'textStatistics') {
       if (!Array.isArray(a.items) || a.items.length > 20) throw new Error('Use up to twenty rows.')
-      out.attrs = {label:string(a.label ?? ''),items:a.items.map(item=>{const i=item as Record<string,unknown>;return {value:string(i.value ?? ''),label:string(i.label ?? '')}}),...(n.type==='textStatistics'?{markSrc:contentUrl(a.markSrc??'',true),markAlt:string(a.markAlt??''),markHref:a.markHref?contentUrl(a.markHref):''}:{})}
+      out.attrs = {label:string(a.label ?? ''),items:a.items.map(item=>{const i=item as Record<string,unknown>;return {value:string(i.value ?? ''),label:string(i.label ?? '')}}),...(n.type==='textStatistics'?{useGroupLogo:a.useGroupLogo===true,markSrc:a.useGroupLogo===true?'':contentUrl(a.markSrc??'',true),markAlt:string(a.markAlt??''),markHref:a.markHref?contentUrl(a.markHref):''}:{})}
     }
     if (n.type === 'columns') {
       if (!out.content || out.content.length < 2 || out.content.length > 3) throw new Error('Layouts need two or three columns.')

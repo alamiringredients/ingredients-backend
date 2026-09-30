@@ -161,6 +161,7 @@ export function SustainabilityManager({
                 <EditorField name={`content.locales.${locale}.title`} label="Title">
                   <ContentEditor
                     sectionGoals
+                    goalOptions={page.goals.map(goal=>({id:goal.id,name:goal.name[locale]}))}
                     editable={canEdit && !busy}
                     key={`title-${locale}`}
                     label="Article title"
@@ -176,6 +177,7 @@ export function SustainabilityManager({
                 <EditorField name={`content.locales.${locale}.body`} label="Article body">
                   <ContentEditor
                     sectionGoals
+                    goalOptions={page.goals.map(goal=>({id:goal.id,name:goal.name[locale]}))}
                     editable={canEdit && !busy}
                     key={`body-${locale}`}
                     locale={locale}
@@ -293,6 +295,7 @@ export function SustainabilityManager({
                 <EditorField name={`content.locales.${locale}.cardTitle`} label="Card title">
                   <ContentEditor
                     sectionGoals
+                    goalOptions={page.goals.map(goal=>({id:goal.id,name:goal.name[locale]}))}
                     editable={canEdit && !busy}
                     key={`card-${locale}`}
                     label="Card title"

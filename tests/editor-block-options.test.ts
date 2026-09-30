@@ -52,9 +52,16 @@ test('statistics blocks preserve their complete header row',()=>{
   assert.deepEqual(document.content[0].attrs,{
     label:'Al Amir Group at a glance',
     markSrc:'/assets/logo-group-mark.webp',
+    useGroupLogo:false,
     markAlt:'Alamir Group',
     markHref:'https://www.alamireg.com/',
     items:[{value:'50+years',label:'Of agricultural trading'}],
     visible:true,
   })
+})
+
+test('statistics can use the shared group logo without retaining a separate image',()=>{
+  const document=validateDocument({type:'doc',content:[{type:'textStatistics',attrs:{useGroupLogo:true,markSrc:'/old-logo.webp',items:[]}}]})
+  assert.equal(document.content[0].attrs?.useGroupLogo,true)
+  assert.equal(document.content[0].attrs?.markSrc,'')
 })

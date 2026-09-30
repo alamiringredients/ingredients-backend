@@ -12,6 +12,6 @@ export function validateSustainabilityVersion(input:unknown,publish=false):Susta
 }
 export function validateSustainabilityContent(input:unknown):SustainabilityContent{
  const c=input as SustainabilityContent
- if(!c||!/^\d{4}-\d{2}-\d{2}$/.test(c.date)||!Number.isFinite(Date.parse(c.date))||!/^\d{4}-\d{2}-\d{2}$/.test(c.updatedDate)||!Number.isFinite(Date.parse(c.updatedDate))||!Number.isSafeInteger(c.sortOrder)||!Array.isArray(c.goalIds)||c.goalIds.some(id=>!Number.isInteger(id)||id<1||id>17)||!Number.isInteger(c.primaryGoal)||c.primaryGoal!==0&&!c.goalIds.includes(c.primaryGoal))throw new Error('Check the date, display order, and sustainability goals.')
+ if(!c||!/^\d{4}-\d{2}-\d{2}$/.test(c.date)||!Number.isFinite(Date.parse(c.date))||!/^\d{4}-\d{2}-\d{2}$/.test(c.updatedDate)||!Number.isFinite(Date.parse(c.updatedDate))||!Number.isSafeInteger(c.sortOrder)||!Array.isArray(c.goalIds)||c.goalIds.some(id=>!Number.isSafeInteger(id)||id<1)||!Number.isInteger(c.primaryGoal)||c.primaryGoal!==0&&!c.goalIds.includes(c.primaryGoal))throw new Error('Check the date, display order, and sustainability goals.')
  return {date:c.date,updatedDate:c.updatedDate,sortOrder:c.sortOrder,featured:Boolean(c.featured),goalIds:[...new Set(c.goalIds)],primaryGoal:c.primaryGoal,locales:Object.fromEntries(newsLocales.map(l=>[l,validateSustainabilityVersion(c.locales?.[l])])) as SustainabilityContent['locales']}
 }

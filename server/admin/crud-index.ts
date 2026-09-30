@@ -8,7 +8,7 @@ import {textContent, type ContentDocument} from '@/lib/editor/document'
 import {databaseDate} from '@/server/support/database-date'
 import {normalizeRolePermissions} from '@/lib/admin/access'
 
-export type CrudKind = 'products' | 'product-categories' | 'applications' | 'concentrations' | 'certifications' | 'certification-types' | 'news' | 'sustainability' | 'news-categories' | 'news-tags' | 'events' | 'careers' | 'admins' | 'roles'
+export type CrudKind = 'products' | 'product-categories' | 'applications' | 'concentrations' | 'certifications' | 'certification-types' | 'news' | 'sustainability' | 'sustainability-goals' | 'news-categories' | 'news-tags' | 'events' | 'careers' | 'admins' | 'roles'
 type Row = Record<string, unknown>
 type Definition=Pick<CrudIndexData,'title'|'section'|'noun'|'resource'|'columns'>&{
   query: TableQueryBuilder; filters: CrudFilter[]; searchColumns: string[]
@@ -35,6 +35,13 @@ const translated = (table: string, key: string, parent = 'r.id') => DB.table(tab
 const names = async (table: string, key: string) => (await DB.table(table).select(key, 'name').where('locale', 'en').orderBy('name').get()).map(row => ({value: str(row[key]), label: str(row.name)}))
 
 async function definition(kind: CrudKind): Promise<Definition> {
+  if (kind === 'sustainability-goals') {
+    return {title:'Sustainability goals',section:'Sustainability',noun:'goal',resource:'sustainability_goals',columns:['Name','Goal ID','Articles','Display order'],
+      query:DB.table('sustainability_goals as r').select('r.id','r.image','r.sort_order').addSelectSub(translated('sustainability_goal_translations','goal_id').select('name'),'name').addSelectSub(DB.table('sustainability_article_goal').whereColumn('goal_id','=','r.id').selectCount(),'used_by').orderBy('r.sort_order').orderBy('r.id'),
+      filters:[],searchColumns:[],translatedSearch:[{table:'sustainability_goal_translations',key:'goal_id',column:'name'}],filter:none,
+      row:r=>identity(r,r.name,[Number(r.id),Number(r.used_by),Number(r.sort_order)],undefined,r.image),
+    }
+  }
   if (kind === 'products' || kind === 'product-categories') {
     const product = kind === 'products'
     const table = product ? 'products' : 'product_categories'

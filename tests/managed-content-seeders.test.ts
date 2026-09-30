@@ -46,8 +46,48 @@ test('homepage key figure numbers are owned by the homepage seeder',()=>{
     ['exhibitions-yearly',14],
   ]
   const source=siteContent.home_sections.find(section=>section.section_key==='figures')!.content
-  assert.deepEqual(figures.stats?.map(stat=>[stat.id,stat.value]),expected)
-  assert.deepEqual(source.stats?.map(stat=>[stat.id,stat.value]),expected)
+  assert.deepEqual(figures.figures?.map(figure=>[figure.id,figure.value]),expected)
+  assert.deepEqual(source.figures?.map(figure=>[figure.id,figure.value]),expected)
+})
+
+test('popup seeds contain only the current announcement, quote introduction and cookie notice',()=>{
+  const overlays=getHomePageSeedContent().sections.find(section=>section.key==='overlays')!
+  const source=siteContent.home_sections.find(section=>section.section_key==='overlays')!.content
+  assert.deepEqual(overlays.texts.map(field=>field.source),source.texts.map(field=>field.source))
+  assert.equal(overlays.texts.length,15)
+  for(const field of ['Upcoming event','Request a quote','Cookie notice'])assert.ok(overlays.texts.some(item=>item.source===field))
+  for(const field of ['Nov 2026','Gulfood Manufacturing.','Full name','Select a product line','Indicative annual volume'])assert.equal(overlays.texts.some(item=>item.source===field),false)
+  assert.deepEqual(overlays.assets,[])
+  assert.deepEqual(source.assets,[])
+  assert.equal(overlays.richTexts?.length,2)
+})
+
+test('the header and footer use the main logo from Website settings',()=>{
+  assert.equal(getWebsiteSettingsSeedContent().logo,'/assets/logo-full.svg')
+  for(const sections of [getHomePageSeedContent().sections,siteContent.home_sections.map(row=>row.content)]){
+    for(const section of sections.filter(section=>['header','footer'].includes(section.key)))assert.equal(section.assets.some(asset=>asset.source==='/assets/logo-full.svg'),false)
+  }
+})
+
+test('the group logo is owned by Website settings instead of individual home sections',()=>{
+  assert.equal(getWebsiteSettingsSeedContent().groupLogo,'/assets/logo.webp')
+  const settings=siteContent.website_settings.find(row=>row.setting_key==='website')!.value
+  assert.equal('groupLogo' in settings&&settings.groupLogo,'/assets/logo.webp')
+  for(const sections of [getHomePageSeedContent().sections,siteContent.home_sections.map(row=>row.content)]){
+    for(const section of sections)assert.equal(section.assets.some(asset=>['/assets/logo.webp','/assets/logo-group-mark.webp'].includes(asset.source)),false)
+  }
+  const about=siteContent.website_settings.find(row=>row.setting_key==='about')!.value
+  const statistics:Record<string,unknown>[]=[]
+  const visit=(value:unknown)=>{
+    if(Array.isArray(value)){value.forEach(visit);return}
+    if(!value||typeof value!=='object')return
+    const node=value as {type?:string;attrs?:Record<string,unknown>}
+    if(node.type==='textStatistics')statistics.push(node.attrs!)
+    Object.values(value).forEach(visit)
+  }
+  visit(about)
+  assert.equal(statistics.length,3)
+  for(const attrs of statistics){assert.equal(attrs.useGroupLogo,true);assert.equal(attrs.markSrc,'')}
 })
 
 test('shared seeder merge repairs copied English while retaining administrator edits',()=>{

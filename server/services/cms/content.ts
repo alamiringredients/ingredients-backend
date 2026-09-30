@@ -1,3 +1,4 @@
+import {removeDecorativeFields} from '@/lib/cms/decorative-fields'
 import cache from '@holo-js/cache'
 import 'server-only'
 
@@ -6,6 +7,9 @@ import type {HomeCmsData, HomeSectionContent, HomeSeoContent, WebsiteSettings} f
 import HomeSection from '@/server/models/HomeSection'
 import WebsiteSetting from '@/server/models/WebsiteSetting'
 import {decodeStoredJson} from '@/lib/cms/stored-json'
+import {removeHomeCountryFields} from '@/lib/cms/country-content'
+import {removeCompanyInformation} from '@/lib/cms/company-information'
+import {removeInternalNavigationLinks} from '@/lib/cms/navigation-links'
 
 function asObject<T>(value: unknown): T | undefined {
   if (value === null || value === undefined) return undefined
@@ -40,7 +44,8 @@ export const getWebsiteSettings = async (): Promise<WebsiteSettings> => {
 export async function persistHomeSection(section: HomeSectionContent) {
   const record=await HomeSection.where('section_key',section.key).first()
   if(!record) throw new Error('Homepage section is missing. Run the home_page seeder.')
-  await record.update({label:section.label,enabled:section.enabled,content:section})
+  if (section.key === 'header' || section.key === 'footer') section = {...section, assets: section.assets.filter(asset => asset.source !== '/assets/logo-full.svg')}
+  await record.update({label:section.label,enabled:section.enabled,content:removeDecorativeFields(removeCompanyInformation(removeInternalNavigationLinks(removeHomeCountryFields(section))))})
 }
 
 export async function persistHomeSeo(value: HomeSeoContent) {

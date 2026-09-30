@@ -4,6 +4,7 @@ import {createHash} from 'node:crypto'
 import {cmsLocales} from './cms/contracts'
 import {contentTranslation} from './content-translation-values'
 import {contentCacheKeys} from '@/server/support/cache-keys'
+import countryNames from './cms/country-names.json'
 import interfaceTranslationSources from '@/server/db/seed-data/interface-translation-sources.json'
 import ContentTranslation from '@/server/models/ContentTranslation'
 import '@/server/models/ContentTranslationValue'
@@ -40,7 +41,7 @@ export function getTranslationDefinitions(): TranslationEntry[] {
   return interfaceTranslationSources.flatMap(({page,sources}) =>
     sources.map(text => ({
       key: `${page.replaceAll('/', '.')}.${createHash('sha1').update(text).digest('hex').slice(0, 12)}`,
-      page,
+      page: countryNames.includes(text) ? 'countries' : page,
       source: text,
       translations: {
         en: text,

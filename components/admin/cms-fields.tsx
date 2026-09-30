@@ -15,7 +15,7 @@ import { FieldError,FormNotice,RequiredMark,useAdminFields,type AdminResult } fr
 import {cmsCardIds} from '@/lib/cms/card-ids'
 
 export type CmsMediaOwner = {
-  type: 'career-job' | 'sustainability' | 'news' | 'event' | 'home-section' | 'website-setting' | 'product' | 'category' | 'certification' | 'certification-type'
+  type: 'sustainability-goal' | 'career-job' | 'sustainability' | 'news' | 'event' | 'home-section' | 'website-setting' | 'product' | 'category' | 'certification' | 'certification-type'
   key: string
 }
 
@@ -88,7 +88,7 @@ export function StatFields({fields,onChange}:{fields:CmsStatField[];onChange:(fi
   const path=form?.path(fields)??'stats'
   return <div className="cms-locale-grid">
     {fields.map((field,index)=>{
-      const name=`${path}.${index}.value`
+      const name=`${form?.path(field)??`${path}.${index}`}.value`
       const props=form?.input(name)
       return <div className="admin-field" key={field.id}>
         <label htmlFor={props?.id}>{field.label}</label>
@@ -157,7 +157,7 @@ export function AssetField({field, owner, onChange, conversion='optimized', name
   return <div className="cms-media-row">
     <div className="cms-media-preview">
       {field.kind === 'pdf' ? <PdfStatus url={field.value} /> : field.kind === 'video'
-        ? <video src={field.value} muted playsInline preload="metadata" />
+        ? field.value ? <video src={field.value} muted playsInline preload="metadata" /> : <span>No video</span>
         : field.value ? <Image src={field.value} alt="" width={176} height={124} unoptimized /> : <span>No image</span>}
     </div>
     <div className="cms-media-field">

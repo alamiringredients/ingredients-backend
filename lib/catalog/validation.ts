@@ -1,7 +1,9 @@
+import {isDecorativeField} from '@/lib/cms/decorative-fields'
 import {cmsLocales, type LocalizedValue} from '@/lib/cms/contracts'
 import {MAX_CATEGORY_ARTWORK_IMAGES,type CatalogBlock,type CatalogPageContent} from './contracts'
 import {localizedDocument} from '@/lib/cms/document'
 import {textContent} from '@/lib/editor/document'
+import {removeInternalNavigationLinks} from '@/lib/cms/navigation-links'
 export function localizedValue(value: unknown, label: string, required = false): LocalizedValue {
   if (!value || typeof value !== 'object') throw new Error(`${label}: enter all three locales.`)
   const result = Object.fromEntries(cmsLocales.map((locale) => {
@@ -31,9 +33,9 @@ export function validateBlock(input: CatalogBlock, original: CatalogBlock): Cata
     }})
   }
   return {...original, enabled:input.enabled, ...(items?{items}:{}),
-    texts:original.texts.map((field) => ({...field, values:localizedValue(input.texts.find((item) => item.id === field.id)?.values, field.label)})),
+    texts:original.texts.filter(field=>!isDecorativeField(field.source)).map((field) => ({...field, values:localizedValue(input.texts.find((item) => item.id === field.id)?.values, field.label)})),
     assets:original.assets.map((field) => ({...field, value:safeUrl(input.assets.find((item) => item.id === field.id)?.value)})),
-    links:original.links.map((field) => ({...field, value:safeUrl(input.links.find((item) => item.id === field.id)?.value)})),
+    links:removeInternalNavigationLinks({links:original.links.map((field) => ({...field, value:safeUrl(input.links.find((item) => item.id === field.id)?.value)}))}).links,
   }
 }
 export function validateArtworkBlock(input:CatalogBlock,original:CatalogBlock):CatalogBlock {

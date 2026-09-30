@@ -1,3 +1,4 @@
+import type {CompanyInformation} from './company-information'
 import type {ContentDocument} from '@/lib/editor/document'
 export const cmsLocales = ['en', 'ar', 'fr'] as const
 
@@ -34,6 +35,15 @@ export type CmsStatField = {
   value: number
 }
 
+export type CmsFigureItem = {
+  id: string
+  value: number
+  unit: string
+  unitLabel: LocalizedValue
+  label: LocalizedValue
+  description: LocalizedValue
+}
+
 export type CmsCardItem = {
   id: string
   title: LocalizedValue
@@ -49,6 +59,7 @@ export type HomeSectionContent = {
   assets: CmsAssetField[]
   links: CmsLinkField[]
   stats?: CmsStatField[]
+  figures?: CmsFigureItem[]
   cards?: CmsCardItem[]
   videos?: string[]
 }
@@ -77,9 +88,11 @@ export type EditorialPageContent = {
 }
 
 export type WebsiteSettings = {
+  company: CompanyInformation
   companyProfile: LocalizedValue
   siteName: LocalizedValue
   logo: string
+  groupLogo: string
   icon: string
   defaultSeoTitle: LocalizedValue
   defaultSeoDescription: LocalizedValue

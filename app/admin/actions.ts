@@ -1,6 +1,7 @@
 'use server'
 import {adminActionError} from '@/server/admin/form-actions'
 import CareerJob from '@/server/models/CareerJob'
+import SustainabilityGoal from '@/server/models/SustainabilityGoal'
 import SustainabilityArticle from '@/server/models/SustainabilityArticle'
 import {safeUrl} from '@/lib/catalog/validation'
 import {sectionVisibility} from '@/lib/cms/section-visibility'
@@ -8,7 +9,7 @@ import {sectionVisibility} from '@/lib/cms/section-visibility'
 import {validate} from '@holo-js/forms'
 import {revalidatePath} from 'next/cache'
 
-import {saveCmsPayload, uploadCmsFile} from '@/app/admin/cms-schema'
+import {companyInformation, homeFigures, saveCmsPayload, uploadCmsFile} from '@/app/admin/cms-schema'
 import {persistHomeSection, persistHomeSeo, persistWebsiteSettings} from '@/server/services/cms/content'
 import {persistDownloadsPageContent} from '@/server/services/downloads/content'
 import type {HomeSectionContent, HomeSeoContent, WebsiteSettings} from '@/lib/cms/contracts'
@@ -76,10 +77,10 @@ export async function saveHomeSectionAction(formData:FormData) {
 
     const data = await validate(formData, saveCmsPayload)
     const section = JSON.parse(data.payload) as HomeSectionContent
-    const validStats=section.key!=='figures'||(Array.isArray(section.stats)&&section.stats.length>0&&new Set(section.stats.map(stat=>stat.id)).size===section.stats.length&&section.stats.every(stat=>typeof stat.id==='string'&&typeof stat.label==='string'&&Number.isSafeInteger(stat.value)&&stat.value>=0))
-    if (section.key !== data.key || !Array.isArray(section.texts) || !Array.isArray(section.assets) || !Array.isArray(section.links) || !validStats) {
+    if (section.key !== data.key || !Array.isArray(section.texts) || !Array.isArray(section.assets) || !Array.isArray(section.links)) {
       return {ok: false, message: 'The section content is not valid.'}
     }
+    if(section.key==='figures')section.figures=(await validate(section,homeFigures)).figures
     await persistHomeSection(section)
     
     revalidatePath('/admin/home')
@@ -111,6 +112,11 @@ export async function saveWebsiteSettingsAction(formData:FormData) {
     const data = await validate(formData, saveCmsPayload)
     if (data.key !== 'website') return {ok: false, message: 'The settings key is not valid.'}
     const value = JSON.parse(data.payload) as WebsiteSettings
+    const validated = await validate({company: value.company}, companyInformation)
+    value.company = validated.company
+    value.company.website = safeUrl(value.company.website)
+    value.company.salesWhatsapp = safeUrl(value.company.salesWhatsapp)
+    for (const key of ['facebook', 'instagram', 'linkedin', 'youtube', 'whatsapp'] as const) value.company.socialLinks[key] = safeUrl(value.company.socialLinks[key])
     value.companyProfile = {en:safeUrl(value.companyProfile?.en ?? ''), ar:safeUrl(value.companyProfile?.ar ?? ''), fr:safeUrl(value.companyProfile?.fr ?? '')}
     await persistWebsiteSettings(value)
     
@@ -164,6 +170,13 @@ export async function uploadCmsFileAction(formData:FormData) {
       await requireAdminPermission('news','edit')
       const owner=await NewsArticle.where('id',Number(data.ownerKey)).first()
       if(!owner)return {ok:false,message:'Save the article before uploading media.'}
+      return storeCmsMedia(owner,file,conversion)
+    }
+
+    if(data.ownerType==='sustainability-goal'){
+      await requireAdminPermission('sustainability_goals','edit')
+      const owner=await SustainabilityGoal.find(Number(data.ownerKey))
+      if(!owner)return {ok:false,message:'Save the goal before uploading its image.'}
       return storeCmsMedia(owner,file,conversion)
     }
 

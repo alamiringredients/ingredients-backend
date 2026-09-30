@@ -93,6 +93,7 @@ const navigationGroups: {label: string; links: NavigationLink[]}[] = [
     label: 'Sustainability',
     links: [
       {href:'/admin/sustainability-page',label:'Sustainability page',icon:'sustainability-page',resource:'sustainability_page'},
+      {href:'/admin/sustainability-goals',label:'Sustainability goals',icon:'sustainability-page',resource:'sustainability_goals'},
       {href:'/admin/sustainability',label:'Sustainability articles',icon:'sustainability-articles',resource:'sustainability'},
     ],
   },
