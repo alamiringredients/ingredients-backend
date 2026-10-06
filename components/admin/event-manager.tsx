@@ -336,6 +336,7 @@ export function EventEditor({
       </AdminForm>
       {event.id>0&&pagination&&<AppointmentManager
                   event={event}
+                  canEdit={canEdit}
                   slots={slots}
                   pagination={pagination}
                   onNotice={form.apply}
@@ -347,11 +348,13 @@ export function EventEditor({
 
 function AppointmentManager({
   event,
+  canEdit,
   slots,
   pagination,
   onNotice,
 }: {
   event: EventRecord;
+  canEdit: boolean;
   slots: EventSlotRecord[];
   pagination: SubmissionPagination;
   onNotice: (result: { ok: boolean; message: string }) => void;
@@ -380,12 +383,12 @@ function AppointmentManager({
     timeZone: event.timezone,
   });
   return (
-    <AdminFormProvider form={form}><AdminForm onSubmit={event=>{event.preventDefault();void generate(new FormData(event.currentTarget))}}><CatalogPanel title="Appointments"><FormNotice result={form.result}/><FormNotice result={deletion.result}/>
+    <AdminFormProvider form={form}><AdminForm onSubmit={event=>{event.preventDefault();if(canEdit)void generate(new FormData(event.currentTarget))}}><CatalogPanel title="Appointments"><FormNotice result={form.result}/><FormNotice result={deletion.result}/>
       <p className="catalog-help">
         Generate explicit dated slots. Reserved slots remain protected and show
         the booking details below.
       </p>
-      <div className="catalog-form-grid">
+      <fieldset className="catalog-form-grid news-crud-fields" disabled={!canEdit || busy}>
         <CatalogField name="date">
           <span>Date</span>
           <input
@@ -422,10 +425,10 @@ function AppointmentManager({
             }
           />
         </CatalogField>
-      </div>
+      </fieldset>
       <CatalogButton
         type="button"
-        disabled={busy}
+        disabled={!canEdit || busy}
         onClick={() => void generate()}
       >
         {busy ? "Generating..." : "Generate slots"}
@@ -470,10 +473,10 @@ function AppointmentManager({
               )}
             </td>
             <td>
-              {slot.status === "available" && (
+              {canEdit && slot.status === "available" && (
                 <CatalogButton
                   type="button"
-                  disabled={busy}
+                  disabled={!canEdit || busy}
                   onClick={async () => {
                     const result=await deletion.run(()=>deleteEventSlotAction(slot.id));
                     if(result?.ok)router.refresh();

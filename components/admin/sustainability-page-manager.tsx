@@ -173,6 +173,7 @@ export function SustainabilityPageManager({
                     }
                   />
                   <LocalizedEditor
+                    editable={canEdit && !busy}
                     label="Heading"
                     value={content.relatedTitle}
                     onChange={(relatedTitle) =>

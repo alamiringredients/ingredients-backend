@@ -1,10 +1,11 @@
+import {resolveMediaReferences} from '@/server/support/media-references'
 import 'server-only'
 import {databaseDate} from '@/server/support/database-date'
 import {decode, type NewsContent, type NewsRecord, type NewsVersion} from '@/lib/news/contracts'
 import type {CmsLocale} from '@/lib/cms/contracts'
 import NewsArticle from '@/server/models/NewsArticle'
 
-export async function getNewsRecords(articleId?: number): Promise<NewsRecord[]> {
+export async function getNewsRecordsStored(articleId?: number): Promise<NewsRecord[]> {
   let query = NewsArticle
     .with('translations', 'publications', 'tags', 'related', 'previous', 'next')
     .orderBy('id')
@@ -40,4 +41,8 @@ export async function getNewsRecords(articleId?: number): Promise<NewsRecord[]> 
       ])),
     }
   })
+}
+
+export async function getNewsRecords(...args: Parameters<typeof getNewsRecordsStored>) {
+  return resolveMediaReferences(await getNewsRecordsStored(...args))
 }

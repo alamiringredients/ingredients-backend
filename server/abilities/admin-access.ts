@@ -1,6 +1,6 @@
 import {allow, defineAbility, deny} from '@holo-js/authorization'
-import {adminActions, adminResources, hasAdminPermission, normalizeRolePermissions, type AdminAction, type AdminResource} from '@/lib/admin/access'
-import Role from '@/server/models/Role'
+import {adminActions, adminResources, type AdminAction, type AdminResource} from '@/lib/admin/access'
+import RolePermission from '@/server/models/RolePermission'
 import Admin from '@/server/models/Admin'
 import {adminSessionMatches} from '@/lib/admin/session'
 
@@ -22,10 +22,8 @@ export default defineAbility('admin.access', async (context, input: {resource: A
 
   const roleId = Number(admin.role_id)
   if (!Number.isSafeInteger(roleId) || roleId < 1) return deny('Your account does not have a valid role.')
-  const role = await Role.where('id', roleId).firstJson()
-  if (!role) return deny('Your assigned role no longer exists.')
-
-  return hasAdminPermission(normalizeRolePermissions(role.permissions), input.resource, input.action)
+  const permission = await RolePermission.where('role_id', roleId).where('resource', input.resource).where('action', input.action).firstJson()
+  return permission
     ? allow()
     : deny(`Your role cannot ${input.action} ${input.resource.replaceAll('_', ' ')}.`)
 })

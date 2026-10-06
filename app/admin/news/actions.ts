@@ -1,4 +1,5 @@
 'use server'
+import {storeMediaPaths, resolveMediaReferences} from '@/server/support/media-references'
 import cache from '@holo-js/cache'
 import {newsCacheKeys, careersCacheKeys, searchCacheKeys} from '@/server/support/cache-keys'
 
@@ -54,10 +55,11 @@ export async function saveNews(id:number,revision:number,slugInput:string,raw:st
       const article = current ?? await NewsArticle.create(values)
       if (current) await article.update(values)
 
+      const storedContent = await storeMediaPaths(content)
       for (const language of newsLocales) {
         await NewsArticleTranslation.upsert(
           {article_id: Number(article.id), locale: language},
-          {content: content.locales[language]},
+          {content: storedContent.locales[language]},
         )
       }
 
@@ -73,7 +75,7 @@ export async function saveNews(id:number,revision:number,slugInput:string,raw:st
 
       const published = {...existing?.published}
       if (operation === 'publish') {
-        const {locales: versions, ...metadata} = content
+        const {locales: versions, ...metadata} = storedContent
         await NewsPublication.upsert(
           {article_id: Number(article.id), locale},
           {
@@ -86,7 +88,7 @@ export async function saveNews(id:number,revision:number,slugInput:string,raw:st
             published_at: new Date(),
           },
         )
-        published[locale] = versions[locale]
+        published[locale] = content.locales[locale]
       } else if (operation === 'unpublish') {
         await NewsPublication.where('article_id', article.id).where('locale', locale).delete()
         delete published[locale]
@@ -96,7 +98,7 @@ export async function saveNews(id:number,revision:number,slugInput:string,raw:st
         await NewsRevision.create({
           article_id: Number(article.id),
           revision: existing.revision,
-          content: existing.content,
+          content: await storeMediaPaths(existing.content),
         })
         const retained = await NewsRevision.where('article_id', article.id).orderBy('id', 'desc').limit(10).get()
         if (retained.length === 10) {
@@ -114,7 +116,7 @@ export async function saveNews(id:number,revision:number,slugInput:string,raw:st
 }
 export async function getNewsRevisions(id:number) {
   await requireAdminPermission('news','view')
-  return (await NewsRevision.where('article_id',id).orderBy('id','desc').limit(10).getJson()).map(r=>({id:Number(r.id),date:new Date(r.created_at as string|Date).toISOString(),content:decode<NewsContent>(r.content)}))
+  return resolveMediaReferences((await NewsRevision.where('article_id',id).orderBy('id','desc').limit(10).getJson()).map(r=>({id:Number(r.id),date:new Date(r.created_at as string|Date).toISOString(),content:decode<NewsContent>(r.content)})))
 }
 export async function saveNewsTaxonomy(id:number,raw:string) {
   const originalId=id
@@ -142,7 +144,7 @@ export async function deleteNewsTaxonomy(id:number) {
   }catch(e){return adminActionError(e)}
 }
 export async function saveNewsPage(raw:string) {
-  try{await requireAdminPermission('news_page','edit');const value=validateNewsPage(payload(raw));const row=await WebsiteSetting.where('setting_key','news').first();if(!row)throw new Error('News page is missing.');await row.update({value});return {ok:true,message:'News page saved.'}}catch(e){return adminActionError(e)}
+  try{await requireAdminPermission('news_page','edit');const value=validateNewsPage(payload(raw));const row=await WebsiteSetting.where('setting_key','news').first();if(!row)throw new Error('News page is missing.');await row.update({value:await storeMediaPaths(value)});return {ok:true,message:'News page saved.'}}catch(e){return adminActionError(e)}
 }
 export async function deleteNews(id:number) {
   try {

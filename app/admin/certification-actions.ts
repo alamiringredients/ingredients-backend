@@ -1,4 +1,5 @@
 'use server'
+import {storeMediaPaths} from '@/server/support/media-references'
 
 import { requireAdminPermission } from '@/server/admin/authorization'
 import { adminActionError,redirectCreatedRecord } from '@/server/admin/form-actions'
@@ -50,6 +51,7 @@ export async function deleteCertificationRecord(kind:'certification'|'certificat
 }
 
 async function persistCertification(kind: 'certification' | 'certification-type', id: number, values: ReturnType<typeof validateCertification> | ReturnType<typeof validateCertificationType>) {
+  values = await storeMediaPaths(values)
   return DB.writeTransaction(async () => {
     if (kind === 'certification-type') {
       const {content, ...attributes} = values as Omit<CertificationTypeRecord, 'id'>

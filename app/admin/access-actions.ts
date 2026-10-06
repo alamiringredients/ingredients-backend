@@ -4,12 +4,13 @@ import {adminActionError,redirectCreatedRecord} from '@/server/admin/form-action
 
 import {randomUUID} from 'node:crypto'
 import {assertAccessChange} from '@/server/admin/access-control'
-import { normalizeRolePermissions } from '@/lib/admin/access'
+import { normalizeRolePermissions, permissionsFromRows, rolePermissionRows } from '@/lib/admin/access'
 import { requireAdminPermission } from '@/server/admin/authorization'
 import {validate} from '@holo-js/forms'
 import {createAdminForm,roleForm,updateAdminForm} from '@/app/admin/access-schema'
 import Admin from '@/server/models/Admin'
 import Role from '@/server/models/Role'
+import {DB} from '@holo-js/db'
 import { hashPassword } from '@holo-js/auth'
 import { revalidatePath } from 'next/cache'
 
@@ -37,14 +38,18 @@ export async function saveRoleAction(id:number,payload:string) {
 
     const duplicate = await Role.where('name', name).firstJson()
     if(duplicate&&Number(duplicate.id)!==id)return {ok:false,message:'Please correct the highlighted fields.',errors:{name:['A role with this name already exists.']}}
-    const values = {name, description, permissions}
+    const values = {name, description}
     let savedId = id
-    if (id) {
-      await (await Role.findOrFail(id)).update(values)
-    } else {
-      const role = await Role.create(values)
-      savedId = Number(role.get('id'))
-    }
+    await DB.transaction(async () => {
+      if (id) {
+        await (await Role.findOrFail(id)).update(values)
+        await DB.table('role_permissions').where('role_id', id).delete()
+      } else {
+        const role = await Role.create(values)
+        savedId = Number(role.get('id'))
+      }
+      await DB.table('role_permissions').insert(rolePermissionRows(savedId, permissions))
+    })
     refreshAccessPages()
     await redirectCreatedRecord(id,savedId,'/admin/roles','roles')
     return {ok: true, message: 'Role saved.', id: savedId}
@@ -73,9 +78,9 @@ export async function saveAdminAction(id:number,payload:string) {
     const actor = await requireAdminPermission('admins', id ? 'edit' : 'create')
     const input=await validate(JSON.parse(payload),id?updateAdminForm:createAdminForm)
     const name=input.name,email=input.email,password=input.password??'',roleId=input.role_id
-    const assignedRole = await Role.where('id',roleId).firstJson()
+    const assignedRole = await Role.with('permissions').where('id',roleId).firstJson()
     if(!assignedRole)return {ok:false,message:'Please correct the highlighted fields.',errors:{role_id:['Choose an existing role.']}}
-    await assertAccessChange(Number(actor.id), {adminId: id}, normalizeRolePermissions(assignedRole.permissions))
+    await assertAccessChange(Number(actor.id), {adminId: id}, permissionsFromRows(assignedRole.permissions))
     const duplicate = await Admin.where('email', email).firstJson()
     if(duplicate&&Number(duplicate.id)!==id)return {ok:false,message:'Please correct the highlighted fields.',errors:{email:['An admin with this email already exists.']}}
 

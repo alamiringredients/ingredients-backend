@@ -1,3 +1,4 @@
+import {resolveMediaReferences} from '@/server/support/media-references'
 import cache from '@holo-js/cache'
 import {paginateCrud} from '@/server/admin/crud-query'
 import type {ListSearchParams} from '@/lib/admin/submission-list'
@@ -18,7 +19,7 @@ const decode = <T>(value: unknown): T =>
 const iso = (value: unknown) => new Date(value as string | Date).toISOString();
 
 export async function getEvents(): Promise<EventRecord[]> {
-  return cache.rememberForever(contentCacheKeys.events, async () =>
+  return resolveMediaReferences(await cache.rememberForever(contentCacheKeys.events, async () =>
     (await Event.orderBy("sort_order").orderBy("starts_at").getJson()).map(
       (row) => ({
         id: Number(row.id),
@@ -34,7 +35,7 @@ export async function getEvents(): Promise<EventRecord[]> {
         updated_at: iso(row.updated_at),
       }),
     ),
-  );
+  ));
 }
 
 export async function getEventSlotList(eventId: number, params: ListSearchParams) {

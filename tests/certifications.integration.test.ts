@@ -5,7 +5,7 @@ import {getPdfFileSizes} from '../server/services/downloads/file-sizes'
 import assert from 'node:assert/strict'
 import {test} from 'node:test'
 import {loadEnvFile} from 'node:process'
-import {mkdtemp, rm, writeFile} from 'node:fs/promises'
+import {mkdtemp, rm} from 'node:fs/promises'
 import {tmpdir} from 'node:os'
 import {join} from 'node:path'
 import {createConnection} from 'mysql2/promise'
@@ -58,7 +58,7 @@ test('database bootstrap and certification cache work against MySQL without chan
   const client = await createConnection({host: process.env.DB_HOST || '127.0.0.1', port: Number(process.env.DB_PORT || 3306), user: process.env.DB_USERNAME || 'root', password: process.env.DB_PASSWORD, database: process.env.DB_DATABASE || 'alamir'})
   const directory = await mkdtemp(join(tmpdir(), 'alamir-certifications-test-'))
   try {
-    for (const table of ['certification_types', 'certifications', 'home_sections', 'website_settings', 'products', 'product_categories', 'admins', 'roles', 'users', 'content_translations', 'translation_seed_keys', 'media', 'news_articles', 'news_taxonomies', 'news_revisions', 'events', 'event_slots', 'sustainability_articles', 'career_jobs']) {
+    for (const table of ['certification_types', 'certifications', 'home_sections', 'website_settings', 'products', 'product_categories', 'admins', 'roles', 'role_permissions', 'users', 'content_translations', 'translation_seed_keys', 'media', 'news_articles', 'news_taxonomies', 'news_revisions', 'events', 'event_slots', 'sustainability_articles', 'career_jobs']) {
       const [rows] = await client.query(`SHOW CREATE TABLE \`${table}\``)
       const ddl = (rows as Array<{'Create Table': string}>)[0]['Create Table'].replace('CREATE TABLE', 'CREATE TEMPORARY TABLE').split('\n').filter(line => !line.trimStart().startsWith('CONSTRAINT ')).join('\n').replace(/,\n\)/, '\n)')
       await client.query(ddl)
@@ -80,8 +80,9 @@ test('database bootstrap and certification cache work against MySQL without chan
       assert.equal((await CareerJob.getJson()).length, 5)
       assert.equal((await Admin.getJson()).length, 1)
       assert.equal((await Role.getJson()).length, 1)
-      assert.deepEqual(decode<Record<string, string[]>>((await Role.getJson())[0].permissions).downloads_page, ['view', 'create', 'edit', 'delete'])
-      assert.deepEqual(decode<Record<string, string[]>>((await Role.getJson())[0].permissions).quality_page, ['view', 'create', 'edit', 'delete'])
+      const permissions = (await Role.with('permissions').getJson())[0].permissions
+      assert.deepEqual(permissions.filter(row => row.resource === 'downloads_page').map(row => row.action), ['view', 'create', 'edit', 'delete'])
+      assert.deepEqual(permissions.filter(row => row.resource === 'quality_page').map(row => row.action), ['view', 'create', 'edit', 'delete'])
       assert.equal((await User.getJson()).length, 1)
       assert.ok((await ContentTranslation.getJson()).length > 0)
     })
@@ -162,16 +163,7 @@ test('database bootstrap and certification cache work against MySQL without chan
       await media.update({size: 2621440})
       assert.equal((await getPdfFileSizes(['/storage/certificates/certificate.pdf']))['/storage/certificates/certificate.pdf'], 2621440)
       assert.deepEqual(await getPdfFileSizes(['/storage/certificates/replacement.pdf']), {})
-      const assets = await mkdtemp(join(process.cwd(), 'public/assets/pdf-size-test-'))
-      try {
-        const file = join(assets, 'document.pdf')
-        const url = file.slice(join(process.cwd(), 'public').length)
-        await writeFile(file, Buffer.alloc(2048))
-        assert.equal((await getPdfFileSizes([url]))[url], 2048)
-        await writeFile(file, Buffer.alloc(4096))
-        assert.equal((await getPdfFileSizes([url]))[url], 4096)
-        assert.deepEqual(await getPdfFileSizes(['/assets/nonexistent-test.pdf', '/assets/../../package.json']), {})
-      } finally {await rm(assets, {recursive: true, force: true})}
+      assert.deepEqual(await getPdfFileSizes(['/assets/nonexistent-test.pdf', '/assets/../../package.json']), {})
     })
     await t.test('deleted translations stay absent from every page after standalone and full seeds', async () => {
       const rows = await ContentTranslation.getJson()

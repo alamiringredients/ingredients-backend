@@ -65,10 +65,11 @@ async function storeCmsMedia(model:unknown,file:CmsUploadFile,conversion:CmsImag
 
   if (media.error) return {ok: false, message: media.error.message}
 
-  const url = collection === 'images' ? media.getUrl(conversion) : media.getUrl()
+  const convertedUrl = collection === 'images' ? media.getUrl(conversion) : null
+  const url = convertedUrl || media.getUrl()
   if (!url) return {ok: false, message: 'The file was stored but its public URL could not be generated.'}
 
-  return {ok: true, message: collection === 'images' ? 'Image uploaded and optimized.' : 'File uploaded.', url}
+  return {ok: true, message: convertedUrl ? 'Image uploaded and optimized.' : 'File uploaded.', url}
 }
 
 export async function saveHomeSectionAction(formData:FormData) {
@@ -217,7 +218,7 @@ export async function uploadCmsFileAction(formData:FormData) {
       if (data.ownerKey !== 'website' && data.ownerKey !== 'home_seo' && data.ownerKey !== 'catalog' && data.ownerKey !== 'downloads' && data.ownerKey !== 'quality' && data.ownerKey !== 'news' && data.ownerKey !== 'sustainability' && data.ownerKey !== 'about' && data.ownerKey !== 'careers' && !isManagedPageKey(data.ownerKey)) {
         return {ok: false, message: 'The website setting is not valid.'}
       }
-      await requireAdminPermission(isManagedPageKey(data.ownerKey)?managedPageDefinitions[data.ownerKey].resource:data.ownerKey === 'about' ? 'about_page' : data.ownerKey === 'careers' ? 'careers_page' : data.ownerKey === 'sustainability' ? 'sustainability_page' : data.ownerKey === 'news' ? 'news_page' : data.ownerKey === 'downloads' ? 'downloads_page' : data.ownerKey === 'quality' ? 'quality_page' : 'website_settings', 'edit')
+      await requireAdminPermission(isManagedPageKey(data.ownerKey)?managedPageDefinitions[data.ownerKey].resource:data.ownerKey === 'about' ? 'about_page' : data.ownerKey === 'careers' ? 'careers_page' : data.ownerKey === 'sustainability' ? 'sustainability_page' : data.ownerKey === 'news' ? 'news_page' : data.ownerKey === 'downloads' ? 'downloads_page' : data.ownerKey === 'quality' ? 'quality_page' : data.ownerKey === 'home_seo' ? 'home_sections' : data.ownerKey === 'catalog' ? 'products_page' : 'website_settings', 'edit')
 
       if (data.ownerKey === 'catalog') {
         const owner = await WebsiteSetting.where('setting_key', 'catalog').first()

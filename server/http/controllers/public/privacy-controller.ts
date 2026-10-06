@@ -1,3 +1,4 @@
+import {resolveMediaReferences} from '@/server/support/media-references'
 import 'server-only'
 import cache from '@holo-js/cache'
 import type {ManagedPageContent} from '@/lib/cms/contracts'
@@ -21,7 +22,7 @@ export async function GET(request: Request) {
       const translations:TranslationEntry[]=translationRows.map(row=>({key:String(row.translation_key),page:String(row.page),source:String(row.source),translations:{[locale]:String((row.values as Row[])[0]?.value??'')} as TranslationEntry['translations']}))
       return {content:requireContent<ManagedPageContent>(setting.value,'Privacy page'),translations:resolveTranslationDefinitions(definitions,translations)}
     })
-    return Response.json({data}, {headers: {'Cache-Control': 'public, max-age=0, s-maxage=60, stale-while-revalidate=300'}})
+    return Response.json({data: await resolveMediaReferences(data)}, {headers: {'Cache-Control': 'public, max-age=0, s-maxage=60, stale-while-revalidate=300'}})
   } catch (error) {
     if (isValidationException(error)) return Response.json({message: error.message}, {status: error.status})
     console.error('Public privacy request failed', error)

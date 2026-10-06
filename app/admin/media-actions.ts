@@ -1,11 +1,10 @@
 'use server'
 
-import {getCurrentAdmin} from '@/server/admin/session'
+import {requireAdminPermission} from '@/server/admin/authorization'
 import {Media,MediaItem} from '@holo-js/media'
 
 export async function getEditorMedia(kind:'image'|'video',search='',before?:number) {
-  const user=await getCurrentAdmin()
-  if(!user)throw new Error('Your admin session has expired. Sign in again.')
+  await requireAdminPermission('media', 'view')
   if(kind!=='image'&&kind!=='video')throw new Error('Invalid media type.')
   let query=Media.query().where('collection_name',kind==='image'?'images':'videos').orderBy('id','desc').limit(49)
   if(search.trim())query=query.where('file_name','like',`%${search.trim().slice(0,100).replace(/[\\%_]/g,'\\$&')}%`)

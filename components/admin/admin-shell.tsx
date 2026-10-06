@@ -174,7 +174,7 @@ function NavigationIcon({name}: {name: IconName}) {
   return <svg className="admin-nav-icon" viewBox="0 0 24 24" aria-hidden="true">{paths[name]}</svg>
 }
 
-export function AdminShell({children, adminName, access, pendingApplicationsCount = 0, frontendUrl}: {children: ReactNode; adminName: string; pendingApplicationsCount?: number; frontendUrl: string; access: {owner: boolean; permissions: RolePermissions}}) {
+export function AdminShell({children, adminName, access, pendingApplicationsCount = 0, frontendUrl, brandIconUrl}: {brandIconUrl: string; children: ReactNode; adminName: string; pendingApplicationsCount?: number; frontendUrl: string; access: {owner: boolean; permissions: RolePermissions}}) {
   const [collapsed, setCollapsed] = useState(false)
   const [tooltip, setTooltip] = useState<NavigationTooltip | null>(null)
   const tooltipDelayRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -225,7 +225,7 @@ export function AdminShell({children, adminName, access, pendingApplicationsCoun
 
   return <div className={`admin-shell${collapsed ? ' is-collapsed' : ''}`}>
     <aside className="admin-sidebar">
-      <div className="admin-brand"><span className="admin-mark"><Image src="/assets/icon.svg" width={25} height={21} alt="" unoptimized/></span><span className="admin-brand-name">Alamir admin</span></div>
+      <div className="admin-brand"><span className="admin-mark"><Image src={brandIconUrl} width={25} height={21} alt="" unoptimized/></span><span className="admin-brand-name">Alamir admin</span></div>
       <button className="admin-collapse" type="button" onClick={toggleSidebar} aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'} aria-expanded={!collapsed}>
         <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m12.5 5-5 5 5 5"/></svg>
       </button>

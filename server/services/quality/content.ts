@@ -1,3 +1,4 @@
+import {resolveMediaReferences} from '@/server/support/media-references'
 import cache from '@holo-js/cache'
 import 'server-only'
 
@@ -17,5 +18,5 @@ export const getQualityPageContent = async (): Promise<QualityPageContent> => {
   const record = await cache.rememberForever(contentCacheKeys.qualityPage, async () => (await WebsiteSetting.where('setting_key', 'quality').firstJson()) ?? null)
   const content = decode(record?.value)
   if (!content) throw new Error('Quality page content is missing. Run the quality_page database seeder.')
-  return content
+  return resolveMediaReferences(content)
 }

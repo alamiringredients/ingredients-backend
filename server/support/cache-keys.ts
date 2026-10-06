@@ -3,7 +3,7 @@ import type {CmsLocale} from '@/lib/cms/contracts'
 
 export const contentCacheKeys = {
   certifications: 'cms:certifications:v2',
-  homeSections: 'cms:home-sections:v11',
+  homeSections: 'cms:home-sections:v12',
   homeSeo: 'cms:home-seo:v1',
   websiteSettings: 'cms:website-settings:v3',
   downloadsPage: 'cms:downloads-page:v1',
@@ -19,7 +19,7 @@ export const contentCacheKeys = {
 
 export const contentCacheKeyForSetting=(key:string)=>`cms:page:${key}:v9`
 
-export const contentCacheKeyForPage = (page: 'layout' | 'homepage' | 'about' | 'catalog' | 'catalog-labels' | 'certifications' | 'quality' | 'downloads' | 'news' | 'sustainability' | 'careers' | 'careers-search' | 'events' | 'search' | 'search-page' | `managed:${ManagedPageKey}`, locale: CmsLocale) => `cms:${page}:${locale}:v${page==='layout'?11:page==='homepage'?11:12}`
+export const contentCacheKeyForPage = (page: 'layout' | 'homepage' | 'about' | 'catalog' | 'catalog-labels' | 'certifications' | 'quality' | 'downloads' | 'news' | 'sustainability' | 'careers' | 'careers-search' | 'events' | 'search' | 'search-page' | `managed:${ManagedPageKey}`, locale: CmsLocale) => `cms:${page}:${locale}:v${page==='layout'?12:page==='homepage'?11:12}`
 
 export const layoutCacheKeys = (['en', 'fr', 'ar'] as const).map(locale => contentCacheKeyForPage('layout', locale))
 export const homepageCacheKeys = (['en', 'fr', 'ar'] as const).map(locale => contentCacheKeyForPage('homepage', locale))

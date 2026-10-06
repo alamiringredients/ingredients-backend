@@ -68,12 +68,12 @@
           },
           {
             "id": "text-c987299d39",
-            "label": "News",
-            "source": "News",
+            "label": "Events",
+            "source": "Events",
             "values": {
-              "ar": "أخبار",
-              "en": "News",
-              "fr": "Nouvelles"
+              "ar": "الأحداث",
+              "en": "Events",
+              "fr": "Événements"
             }
           },
           {

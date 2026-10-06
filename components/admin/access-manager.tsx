@@ -29,14 +29,13 @@ import { AdminFormProvider,FieldError,FormNotice as Notice,useAdminForm,type Adm
 
 export function AccessManager({
   kind,
-  roles,
+  roles = [],
   capabilities,
   initialAdmin,
   initialRole,
 }: {
   kind: "admin" | "role";
-  admins: AdminSummary[];
-  roles: RoleSummary[];
+  roles?: Pick<RoleSummary, "id" | "name">[];
   capabilities: AdminCapabilities;
   initialAdmin?: AdminSummary;
   initialRole?: RoleSummary;

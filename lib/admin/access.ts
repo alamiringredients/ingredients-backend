@@ -31,6 +31,7 @@ export const adminResources = [
   {key: 'product_categories', label: 'Product categories'},
   {key: 'content_translations', label: 'Translations'},
   {key: 'website_settings', label: 'Website settings'},
+  {key: 'media', label: 'Media library'},
   {key: 'admins', label: 'Admins'},
   {key: 'roles', label: 'Roles'},
 ] as const
@@ -66,4 +67,17 @@ export function normalizeRolePermissions(value: unknown): RolePermissions {
 
 export function hasAdminPermission(permissions: RolePermissions, resource: AdminResource, action: AdminAction) {
   return permissions[resource]?.includes(action) ?? false
+}
+
+export function permissionsFromRows(rows: {resource: string; action: string}[]): RolePermissions {
+  const permissions = emptyRolePermissions()
+  for (const row of rows) {
+    const actions = permissions[row.resource as AdminResource]
+    if (actions && adminActions.includes(row.action as AdminAction)) actions.push(row.action as AdminAction)
+  }
+  return permissions
+}
+
+export function rolePermissionRows(roleId: number, permissions: RolePermissions) {
+  return Object.entries(permissions).flatMap(([resource, actions]) => actions.map(action => ({role_id: roleId, resource, action})))
 }

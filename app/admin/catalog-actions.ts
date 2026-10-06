@@ -1,4 +1,5 @@
 'use server'
+import {storeMediaPaths} from '@/server/support/media-references'
 
 import { requireAdminPermission } from '@/server/admin/authorization'
 import { adminActionError,redirectCreatedRecord } from '@/server/admin/form-actions'
@@ -85,7 +86,7 @@ export async function deleteCatalogRecord(kind:'product'|'category',id:number) {
 
 async function persist(kind: 'product' | 'category', id: number, values: {slug: string; published: boolean; sort_order: number; category_id?: number; content: ProductContent | CategoryContent}) {
   return DB.transaction(async () => {
-    const {content, ...attributes} = values
+    const {content, ...attributes} = await storeMediaPaths(values)
     const {name, description, seo} = content
     const translatedContent = Object.fromEntries(Object.entries(content).filter(([key]) => !['name', 'description', 'seo', 'seedKey'].includes(key)))
 

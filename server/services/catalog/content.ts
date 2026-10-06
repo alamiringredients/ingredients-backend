@@ -1,3 +1,4 @@
+import {resolveMediaReferences} from '@/server/support/media-references'
 import 'server-only'
 
 import {DB} from '@holo-js/db'
@@ -45,9 +46,9 @@ export const getCatalog = async (includeDrafts = false): Promise<Catalog> => {
     } as Product['content'],
   })).filter(row => (includeDrafts || row.published) && categoryIds.has(row.category_id))
   const populatedCategoryIds = new Set(products.map(product => product.category_id))
-  return applyCatalogTranslations({
+  return resolveMediaReferences(applyCatalogTranslations({
     categories: includeDrafts ? categories : categories.filter(category => populatedCategoryIds.has(category.id)),
     products,
     settings: {...decode<CatalogSettings>(settingsRow.value), ...filters},
-  }, translations)
+  }, translations))
 }

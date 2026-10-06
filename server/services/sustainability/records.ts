@@ -1,3 +1,4 @@
+import {resolveMediaReferences} from '@/server/support/media-references'
 import 'server-only'
 import {databaseDate} from '@/server/support/database-date'
 import {decode} from '@/lib/news/contracts'
@@ -6,7 +7,7 @@ import type {SustainabilityContent, SustainabilityGoal as SustainabilityGoalData
 import SustainabilityArticle from '@/server/models/SustainabilityArticle'
 import SustainabilityGoal from '@/server/models/SustainabilityGoal'
 
-export async function getSustainabilityGoals(locale?: CmsLocale): Promise<SustainabilityGoalData[]> {
+export async function getSustainabilityGoalsStored(locale?: CmsLocale): Promise<SustainabilityGoalData[]> {
   const goals = await SustainabilityGoal
     .with({translations: query => locale ? query.where('locale', locale) : query})
     .orderBy('sort_order')
@@ -25,7 +26,7 @@ export async function getSustainabilityGoals(locale?: CmsLocale): Promise<Sustai
   })
 }
 
-export async function getSustainabilityRecords(articleId?: number): Promise<SustainabilityRecord[]> {
+export async function getSustainabilityRecordsStored(articleId?: number): Promise<SustainabilityRecord[]> {
   let query = SustainabilityArticle
     .with('translations', 'publications', 'goals')
     .orderBy('id')
@@ -59,4 +60,12 @@ export async function getSustainabilityRecords(articleId?: number): Promise<Sust
       ])),
     }
   })
+}
+
+export async function getSustainabilityGoals(...args: Parameters<typeof getSustainabilityGoalsStored>) {
+  return resolveMediaReferences(await getSustainabilityGoalsStored(...args))
+}
+
+export async function getSustainabilityRecords(...args: Parameters<typeof getSustainabilityRecordsStored>) {
+  return resolveMediaReferences(await getSustainabilityRecordsStored(...args))
 }

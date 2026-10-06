@@ -1,3 +1,4 @@
+import {resolveMediaReferences, storeMediaPaths} from '@/server/support/media-references'
 import cache from '@holo-js/cache'
 import 'server-only'
 
@@ -18,9 +19,9 @@ export const getDownloadsPageContent = async (): Promise<DownloadsPageContent> =
   ) ?? null)
   const content=decode(record?.value)
   if(!content) throw new Error('Downloads page content is missing. Run the downloads_page seeder.')
-  return {...content,sectionVisibility:sectionVisibility(content.sectionVisibility,['hero','products','company'] as const)}
+  return resolveMediaReferences({...content,sectionVisibility:sectionVisibility(content.sectionVisibility,['hero','products','company'] as const)})
 }
 
 export async function persistDownloadsPageContent(value: DownloadsPageContent) {
-  await WebsiteSetting.updateOrCreate({setting_key: 'downloads'}, {value})
+  await WebsiteSetting.updateOrCreate({setting_key: 'downloads'}, {value: await storeMediaPaths(value)})
 }

@@ -1,3 +1,4 @@
+import {Storage} from '@holo-js/storage/runtime'
 import {fontStylesheets} from '@/lib/site-font-delivery'
 import {sans,arabicDisplay,arabicSans} from '@/lib/site-fonts'
 import '@/styles/serif-font.css'
@@ -21,5 +22,5 @@ export default async function AdminLayout({children}: {children: ReactNode}) {
     ? await CareerApplication.where('status', 'pending').count()
     : 0
 
-  return <html lang="en" className={`${sans.variable} ${arabicDisplay.variable} ${arabicSans.variable}`}><head><link rel="stylesheet" href={fontStylesheets.latin}/><link rel="stylesheet" href={fontStylesheets.arabic}/></head><body><AdminShell adminName={String(admin.name ?? admin.email ?? 'Administrator')} access={access} pendingApplicationsCount={pendingApplicationsCount} frontendUrl={frontendUrl}>{children}</AdminShell></body></html>
+  return <html lang="en" className={`${sans.variable} ${arabicDisplay.variable} ${arabicSans.variable}`}><head><link rel="stylesheet" href={fontStylesheets.latin}/><link rel="stylesheet" href={fontStylesheets.arabic}/></head><body><AdminShell brandIconUrl={Storage.disk('r2').url('assets/icon.svg')} adminName={String(admin.name ?? admin.email ?? 'Administrator')} access={access} pendingApplicationsCount={pendingApplicationsCount} frontendUrl={frontendUrl}>{children}</AdminShell></body></html>
 }

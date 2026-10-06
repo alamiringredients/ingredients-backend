@@ -19,6 +19,7 @@ export default defineMigration({
       table.json('generated_conversions')
       table.integer('order_column').default(1)
       table.timestamps()
+      table.index(['path'])
       table.index(['file_name', 'mime_type'])
       table.index(['model_type', 'model_id'])
       table.index(['model_type', 'model_id', 'collection_name'])

@@ -1,3 +1,4 @@
+import {resolveMediaReferences} from '@/server/support/media-references'
 import 'server-only'
 import {DB, type TableQueryBuilder} from '@holo-js/db'
 import type {CrudCell, CrudFilter, CrudIndexData, CrudIndexRow} from '@/lib/admin/crud-index'
@@ -6,7 +7,6 @@ import {countQuery, paginateCrud} from '@/server/admin/crud-query'
 import {decodeStoredJson} from '@/lib/cms/stored-json'
 import {textContent, type ContentDocument} from '@/lib/editor/document'
 import {databaseDate} from '@/server/support/database-date'
-import {normalizeRolePermissions} from '@/lib/admin/access'
 
 export type CrudKind = 'products' | 'product-categories' | 'applications' | 'concentrations' | 'certifications' | 'certification-types' | 'news' | 'sustainability' | 'sustainability-goals' | 'news-categories' | 'news-tags' | 'events' | 'careers' | 'admins' | 'roles'
 type Row = Record<string, unknown>
@@ -92,13 +92,14 @@ async function definition(kind: CrudKind): Promise<Definition> {
   }
   if (kind === 'admins' || kind === 'roles') {
     const admin = kind === 'admins'
-    let query = DB.table(`${kind} as r`).select(...(admin ? ['r.id', 'r.name', 'r.email', 'r.role_id'] : ['r.id', 'r.name', 'r.description', 'r.permissions'])).orderBy('r.name').orderBy('r.id')
+    let query = DB.table(`${kind} as r`).select(...(admin ? ['r.id', 'r.name', 'r.email', 'r.role_id'] : ['r.id', 'r.name', 'r.description'])).orderBy('r.name').orderBy('r.id')
     if (admin) query = query.addSelectSub(DB.table('roles').select('name').whereColumn('id', '=', 'r.role_id'), 'role_name')
     else query = query.addSelectSub(DB.table('admins').whereColumn('role_id', '=', 'r.id').selectCount(), 'assigned')
+      .addSelectSub(DB.table('role_permissions').whereColumn('role_id', '=', 'r.id').selectCount(), 'permission_count')
     return {title: admin ? 'Admins' : 'Roles', section: 'Access control', noun: admin ? 'admin' : 'role', resource: kind, columns: admin ? ['Name', 'Email', 'Role'] : ['Name', 'Description', 'Permissions', 'Admins'], query,
       filters: admin ? [filter('role', 'Role', [{value: 'owner', label: 'Owner'}, ...(await DB.table('roles').select('id', 'name').orderBy('name').get()).map(row => ({value: str(row.id), label: str(row.name)}))])] : [], searchColumns: admin ? ['r.name', 'r.email'] : ['r.name', 'r.description'],
       filter: (q, _key, value) => value === 'owner' ? q.whereNull('r.role_id') : q.where('r.role_id', Number(value)),
-      row: r => identity(r, r.name, admin ? [str(r.email), status(r.role_id !== null, str(r.role_name), 'Owner')] : [str(r.description), Object.values(normalizeRolePermissions(decodeStoredJson(r.permissions))).reduce((total, actions) => total + actions.length, 0), Number(r.assigned)]),
+      row: r => identity(r, r.name, admin ? [str(r.email), status(r.role_id !== null, str(r.role_name), 'Owner')] : [str(r.description), Number(r.permission_count), Number(r.assigned)]),
     }
   }
   if (kind === 'certifications' || kind === 'certification-types') {
@@ -181,7 +182,7 @@ export async function getCrudIndex(kind: CrudKind, params: ListSearchParams): Pr
       if (typeof cell === 'object' && 'active' in cell) cell.detail = ['en', 'ar', 'fr'].filter(locale => publications.some(publication => Number(publication.article_id) === row.id && publication.locale === locale)).join(' · ').toUpperCase()
     }
   }
-  return {title: config.title, section: config.section, noun: config.noun, resource: config.resource,
+  return resolveMediaReferences({title: config.title, section: config.section, noun: config.noun, resource: config.resource,
     basePath: ['applications', 'concentrations'].includes(kind) ? `/admin/product-filters/${kind}` : `/admin/${kind}`,
-    columns: config.columns, filters: config.filters, stats, rows, pagination: result.pagination}
+    columns: config.columns, filters: config.filters, stats, rows, pagination: result.pagination})
 }

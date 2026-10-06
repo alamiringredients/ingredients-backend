@@ -1,4 +1,5 @@
 'use server'
+import {storeMediaPaths} from '@/server/support/media-references'
 
 import { requireAdminPermission } from '@/server/admin/authorization'
 import {adminActionError,redirectCreatedRecord} from '@/server/admin/form-actions'
@@ -25,7 +26,7 @@ export async function saveJob(id:number,payload:string){const originalId=id;try{
  const parsed=JSON.parse(payload)
  const value=validateJob(parsed),duplicate=await CareerJob.where('slug',value.slug).firstJson()
  if(duplicate&&Number(duplicate.id)!==id)return {ok:false,message:'Please correct the highlighted fields.',errors:{slug:['This slug is already used.']}}
- if(id)await (await CareerJob.findOrFail(id)).update(value);else id=Number((await CareerJob.create(value)).id)
+ if(id)await (await CareerJob.findOrFail(id)).update(await storeMediaPaths(value));else id=Number((await CareerJob.create(await storeMediaPaths(value))).id)
  await redirectCreatedRecord(originalId,id,'/admin/careers','career_jobs');return {ok:true,message:'Job saved.',id}
 }catch(e){return error(e)}}
 export async function deleteJob(id:number){try{await requireAdminPermission('career_jobs','delete');await (await CareerJob.findOrFail(id)).delete();return {ok:true,message:'Job deleted. Existing applications are retained.'}}catch(e){return error(e)}}
@@ -38,7 +39,7 @@ export async function saveEditorialPage(page:'about'|'careers'|'quality',payload
   for(const id of value.newsIds)if(!await NewsArticle.find(id))throw new Error('A selected News article no longer exists.')
  }
  value.seo.socialImage=contentUrl(value.seo.socialImage,true)
- await WebsiteSetting.updateOrCreate({setting_key:page},{value});return {ok:true,message:'Page saved.'}
+ await WebsiteSetting.updateOrCreate({setting_key:page},{value:await storeMediaPaths(value)});return {ok:true,message:'Page saved.'}
 }catch(e){return error(e)}}
 export async function setApplicationStatus(data:FormData){try{
  const input=await validate(data,applicationStatusForm),id=Number(input.applicationId),status=input.status as ApplicationStatus

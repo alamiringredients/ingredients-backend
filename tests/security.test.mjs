@@ -12,9 +12,10 @@ await build({
   outfile, bundle: true, platform: 'node', format: 'esm', packages: 'external',
   plugins: [{name: 'security-boundaries', setup(build) {
     build.onResolve({filter: /^@alamir\/forms\//}, ({path}) => ({path: join(process.cwd(), 'node_modules', path + '.ts')}))
-    build.onResolve({filter: /^(@\/server\/models\/(Admin|Role)|@\/server\/admin\/(authorization|form-actions)|@holo-js\/auth(?:\/next\/server)?|@holo-js\/security|server-only)$/}, ({path}) => ({path, namespace: 'mock'}))
+    build.onResolve({filter: /^(@\/server\/models\/(Admin|Role)|@\/server\/admin\/(authorization|form-actions)|@holo-js\/db|@holo-js\/auth(?:\/next\/server)?|@holo-js\/security|server-only)$/}, ({path}) => ({path, namespace: 'mock'}))
     build.onLoad({filter: /.*/, namespace: 'mock'}, ({path}) => ({contents: {
       'server-only': 'export {}',
+      '@holo-js/db': 'export const DB={transaction:async callback=>callback(),table:table=>globalThis.securityTestModels[table]}',
       '@holo-js/auth/next/server': 'export async function auth(){return {user:globalThis.securityTest.user}}',
       '@holo-js/auth': 'export async function hashPassword(p){return "hash:"+p} export async function verifyPassword(p,h){return h === "hash:"+p}',
       '@holo-js/security': 'export async function rateLimit(){return {limited:false}}',
@@ -29,9 +30,13 @@ await build({
 })
 
 function model(table) {
+  const serialize = row => table === 'roles' && row ? {...row, permissions: globalThis.securityTest.role_permissions.filter(permission => permission.role_id === row.id)} : row
   const query = (filters = []) => ({
+    with() {return query(filters)},
+    async insert(rows) {globalThis.securityTest[table].push(...rows)},
+    async delete() {globalThis.securityTest[table] = globalThis.securityTest[table].filter(row => !filters.every(filter => filter(row)))},
     where(key, value) {return query([...filters, row => row[key] === value])},
-    async firstJson() {return globalThis.securityTest[table].find(row => filters.every(filter => filter(row)))},
+    async firstJson() {return serialize(globalThis.securityTest[table].find(row => filters.every(filter => filter(row))))},
     async getJson() {return globalThis.securityTest[table].filter(row => filters.every(filter => filter(row)))},
     async findOrFail(id) {
       const row = globalThis.securityTest[table].find(row => row.id === id)
@@ -42,7 +47,7 @@ function model(table) {
   })
   return query()
 }
-globalThis.securityTestModels = {admins: model('admins'), roles: model('roles')}
+globalThis.securityTestModels = {admins: model('admins'), roles: model('roles'), role_permissions: model('role_permissions')}
 const security = await import(pathToFileURL(outfile).href)
 after(() => rm(directory, {recursive: true, force: true}))
 beforeEach(() => {
@@ -53,11 +58,16 @@ beforeEach(() => {
       {id: 2, name: 'Limited admin', email: 'limited@example.test', role_id: 2, is_primary_admin: false, auth_version: '', password: 'hash:existing-password'},
       {id: 3, name: 'Other super', email: 'other@example.test', role_id: 3, is_primary_admin: false, auth_version: ''},
     ],
+    role_permissions: [],
     roles: [
       {id: 1, name: 'Super admin', permissions: security.fullRolePermissions()},
       {id: 2, name: 'Access editor', permissions: {admins: ['view', 'edit', 'create', 'delete'], roles: ['view', 'edit', 'create', 'delete']}},
       {id: 3, name: 'Other full access', permissions: security.fullRolePermissions()},
     ],
+  }
+  for (const role of globalThis.securityTest.roles) {
+    globalThis.securityTest.role_permissions.push(...security.rolePermissionRows(role.id, role.permissions))
+    delete role.permissions
   }
 })
 
@@ -65,7 +75,7 @@ test('a role editor cannot grant itself missing permissions', async () => {
   const result = await security.saveRoleAction(2, JSON.stringify({name: 'Access editor', description: '', permissions: security.fullRolePermissions()}))
   assert.equal(result.ok, false)
   assert.match(result.message, /cannot manage or grant/)
-  assert.equal(globalThis.securityTest.roles[1].permissions.products, undefined)
+  assert.equal(globalThis.securityTest.role_permissions.some(row => row.role_id === 2 && row.resource === 'products'), false)
 })
 
 test('an account editor cannot promote itself or create a Super admin', async () => {
@@ -96,7 +106,16 @@ test('the first admin can edit its own account but cannot delete itself', async 
 })
 
 test('delegated editors may create roles containing only permissions they already hold', async () => {
-  assert.equal((await security.saveRoleAction(0, JSON.stringify({name: 'Reader', description: '', permissions: {admins: ['view']}}))).ok, true)
+  const result = await security.saveRoleAction(0, JSON.stringify({name: 'Reader', description: '', permissions: {admins: ['view']}}))
+  assert.equal(result.ok, true)
+  assert.deepEqual(globalThis.securityTest.role_permissions.filter(row => row.role_id === result.id), [{role_id: result.id, resource: 'admins', action: 'view'}])
+})
+
+test('editing a role revokes grants omitted from the submitted permissions', async () => {
+  globalThis.securityTest.user = {id: 1, auth_version: ''}
+  const result = await security.saveRoleAction(2, JSON.stringify({name: 'Reader', description: '', permissions: {admins: ['view']}}))
+  assert.equal(result.ok, true)
+  assert.deepEqual(globalThis.securityTest.role_permissions.filter(row => row.role_id === 2), [{role_id: 2, resource: 'admins', action: 'view'}])
 })
 
 test('password changes invalidate old sessions and accept a newly authenticated session', async () => {

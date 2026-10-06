@@ -1,7 +1,7 @@
 import {getCurrentAdmin} from '@/server/admin/session'
 import authorization from '@holo-js/authorization'
 import {notFound} from 'next/navigation'
-import {adminActions, normalizeRolePermissions, type AdminAction, type AdminCapabilities, type AdminResource, type RolePermissions} from '@/lib/admin/access'
+import {adminActions, permissionsFromRows, type AdminAction, type AdminCapabilities, type AdminResource, type RolePermissions} from '@/lib/admin/access'
 import Role from '@/server/models/Role'
 import Admin from '@/server/models/Admin'
 
@@ -30,6 +30,11 @@ export async function getAdminResourceCapabilities(resource: AdminResource): Pro
   return Object.fromEntries(entries) as AdminCapabilities
 }
 
+export async function canAdminEdit(resource: AdminResource): Promise<boolean> {
+  const user = await getCurrentAdmin()
+  return user ? authorization.forUser(user).ability('admin.access').can({resource, action: 'edit'}) : false
+}
+
 export async function getAdminNavigationAccess(admin: object): Promise<{owner: boolean; permissions: RolePermissions}> {
   const adminId = Number((admin as {id?: unknown}).id)
   const current = Number.isSafeInteger(adminId) && adminId > 0 ? await Admin.where('id', adminId).firstJson() : null
@@ -38,6 +43,6 @@ export async function getAdminNavigationAccess(admin: object): Promise<{owner: b
   if (current.is_primary_admin) return {owner: true, permissions: {}}
   const roleId = Number(roleValue)
   if (!Number.isSafeInteger(roleId) || roleId < 1) return {owner: false, permissions: {}}
-  const role = await Role.where('id', roleId).firstJson()
-  return {owner: false, permissions: normalizeRolePermissions(role?.permissions)}
+  const role = await Role.with('permissions').where('id', roleId).firstJson()
+  return {owner: false, permissions: permissionsFromRows(role?.permissions ?? [])}
 }

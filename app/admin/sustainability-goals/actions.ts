@@ -1,4 +1,5 @@
 'use server'
+import {storeMediaPaths} from '@/server/support/media-references'
 import {createFailedSubmission, validate} from '@holo-js/forms'
 import {DB} from '@holo-js/db'
 import {redirect} from 'next/navigation'
@@ -16,7 +17,7 @@ export async function saveGoal(id: number, data: Record<string, unknown>) {
     if (!Number.isSafeInteger(id) || id < 0) throw new Error('Invalid goal.')
     await requireAdminPermission('sustainability_goals', id ? 'edit' : 'create')
     const input = await validate(data, goalForm)
-    const image = contentUrl(input.image, true)
+    const image = await storeMediaPaths(contentUrl(input.image, true))
     const savedId = await DB.writeTransaction(async () => {
       const attributes = {image, color: input.color, sort_order: input.sortOrder}
       const goal = id ? await SustainabilityGoal.findOrFail(id) : await SustainabilityGoal.create(attributes)

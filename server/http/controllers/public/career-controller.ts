@@ -1,3 +1,4 @@
+import {resolveMediaReferences} from '@/server/support/media-references'
 import 'server-only'
 
 import cache from '@holo-js/cache'
@@ -81,7 +82,7 @@ export async function payload(request: Request) {
     const search = new URL(request.url).searchParams
     const {locale} = await validate({locale: search.get('locale')?.trim()}, schema({locale: field.string().required().in(['en','ar','fr'])}))
     const data = await getCareersPayload(locale, search.get('slug') ?? undefined)
-    return Response.json({data}, {headers: {'Cache-Control': 'public, max-age=0, s-maxage=60, stale-while-revalidate=300'}})
+    return Response.json({data: await resolveMediaReferences(data)}, {headers: {'Cache-Control': 'public, max-age=0, s-maxage=60, stale-while-revalidate=300'}})
   } catch (error) {
     if (isValidationException(error)) return Response.json({message: error.message}, {status: error.status})
     console.error('Public careers request failed', error)

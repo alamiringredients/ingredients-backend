@@ -1,3 +1,4 @@
+import {resolveMediaReferences} from '@/server/support/media-references'
 import 'server-only'
 
 import cache from '@holo-js/cache'
@@ -52,5 +53,5 @@ export async function getCertifications(includeDrafts = false, locale?: CmsLocal
         description: Object.fromEntries((row.translations as Row[]).filter(item => !locale || item.locale === locale).map(item => [String(item.locale), String(item.description)])),
       },
     } as CertificationType))
-  return {certifications, types: certificationTypes}
+  return resolveMediaReferences({certifications, types: certificationTypes})
 }

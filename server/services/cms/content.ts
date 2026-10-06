@@ -1,3 +1,4 @@
+import {resolveMediaReferences, storeMediaPaths} from '@/server/support/media-references'
 import {removeDecorativeFields} from '@/lib/cms/decorative-fields'
 import cache from '@holo-js/cache'
 import 'server-only'
@@ -31,17 +32,18 @@ export const getHomeCmsData = async (): Promise<HomeCmsData> => {
   const seoRecord = await cache.rememberForever(contentCacheKeys.homeSeo, async () => (await WebsiteSetting.where('setting_key', 'home_seo').firstJson()) ?? null)
   const seo = asObject<HomeSeoContent>(seoRecord?.value)
   if (!seo) throw new Error('Homepage SEO content is missing. Run the home_page seeder.')
-  return {sections, seo}
+  return resolveMediaReferences({sections, seo})
 }
 
 export const getWebsiteSettings = async (): Promise<WebsiteSettings> => {
   const record = await cache.rememberForever(contentCacheKeys.websiteSettings, async () => (await WebsiteSetting.where('setting_key', 'website').firstJson()) ?? null)
   const settings=asObject<WebsiteSettings>(record?.value)
   if (!settings) throw new Error('Website settings are missing. Run the website_settings seeder.')
-  return settings
+  return resolveMediaReferences(settings)
 }
 
 export async function persistHomeSection(section: HomeSectionContent) {
+  section = await storeMediaPaths(section)
   const record=await HomeSection.where('section_key',section.key).first()
   if(!record) throw new Error('Homepage section is missing. Run the home_page seeder.')
   if (section.key === 'header' || section.key === 'footer') section = {...section, assets: section.assets.filter(asset => asset.source !== '/assets/logo-full.svg')}
@@ -49,9 +51,9 @@ export async function persistHomeSection(section: HomeSectionContent) {
 }
 
 export async function persistHomeSeo(value: HomeSeoContent) {
-  await WebsiteSetting.updateOrCreate({setting_key: 'home_seo'}, {value})
+  await WebsiteSetting.updateOrCreate({setting_key: 'home_seo'}, {value: await storeMediaPaths(value)})
 }
 
 export async function persistWebsiteSettings(value: WebsiteSettings) {
-  await WebsiteSetting.updateOrCreate({setting_key: 'website'}, {value})
+  await WebsiteSetting.updateOrCreate({setting_key: 'website'}, {value: await storeMediaPaths(value)})
 }

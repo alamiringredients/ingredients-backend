@@ -23,7 +23,7 @@ const sharedSectionKeys = ['header', 'footer', 'overlays']
 
 const headerGroups = [
   {title: 'Primary navigation · left', sources: ['Home', 'About us', 'Products', 'Quality', 'Sustainability']},
-  {title: 'Secondary navigation · right', sources: ['Careers', 'News', 'Downloads', 'Contact', 'Get in touch']},
+  {title: 'Secondary navigation · right', sources: ['Careers', 'Events', 'Downloads', 'Contact', 'Get in touch']},
   {title: 'Mobile menu', sources: ['Sadat City, Egypt', 'Est. 1970']},
 ]
 
@@ -52,9 +52,9 @@ const homeImageFields: Record<string, {label: string; altSource: string}> = {
   '/assets/photos/magnific_interior-of-a-modern-food_swLaKaNl8e.webp': {label: 'Quality image', altSource: 'Modern stainless steel food processing line'},
 }
 
-function HomeSectionFields({section,onChange}: {section:HomeSectionContent;onChange:(section:HomeSectionContent)=>void}) {
+function HomeSectionFields({section,onChange,canEdit}: {section:HomeSectionContent;onChange:(section:HomeSectionContent)=>void;canEdit:boolean}) {
   const imageTextSources = section.assets.flatMap(asset => homeImageFields[asset.source]?.altSource ?? [])
-  const textFields = (sources?:string[]) => <TextContentFields
+  const textFields = (sources?:string[]) => <TextContentFields editable={canEdit}
     fields={section.texts.filter(field=>!imageTextSources.includes(field.source) && (!sources || sources.includes(field.source)))}
     richTexts={sources ? section.richTexts?.filter(field=>field.sources.some(source=>sources.includes(source))) : section.richTexts}
     onChange={texts=>onChange({...section,texts:section.texts.map(field=>texts.find(next=>next.id===field.id)??field)})}
@@ -121,7 +121,7 @@ function HomeSectionFields({section,onChange}: {section:HomeSectionContent;onCha
   </>
 }
 
-export function HomeContentManager({initialData}: {initialData: HomeCmsData}) {
+export function HomeContentManager({initialData,canEdit}: {initialData: HomeCmsData;canEdit:boolean}) {
   const [data, setData] = useState(initialData)
   const [panel, setPanel] = useState<Panel>({kind: 'section', key: initialData.sections.find(section=>section.key==='hero')?.key ?? initialData.sections[0]?.key ?? 'hero'})
   const section = panel.kind === 'section' ? data.sections.find((item) => item.key === panel.key) : undefined
@@ -143,8 +143,8 @@ export function HomeContentManager({initialData}: {initialData: HomeCmsData}) {
     await form.run(()=>saveHomeSeoAction(formData))
   }
 
-  return <AdminFormProvider form={form}><section onChangeCapture={()=>form.change()}><AdminForm noValidate onSubmit={event=>{event.preventDefault();void (panel.kind === 'seo' ? saveSeo() : saveSection())}}>
-    <PageManagerShell title="Home page"  saving={saving} navigation={<CmsSectionTabs aria-label="Homepage sections">
+  return <AdminFormProvider form={form}><section onChangeCapture={()=>form.change()}><AdminForm noValidate onSubmit={event=>{event.preventDefault();if(canEdit)void (panel.kind === 'seo' ? saveSeo() : saveSection())}}>
+    <PageManagerShell canSave={canEdit} title="Home page"  saving={saving} navigation={<CmsSectionTabs aria-label="Homepage sections">
         {[{label:'Homepage sections',keys:homeSectionKeys},{label:'Shared site sections',keys:sharedSectionKeys},{label:'Other sections',keys:data.sections.filter(item=>![...homeSectionKeys,...sharedSectionKeys].includes(item.key)).map(item=>item.key)}].filter(group=>group.keys.some(key=>data.sections.some(item=>item.key===key))).map(group=><div className="home-menu-group" key={group.label}><h2>{group.label}</h2>{group.keys.flatMap(key=>data.sections.filter(item=>item.key===key)).map((item) => <CatalogTabButton type="button" onClick={() => {setPanel({kind: 'section', key: item.key}); form.reset()}} key={item.key} active={panel.kind === 'section' && panel.key === item.key}>
           <span>{item.label}</span><i className={item.enabled ? 'is-visible' : ''}>{item.enabled ? 'Visible' : 'Hidden'}</i>
         </CatalogTabButton>)}</div>)}
@@ -157,7 +157,7 @@ export function HomeContentManager({initialData}: {initialData: HomeCmsData}) {
             <label className="cms-toggle"><input type="checkbox" checked={section.enabled} onChange={(event) => replaceSection({...section, enabled: event.target.checked})} /><span />Show section</label>
           </div>
           {section.key === 'certifications' && <p className="catalog-help">Names, logos, statuses and documents are managed in Certifications. This section controls the homepage introduction.</p>}
-          <HomeSectionFields section={section} onChange={replaceSection}/>
+          <HomeSectionFields canEdit={canEdit} section={section} onChange={replaceSection}/>
           {!!section.links.length&&<CatalogPanel title="Links and contact details">{section.links.map((link,index)=><UrlField key={link.id} name={`links.${index}.value`} label={link.label} value={link.value} onChange={value=>replaceSection({...section,links:section.links.map(field=>field.id===link.id?{...field,value}:field)})}/>)}</CatalogPanel>}
           {section.videos && <CatalogPanel><div className="cms-block-title"><h3>Hero video sequence</h3><CatalogButton type="button" onClick={() => replaceSection({...section, videos: [...(section.videos ?? []), '']})} variant="secondary">Add video</CatalogButton></div><div className="cms-sort-list">{section.videos.map((video, index) => <div className="cms-video-row" key={index}>
               <span>{index + 1}</span><AssetField name={`videos.${index}`} field={{id:`video-${index}`,label:`Video ${index+1} · WebM`,kind:'video',source:'',value:video}} owner={{type:'home-section',key:section.key}} onChange={value=>replaceSection({...section,videos:section.videos?.map((item,current)=>current===index?value:item)})}/>

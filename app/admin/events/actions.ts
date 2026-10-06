@@ -1,4 +1,5 @@
 "use server";
+import {storeMediaPaths} from '@/server/support/media-references'
 
 import { requireAdminPermission } from "@/server/admin/authorization";
 import {adminActionError,redirectCreatedRecord} from '@/server/admin/form-actions';
@@ -23,8 +24,8 @@ export async function saveEventAction(id:number,payload:string) {
     if(duplicate&&Number(duplicate.id)!==id)return {ok:false,message:'Please correct the highlighted fields.',errors:{slug:['This event slug is already in use.']}};
     const values={slug:data.slug,kind:data.kind as EventKind,published:Boolean(data.published),sort_order:data.sort_order,starts_at:new Date(data.starts_at),ends_at:new Date(data.ends_at),timezone:data.timezone,content:normalizeEventContent(data.content)};
     let savedId=id;
-    if(id)await (await Event.findOrFail(id)).update(values);
-    else savedId=Number((await Event.create(values)).id);
+    if(id)await (await Event.findOrFail(id)).update(await storeMediaPaths(values));
+    else savedId=Number((await Event.create(await storeMediaPaths(values))).id);
     
     revalidatePath('/admin/events');
     await redirectCreatedRecord(id,savedId,'/admin/events','events');
