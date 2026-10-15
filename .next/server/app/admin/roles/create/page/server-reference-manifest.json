@@ -1,0 +1,38 @@
+{
+  "node": {
+    "402a2ca564e142abe5fcbbbdc5466612bec5501513": {
+      "workers": {
+        "app/admin/roles/create/page": {
+          "moduleId": 74607,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "logoutAdminAction",
+      "filename": "app/admin/auth-actions.ts"
+    },
+    "602bbd01a04ced0157752cde23b26ebf9d827e6b07": {
+      "workers": {
+        "app/admin/roles/create/page": {
+          "moduleId": 74607,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "saveAdminAction",
+      "filename": "app/admin/access-actions.ts"
+    },
+    "60bbba2c27eedde4d7176a36386f054a0240dca11b": {
+      "workers": {
+        "app/admin/roles/create/page": {
+          "moduleId": 74607,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "saveRoleAction",
+      "filename": "app/admin/access-actions.ts"
+    }
+  },
+  "edge": {}
+}

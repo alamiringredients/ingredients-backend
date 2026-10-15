@@ -1,0 +1,27 @@
+{
+  "node": {
+    "402a2ca564e142abe5fcbbbdc5466612bec5501513": {
+      "workers": {
+        "app/admin/translations/page": {
+          "moduleId": 19932,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "logoutAdminAction",
+      "filename": "app/admin/auth-actions.ts"
+    },
+    "40c932cc6ebd99e65d0f7237bf3d39c448cc0db958": {
+      "workers": {
+        "app/admin/translations/page": {
+          "moduleId": 19932,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "saveTranslationsAction",
+      "filename": "app/admin/translation-actions.ts"
+    }
+  },
+  "edge": {}
+}

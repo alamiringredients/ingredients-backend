@@ -1,0 +1,27 @@
+{
+  "node": {
+    "402a2ca564e142abe5fcbbbdc5466612bec5501513": {
+      "workers": {
+        "app/admin/change-password/page": {
+          "moduleId": 88533,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "logoutAdminAction",
+      "filename": "app/admin/auth-actions.ts"
+    },
+    "401faa333e370c1eb3a701b11368456448c9b23dd1": {
+      "workers": {
+        "app/admin/change-password/page": {
+          "moduleId": 88533,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "changePasswordAction",
+      "filename": "app/admin/change-password/actions.ts"
+    }
+  },
+  "edge": {}
+}
