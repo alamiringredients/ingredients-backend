@@ -51,3 +51,5 @@ storage
 # OS
 .DS_Store
 Thumbs.db
+!.next/standalone/node_modules
+!.next/standalone/node_modules/**
