@@ -1,0 +1,27 @@
+{
+  "node": {
+    "402a2ca564e142abe5fcbbbdc5466612bec5501513": {
+      "workers": {
+        "app/admin/login/page": {
+          "moduleId": 93152,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "logoutAdminAction",
+      "filename": "app/admin/auth-actions.ts"
+    },
+    "6077c148ee04df68a813cdc00c401e214e967f6f71": {
+      "workers": {
+        "app/admin/login/page": {
+          "moduleId": 93152,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "loginAdminAction",
+      "filename": "app/admin/login/actions.ts"
+    }
+  },
+  "edge": {}
+}

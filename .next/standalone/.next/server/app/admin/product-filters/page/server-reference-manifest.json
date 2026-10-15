@@ -1,0 +1,16 @@
+{
+  "node": {
+    "402a2ca564e142abe5fcbbbdc5466612bec5501513": {
+      "workers": {
+        "app/admin/product-filters/page": {
+          "moduleId": 72974,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "logoutAdminAction",
+      "filename": "app/admin/auth-actions.ts"
+    }
+  },
+  "edge": {}
+}

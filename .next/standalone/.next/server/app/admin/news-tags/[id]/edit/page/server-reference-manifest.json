@@ -1,0 +1,49 @@
+{
+  "node": {
+    "402a2ca564e142abe5fcbbbdc5466612bec5501513": {
+      "workers": {
+        "app/admin/news-tags/[id]/edit/page": {
+          "moduleId": 3628,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "logoutAdminAction",
+      "filename": "app/admin/auth-actions.ts"
+    },
+    "609be0bec6c19136ee7ecd62ee669bbb31bde6a69a": {
+      "workers": {
+        "app/admin/news-tags/[id]/edit/page": {
+          "moduleId": 3628,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "saveNewsTaxonomy",
+      "filename": "app/admin/news/actions.ts"
+    },
+    "40d42c865e84609c408a4659f76964ccb6d6ae4cd3": {
+      "workers": {
+        "app/admin/news-tags/[id]/edit/page": {
+          "moduleId": 3628,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "uploadCmsFileAction",
+      "filename": "app/admin/actions.ts"
+    },
+    "7067d79c39f39c3464f5b7ae01f1d9473d97ae13c8": {
+      "workers": {
+        "app/admin/news-tags/[id]/edit/page": {
+          "moduleId": 3628,
+          "async": true,
+          "codeHash": null
+        }
+      },
+      "exportedName": "getEditorMedia",
+      "filename": "app/admin/media-actions.ts"
+    }
+  },
+  "edge": {}
+}
