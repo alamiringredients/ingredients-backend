@@ -11,7 +11,7 @@ const nextConfig: NextConfig = withHolo({
   // workerThreads: false,
   // cpus: 1
   // },
-  experimental: {serverActions: {bodySizeLimit: '105mb'}},
+  experimental: {instrumentationHook: true, serverActions: {bodySizeLimit: '105mb'}},
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [appImageSource],
