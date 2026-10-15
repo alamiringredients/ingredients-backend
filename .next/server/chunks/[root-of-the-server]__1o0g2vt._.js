@@ -1,0 +1,3 @@
+module.exports=[66539,a=>a.a(async(e,t)=>{try{var i=await a.y("@holo-js/core-84450fb23726210b");a.n(i),t()}catch(a){t(a)}},!0),56672,a=>a.a(async(e,t)=>{try{var i=a.i(66539),r=e([i]);[i]=r.then?(await r)():r;var o=(0,i.createHoloFrameworkAdapter)({stateKey:"__holoNextAdapter__",displayName:"Next"});async function c(a={}){return o.initializeProject(a)}o.capabilities,o.internals,a.s(["initializeNextHoloProject",0,c]),t()}catch(a){t(a)}},!1)];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__1o0g2vt._.js.map

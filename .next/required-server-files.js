@@ -241,6 +241,7 @@ self.__SERVER_FILES_MANIFEST={
       "turbopackFileSystemCacheForBuild": true,
       "turbopackInferModuleSideEffects": true,
       "turbopackPluginRuntimeStrategy": "childProcesses",
+      "instrumentationHook": true,
       "serverActions": {
         "bodySizeLimit": "105mb"
       },
@@ -420,7 +421,8 @@ self.__SERVER_FILES_MANIFEST={
     ".next/BUILD_ID",
     ".next/server/next-font-manifest.js",
     ".next/server/next-font-manifest.json",
-    ".next/required-server-files.json"
+    ".next/required-server-files.json",
+    ".next/server/instrumentation.js"
   ],
   "ignore": []
 }
