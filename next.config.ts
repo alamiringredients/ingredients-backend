@@ -5,7 +5,12 @@ const appImageSource = new URL('/**', process.env.APP_URL || 'http://localhost:3
 
 const nextConfig: NextConfig = withHolo({
   typescript: {ignoreBuildErrors: true},
-  experimental: {serverActions: {bodySizeLimit: '105mb'}},
+  experimental: {
+  serverActions: {bodySizeLimit: '105mb'},
+  workerThreads: false,
+  cpus: 1
+},
+  // experimental: {serverActions: {bodySizeLimit: '105mb'}},
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [appImageSource],
