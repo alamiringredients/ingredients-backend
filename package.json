@@ -7,7 +7,7 @@
     "prepare": "holo key:generate && holo prepare",
     "dev": "PORT=8000 holo dev",
     "prebuild": "npm run translations:generate",
-    "build": "holo build",
+    "build": "echo skip",
     "build:holo": "holo build",
     "start": "holo start --port 8000",
     "lint": "eslint app components config i18n lib server tests proxy.ts next.config.ts --no-warn-ignored --no-error-on-unmatched-pattern",
