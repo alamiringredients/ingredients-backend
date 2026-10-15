@@ -53,3 +53,5 @@ storage
 Thumbs.db
 !.next/standalone/node_modules
 !.next/standalone/node_modules/**
+!.next/standalone/node_modules/@holo-js/*/dist/**
+!.next/standalone/node_modules/@holo-js/*/dist
