@@ -241,7 +241,6 @@ self.__SERVER_FILES_MANIFEST={
       "turbopackFileSystemCacheForBuild": true,
       "turbopackInferModuleSideEffects": true,
       "turbopackPluginRuntimeStrategy": "childProcesses",
-      "instrumentationHook": true,
       "serverActions": {
         "bodySizeLimit": "105mb"
       },

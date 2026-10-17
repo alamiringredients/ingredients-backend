@@ -241,7 +241,6 @@
       "turbopackFileSystemCacheForBuild": true,
       "turbopackInferModuleSideEffects": true,
       "turbopackPluginRuntimeStrategy": "childProcesses",
-      "instrumentationHook": true,
       "serverActions": {
         "bodySizeLimit": "105mb"
       },

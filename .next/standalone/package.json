@@ -4,7 +4,7 @@
   "type": "module",
   "packageManager": "npm@latest",
   "scripts": {
-    "prepare": "holo key:generate && holo prepare",
+    "prepare": "holo key:generate && holo prepare && (cp -r .next/standalone/.next/node_modules/@holo-js/* .next/standalone/node_modules/@holo-js/ 2>/dev/null || true)",
     "dev": "PORT=8000 holo dev",
     "prebuild": "npm run translations:generate",
     "build": "echo skip",
