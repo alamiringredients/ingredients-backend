@@ -5,6 +5,20 @@ import module from 'node:module'
 const require = module.createRequire(import.meta.url)
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
+// Capture ALL errors to stdout so Hostinger's log shows them
+process.on('uncaughtException', (err) => {
+  process.stdout.write('=== UNCAUGHT EXCEPTION ===\n');
+  process.stdout.write(String(err?.stack || err) + '\n');
+  process.stdout.write('=== END UNCAUGHT EXCEPTION ===\n');
+  process.exit(1);
+});
+process.on('unhandledRejection', (reason) => {
+  process.stdout.write('=== UNHANDLED REJECTION ===\n');
+  process.stdout.write(String(reason?.stack || reason) + '\n');
+  process.stdout.write('=== END UNHANDLED REJECTION ===\n');
+  process.exit(1);
+});
+
 
 const dir = path.join(__dirname)
 
@@ -39,6 +53,8 @@ startServer({
   allowRetry: false,
   keepAliveTimeout,
 }).catch((err) => {
-  console.error(err);
+  process.stdout.write('=== STARTUP ERROR ===\n');
+  process.stdout.write(String(err?.stack || err) + '\n');
+  process.stdout.write('=== END STARTUP ERROR ===\n');
   process.exit(1);
 });
