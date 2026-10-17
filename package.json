@@ -4,7 +4,7 @@
   "type": "module",
   "packageManager": "npm@latest",
   "scripts": {
-    "prepare": "holo key:generate && holo prepare && (cp -r .next/standalone/.next/node_modules/@holo-js/* .next/standalone/node_modules/@holo-js/ 2>/dev/null || true) && (cp -r config .next/standalone/config 2>/dev/null || true) && (cp -r lib .next/standalone/lib 2>/dev/null || true)",
+    "prepare": "holo key:generate && holo prepare && (cp -r .next/standalone/.next/node_modules/@holo-js/* .next/standalone/node_modules/@holo-js/ 2>/dev/null || true) && (cp -r config .next/standalone/config 2>/dev/null || true) && (cp -r lib .next/standalone/lib 2>/dev/null || true) && (for dep in mysql2 aws-ssl-profiles generate-function iconv-lite long lru.min named-placeholders sql-escaper is-property safer-buffer; do cp -rL node_modules/$dep .next/standalone/node_modules/$dep 2>/dev/null || true; done)",
     "dev": "PORT=8000 holo dev",
     "prebuild": "npm run translations:generate",
     "build": "echo skip",
