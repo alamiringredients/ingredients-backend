@@ -1,3 +1,3 @@
-module.exports=[69449,e=>{"use strict";async function t(){{let{initializeNextHoloProject:t}=await e.A(91902);await t()}}e.s(["register",0,t])},91902,e=>{e.v(t=>Promise.all(["server/chunks/[root-of-the-server]__1o0g2vt._.js"].map(t=>e.l(t))).then(()=>t(56672)))}];
+module.exports=[69449,e=>{"use strict";async function t(){{let{initializeNextHoloProject:t}=await e.A(91902);await t().catch((err)=>{console.error("=== HOLO INIT FATAL ERROR ===");console.error(err);console.error("=== END HOLO INIT FATAL ERROR ===");throw err;})}}e.s(["register",0,t])},91902,e=>{e.v(t=>Promise.all(["server/chunks/[root-of-the-server]__1o0g2vt._.js"].map(t=>e.l(t))).then(()=>t(56672)))}];
 
 //# sourceMappingURL=_0bbvpcl._.js.map
